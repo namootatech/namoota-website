@@ -41,7 +41,7 @@ export default function GetStarted() {
                 className='space-y-5 font-medium'
                 name='contact'
                 method='post'
-                netlify
+                data-netlify='true'
                 action='/success'
               >
                 <div>
