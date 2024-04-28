@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: 'Shaun Adams',
       title: 'DevOps engineer',
       quote:
-        "My company's software now is easy to use, saves time and money, and is loved by a lot of users. One customer saved $10k over the course of 3 years and another saves 8 hours per week! Thanks to Namoota.",
+        "My company's software now is easy to use, saves time and money, and is loved by a lot of users. One customer saved R10k over the course of 3 years and another saves 8 hours per week! Thanks to Namoota.",
     },
     {
       avatar:
