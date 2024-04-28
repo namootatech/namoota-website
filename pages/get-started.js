@@ -38,11 +38,12 @@ export default function GetStarted() {
             </div>
             <div className='flex-1 mt-12 sm:max-w-lg lg:max-w-md lg:mt-0'>
               <form
-                onSubmit={(e) => e.preventDefault()}
                 className='space-y-5 font-medium'
                 name='contact'
                 method='post'
                 netlify
+                data-netlify='true'
+                action='/success'
               >
                 <div>
                   <label>Full name</label>
