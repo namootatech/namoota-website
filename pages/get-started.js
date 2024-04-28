@@ -50,6 +50,7 @@ export default function GetStarted() {
                     aria-label='Full name'
                     type='text'
                     required
+                    name='name'
                     className='mt-2 focus:border-indigo-600'
                   />
                 </div>
@@ -59,6 +60,7 @@ export default function GetStarted() {
                     aria-label='Email'
                     type='email'
                     required
+                    name='email'
                     className='mt-2 focus:border-indigo-600'
                   />
                 </div>
@@ -67,6 +69,7 @@ export default function GetStarted() {
                   <textarea
                     aria-label='Message'
                     required
+                    name='message'
                     className='w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg'
                   ></textarea>
                 </div>
@@ -75,7 +78,7 @@ export default function GetStarted() {
                   <ul className='mt-3 flex flex-wrap gap-x-8 gap-y-3 font-normal max-w-md sm:gap-x-16'>
                     {servicesItems.map((item, idx) => (
                       <li key={idx} className='flex gap-x-2 items-center'>
-                        <Checkbox id={`service-${idx}`} />
+                        <Checkbox id={`service-${idx}`} name={item} />
                         <label htmlFor={`service-${idx}`} className='text-sm'>
                           {item}
                         </label>
