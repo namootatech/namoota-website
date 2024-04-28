@@ -44,6 +44,8 @@ export default function GetStarted() {
                 data-netlify='true'
                 action='/success'
               >
+                <input type='hidden' name='form-name' value='contact' />
+
                 <div>
                   <label>Full name</label>
                   <Input
