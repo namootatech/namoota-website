@@ -14,7 +14,7 @@ export default function Contact() {
             touch soon
           </p>
           <Link href='/'>
-            <button className='rounded rounded-lg bg-gray-900 p-4 my-4 text-white'>
+            <button className='rounded rounded-lg bg-gray-900 p-3 my-4 text-white'>
               Go back home
             </button>
           </Link>
