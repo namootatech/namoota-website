@@ -42,7 +42,6 @@ export default function GetStarted() {
                 name='contact'
                 method='post'
                 netlify
-                data-netlify='true'
                 action='/success'
               >
                 <div>
