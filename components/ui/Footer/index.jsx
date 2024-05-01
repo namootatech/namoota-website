@@ -72,7 +72,7 @@ const Footer = () => (
     <div className='custom-screen pt-16'>
       <div className='mt-10 py-10 border-t items-center justify-between sm:flex'>
         <p className='text-gray-600'>
-          © 2023 Namoota Startup. All rights reserved.
+          © 2023 Namoota. All rights reserved.
         </p>
         <div className='flex items-center gap-x-6 text-gray-400 mt-6'>
           {socialInfo.map((item, idx) => (

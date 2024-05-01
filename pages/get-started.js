@@ -24,15 +24,15 @@ export default function GetStarted() {
                 Talk to a Namoota expert
               </h1>
               <p className='mt-3'>
-                We are here to help. Get in touch with sales our press team and
-                let us know how we can help, or shoot us an email on{' '}
+                We are here to help. Get in touch with our sales press team and
+                let us know how we can help, or send us an email on{' '}
                 <a
                   href='mailto:support@Namoota.co.za'
                   target='_blank'
                   rel='noreferrer'
-                  className='text-indigo-600 hover:text-indigo-400 font-medium duration-150'
+                  className='text-gray-600 hover:text-gray-400 font-medium duration-150'
                 >
-                  support@Namoota.co.za.
+                  support@Namoota.co.za
                 </a>
               </p>
             </div>
@@ -53,7 +53,7 @@ export default function GetStarted() {
                     type='text'
                     required
                     name='name'
-                    className='mt-2 focus:border-indigo-600'
+                    className='mt-2 focus:border-gray-600'
                   />
                 </div>
                 <div>
@@ -63,7 +63,7 @@ export default function GetStarted() {
                     type='email'
                     required
                     name='email'
-                    className='mt-2 focus:border-indigo-600'
+                    className='mt-2 focus:border-gray-600'
                   />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export default function GetStarted() {
                     aria-label='Message'
                     required
                     name='message'
-                    className='w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg'
+                    className='w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-gray-600 shadow-sm rounded-lg'
                   ></textarea>
                 </div>
                 <div>
@@ -91,7 +91,7 @@ export default function GetStarted() {
                 <div className='pt-1'>
                   <Button
                     type='submit'
-                    className='w-full text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 ring-offset-2 ring-indigo-600 focus:ring'
+                    className='w-full text-white bg-gray-600 hover:bg-gray-500 active:bg-gray-600 ring-offset-2 ring-gray-600 focus:ring'
                   >
                     Submit
                   </Button>
