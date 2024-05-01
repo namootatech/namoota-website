@@ -10,7 +10,7 @@ const FooterCTA = () => (
         </h2>
         <p className='mt-3 text-gray-600'>
           Hire experts to create your next idea, follow best practices, remove
-          roadblocks, and delivery on schedule.
+          roadblocks, and deliver on schedule.
         </p>
         <NavLink
           href='/get-started'
