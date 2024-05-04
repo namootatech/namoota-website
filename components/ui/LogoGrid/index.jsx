@@ -3,6 +3,9 @@ import clinicplus from '../../../public/logos/1.png';
 import tecla from '../../../public/logos/2.webp';
 import siavista from '../../../public/logos/3.png';
 import adobe from '../../../public/logos/adobe.svg';
+import theotours from '../../../public/logos/theotours.png';
+import africancreative from '../../../public/logos/africancreativeartforms.png';
+import musicloopy from '../../../public/logos/musicloopy.png';
 
 const logos = [
   {
@@ -17,7 +20,20 @@ const logos = [
     src: siavista,
     alt: 'siavista',
   },
+  {
+    src: theotours,
+    alt: 'theotours',
+  },
+  {
+    src: africancreative,
+    alt: 'african creative artforms',
+  },
+  {
+    src: musicloopy,
+    alt: 'Music Loopy',
+  },
 ];
+
 
 const LogoGrid = () => (
   <div>
@@ -34,7 +50,6 @@ const LogoGrid = () => (
                 alt={item.alt}
                 width={100}
                 height={100}
-                className='grayscale'
               />
             </li>
           ))}
