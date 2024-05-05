@@ -17,6 +17,14 @@ const Layout = ({ children }) => {
          kwaZulu Natal Software companies, South African IT companies, South African Systems Developers, Best IT companies, Eastern Cape Best Software Development companies" />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+          integrity="sha512-qOA1GuvtgCrVwIft5mG95n2ZMOj35FRARn/V/7Ig1UsdFJldqj36a+um5E+d50UUa8OHvN2s46+sMWaZ69uqAw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+
       </Head>
       <Navbar />
       <main>{children}</main>
