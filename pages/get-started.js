@@ -45,6 +45,7 @@ export default function GetStarted() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Google Map"
+                fluid
               ></iframe>
             </div>
             <div className='flex-1 mt-12 sm:max-w-lg lg:max-w-md lg:mt-0'>
