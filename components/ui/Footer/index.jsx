@@ -19,7 +19,7 @@ const socialInfo = [
         </defs>
       </svg>
     ),
-    href: '#',
+    href: 'https://web.facebook.com/profile.php?id=61559743612065&sk=about',
   },
   {
     icon: (
