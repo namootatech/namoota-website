@@ -33,7 +33,7 @@ const Testimonials = () => {
       <div id='testimonials' className='max-w-screen-xl mx-auto px-4 md:px-8'>
         <div className='max-w-2xl sm:text-center md:mx-auto'>
           <h2 className='text-gray-800 text-3xl font-semibold sm:text-4xl'>
-            See what others saying about us
+            See what others are saying about us
           </h2>
           <p className='mt-3 text-gray-600'>
             Listen to what the experts around the country are saying about us.
