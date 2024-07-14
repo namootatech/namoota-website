@@ -34,7 +34,7 @@ export default function GetStarted() {
                   support@Namoota.co.za
                 </a> or{' '} Message on{' '}
                 <a className='text-gray-600 hover:text-gray-400 font-medium duration-150' href="https://wa.me/27734668809" target="_blank" rel="noreferrer">WhatsApp</a>
-                {' '}or Call <a className='text-gray-600 hover:text-gray-400 font-medium duration-150' href="tel:+27789087337">+27(0)78 908 7337</a>
+                {' '}or Call <a className='text-gray-600 hover:text-gray-400 font-medium duration-150' href="tel:+27687139987">+27(0)68 713 9987</a>
               </p>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27492351.60613264!2d5.847499693889836!3d-32.7391919653597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c34a689d9ee1251%3A0xe85d630c1fa4e8a0!2sSouth%20Africa!5e0!3m2!1sen!2sza!4v1714863786256!5m2!1sen!2sza"
