@@ -17,8 +17,8 @@ export default function team() {
       name: 'Zweli Mthethwa',
       title: 'Co-founder/ Software Engineer',
       imageUrl: "/team/zweli-removebg.png",
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel lacinia, nec aliquam nunc nisl sit amet nunc.',
-      color: '#782a2b'
+      description: 'Zweli designs high-performance solutions and mentors the team, driving the technical vision of our projects.',
+      color: '#219ebc'
     },
     {
       id: 2,
@@ -26,23 +26,23 @@ export default function team() {
       title: 'Co-founder/ Software Engineer',
       imageUrl: "/team/aya-removebg.png",
       description: 'Aya develops efficient and scalable software solutions, contributing to the innovation and functionality of our products.',
-      color: '#782a2b'
+      color: '#219ebc'
     },
     {
       id: 3,
       name: 'Siyamthanda Nomgqokwana',
       title: 'IT Infrastructure / Cloud Architect',
       imageUrl: "team/siya-removebg.png",
-      description: 'Siya architects and implements robust cloud solutions, shaping the technological foundation of our projects.',
-      color: '#37375e'
+      description: 'Siya architects and implements robust cloud solutions, shaping the technological foundations of our projects.',
+      color: '#219ebc'
     },
     {
       id: 4,
       name: 'Matthew Fourie',
       title: 'Software Engineer',
       imageUrl: "team/matt-removebg.png",
-      description: 'Lorem ipsum  amet nunc. Sed euismod, nunc vel tincidunt lacinia, nunc nisl aliquet nunc, nisl sit amet nunc.',
-      color: '#3e6e7c'
+      description: 'Matthew supports the development team by writing clean and maintainable code, assisting in the creation of innovative software solutions that drive project success.',
+      color: '#219ebc'
     },
     {
       id: 5,
@@ -50,7 +50,7 @@ export default function team() {
       title: 'Social Media Specialist',
       imageUrl: "team/kaatnanret-removebg.png",
       description: 'KaatNanret manages social media pages and creates content to reach target audiences and drive conversions.',
-      color: '#3e6e7c'
+      color: 'black'
     },
   ]
 
@@ -67,7 +67,10 @@ export default function team() {
           return (
             <div key={member.id} className='w-full md:w-[80%] xl:w-1/3 p-8 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-out'>
               <div className='flex flex-col items-center justify-center'>
-                <img src={member.imageUrl} alt={member.name} width={120} height={120} className='w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg'/>
+                <img src={member.imageUrl} alt={member.name} width={120} height={120} 
+                    className='w-32 h-32 rounded-full object-cover border-4 border-white mb-5 shadow-3xl'
+                    // style={{ boxShadow: `5px 5px 5px ${member.color}` }}
+                />
                 <h2 className='text-xl text-gray-800 font-extrabold mx-auto sm:text-2xl'>{member.name}</h2>
                 <p className='text-lg font-semibold text-gray-700 sm:text-base'>{member.title}</p>
                 {/* divider line */}
