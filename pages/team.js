@@ -59,8 +59,21 @@ export default function team() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      <Hero />
-      <LogoGrid />
+      <section>
+  <div className='border-t custom-screen py-16 text-gray-600'> {/* Adjusted padding from py-28 to py-16 */}
+    <div className='space-y-2 max-w-4xl mx-auto text-center'>
+      <h1 className='text-4xl text-gray-800 font-extrabold mx-auto sm:text-6xl'>
+        Meet Our Team
+      </h1>
+      <p className='max-w-xl mx-auto'>
+        We empower businesses by crafting bespoke software solutions that
+        transcend expectations. Namoota crafts innovative applications that
+        integrate perfectly, driving exceptional customer experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
       <GradientWrapper>
       <div className="flex flex-wrap justify-center gap-6 p-10">
         {data.map((member) => {
