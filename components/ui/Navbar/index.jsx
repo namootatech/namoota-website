@@ -13,6 +13,7 @@ const Navbar = () => {
         { title: "Features", path: "/#features" },
         { title: "Our toolkit", path: "/#toolkit" },
         { title: "Testimonials", path: "/#testimonials" },
+        { title: "Team", path: "/team"}
     ]
 
     useEffect(() => {
