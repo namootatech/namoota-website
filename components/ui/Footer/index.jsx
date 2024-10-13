@@ -1,91 +1,278 @@
-const socialInfo = [
-  {
-    icon: (
-      <svg
-        className='w-6 h-6 hover:text-gray-500 duration-150'
-        fill='none'
-        viewBox='0 0 48 48'
-      >
-        <g clipPath='url(#a)'>
-          <path
-            fill='currentColor'
-            d='M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708v-16.77h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.978 48 24z'
-          />
-        </g>
-        <defs>
-          <clipPath id='a'>
-            <path fill='#fff' d='M0 0h48v48H0z' />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-    href: 'https://web.facebook.com/profile.php?id=61559743612065&sk=about',
-  },
-  {
-    icon: (
-      <svg
-        className='w-6 h-6 hover:text-gray-500 duration-150'
-        fill='none'
-        viewBox='0 0 48 48'
-      >
-        <g clipPath='url(#clip0_17_80)'>
-          <path
-            fill='currentColor'
-            d='M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z'
-          />
-        </g>
-        <defs>
-          <clipPath id='clip0_17_80'>
-            <path fill='#fff' d='M0 0h48v48H0z' />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-    href: '#',
-  },
-  {
-    icon: (
-      <svg
-        className='w-6 h-6 hover:text-gray-500 duration-150'
-        fill='none'
-        viewBox='0 0 28 28'
-      >
-        <g clipPath='url(#clip0_1213_3074)'>
-          <path
-            fill='currentColor'
-            d='M25.927 0H2.067C.924 0 0 .902 0 2.018v23.959C0 27.092.924 28 2.067 28h23.86C27.07 28 28 27.092 28 25.982V2.018C28 .902 27.07 0 25.927 0zM8.307 23.86H4.151V10.495h4.156V23.86zM6.229 8.673a2.407 2.407 0 110-4.812 2.406 2.406 0 010 4.812zM23.86 23.86h-4.15v-6.497c0-1.547-.028-3.543-2.16-3.543-2.16 0-2.49 1.69-2.49 3.434v6.606h-4.144V10.495h3.98v1.826h.056c.552-1.05 1.908-2.16 3.926-2.16 4.206 0 4.982 2.767 4.982 6.366v7.333z'
-          />
-        </g>
-        <defs>
-          <clipPath id='clip0_1213_3074'>
-            <path fill='#fff' d='M0 0h28v28H0z' />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
-    href: '#',
-  },
-];
-
 const Footer = () => (
-  <footer>
-    <div className='custom-screen pt-16'>
-      <div className='mt-10 py-10 border-t items-center justify-between sm:flex'>
-        <p className='text-gray-600'>
-          © 2023 Namoota. All rights reserved.
-        </p>
-        <div className='flex items-center gap-x-6 text-gray-400 mt-6'>
-          {socialInfo.map((item, idx) => (
+  <footer class='bg-white'>
+    <div class='pb-16 pt-4 sm:pt-10 lg:pt-12'>
+      <div class='mx-auto max-w-screen-2xl px-4 md:px-8'>
+        <div class='grid grid-cols-2 gap-12 border-t pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12'>
+          <div class='col-span-full lg:col-span-2'>
+            <div class='mb-4 lg:-mt-2'>
+              <a
+                href='/'
+                class='inline-flex items-center gap-2 text-xl font-bold text-black md:text-2xl'
+                aria-label='logo'
+              >
+                <img className='w-54 h-10' src='/logz.png' />
+              </a>
+            </div>
+            <p class='text-gray-500 sm:pr-8'>
+              We are a small but feisty team, situated in KZN & Eastern Cape.
+              Our passion lies in bridging the digital divide in these areas
+              with custom digital solutions for SMME's
+            </p>
+          </div>
+
+          <div>
+            <div class='mb-4 font-bold uppercase tracking-widest text-gray-800'>
+              Systems we build
+            </div>
+            <nav class='flex flex-col gap-4'>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Overview
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Quoting & Invoicing
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Bookings & Appointments
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Inventory Management
+                </a>
+              </div>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Social features System
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <div>
+            <div class='mb-4 font-bold uppercase tracking-widest text-gray-800'>
+              Apps we build
+            </div>
+
+            <nav class='flex flex-col gap-4'>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Android App
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Progressive Web App
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  iOs App
+                </a>
+              </div>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Desktop Apps
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <div>
+            <div class='mb-4 font-bold uppercase tracking-widest text-gray-800'>
+              Content
+            </div>
+
+            <nav class='flex flex-col gap-4'>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Social media management
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Digital Marketing
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Chat with us
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  FAQs
+                </a>
+              </div>
+            </nav>
+          </div>
+
+          <div>
+            <div class='mb-4 font-bold uppercase tracking-widest text-gray-800'>
+              About us
+            </div>
+
+            <nav class='flex flex-col gap-4'>
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Terms of Service
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Privacy Policy
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
+                  Cookie settings
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='bg-gray-100'>
+      <div class='mx-auto max-w-screen-2xl px-4 md:px-8'>
+        <div class='flex items-center justify-between gap-4 py-8'>
+          <span class='text-sm text-gray-400'>
+            {' '}
+            © 2024 - Namoota Technology. All rights reserved.{' '}
+          </span>
+
+          <div class='flex gap-4'>
             <a
-              key={idx}
-              href={item.href}
-              aria-label='social media'
+              href='#'
               target='_blank'
-              rel='noreferrer'
+              class='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
             >
-              {item.icon}
+              <svg
+                class='h-5 w-5'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' />
+              </svg>
             </a>
-          ))}
+
+            <a
+              href='#'
+              target='_blank'
+              class='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
+            >
+              <svg
+                class='h-5 w-5'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z' />
+              </svg>
+            </a>
+
+            <a
+              href='#'
+              target='_blank'
+              class='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
+            >
+              <svg
+                class='h-5 w-5'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z' />
+              </svg>
+            </a>
+
+            <a
+              href='#'
+              target='_blank'
+              class='text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600'
+            >
+              <svg
+                class='h-5 w-5'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='currentColor'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z' />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
