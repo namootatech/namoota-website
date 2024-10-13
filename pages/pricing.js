@@ -10,6 +10,8 @@ import ToolKit from '../components/ui/ToolKit';
 import Stats from '../components/ui/Stats';
 import Team from '../components/ui/Team';
 import { FaCircleCheck } from 'react-icons/fa6';
+import { pricing } from '../config';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -42,7 +44,7 @@ export default function Home() {
             </div>
           </div>
           <div class='mt-16 border-t border-t-gray-200 dark:border-t-gray-800 divide-y divide-gray-200 dark:divide-gray-800'>
-            {items.map((i) => (
+            {pricing.map((i) => (
               <div class='py-4 grid items-center md:grid-cols-3 lg:grid-cols-5 gap-6'>
                 <div class='md:col-span-2 lg:col-span-1'>
                   <h2 class='font-bold text-2xl text-gray-900 dark:text-gray-100'>
@@ -65,12 +67,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div class='flex md:justify-end md:items-center'>
-                  <a
-                    href='#'
+                  <Link
+                    href='/contact'
                     class='h-10 px-5 bg-sky-700 text-sky-100 dark:text-gray-300 rounded-lg bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 flex items-center outline-none'
                   >
                     Talk to us
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

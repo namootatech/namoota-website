@@ -5,30 +5,17 @@ import Brand from '../Brand';
 import NavLink from '../NavLink';
 
 const Navbar = () => {
-  const [state, setState] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { events } = useRouter();
-
-  const navigation = [
-    { title: 'Features', path: '/#features' },
-    { title: 'Our toolkit', path: '/#toolkit' },
-    { title: 'Testimonials', path: '/#testimonials' },
-    { title: 'Team', path: '/team' },
-  ];
 
   useEffect(() => {
     // Close the navbar menu when navigate
     const handleState = () => {
-      document.body.classList.remove('overflow-hidden');
-      setState(false);
+      setIsOpen(false);
     };
     events.on('routeChangeStart', () => handleState());
     events.on('hashChangeStart', () => handleState());
   }, []);
-
-  const handleNavMenu = () => {
-    setState(!state);
-    document.body.classList.toggle('overflow-hidden');
-  };
 
   return (
     <header class='flex items-center justify-between py-4  md:py-8'>
@@ -82,9 +69,54 @@ const Navbar = () => {
       >
         Contact Sales
       </Link>
+      <div
+        className={`${
+          isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full'
+        } md:hidden absolute border-b-sky-700 border-b-8 shadow-lg  border-b-solid top-10 mt-4 inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center`}
+      >
+        <div class='flex flex-col md:flex-row md:mx-6'>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/'
+          >
+            Home
+          </Link>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/#features'
+          >
+            Features
+          </Link>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/pricing'
+          >
+            Pricing
+          </Link>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/#team'
+          >
+            Our Team
+          </Link>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/#contact'
+          >
+            Contact
+          </Link>
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            href='/resources'
+          >
+            Resources
+          </Link>
+        </div>
+      </div>
 
       <button
         type='button'
+        onClick={() => setIsOpen(!isOpen)}
         class='inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-sky-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden'
       >
         <svg
