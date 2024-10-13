@@ -1,35 +1,53 @@
 import NavLink from '../NavLink';
 
 const Hero = () => (
-  <section>
-    <div className='border-t custom-screen py-28 text-gray-600'>
-      <div className='space-y-5 max-w-4xl mx-auto text-center'>
-        <h1 className='text-4xl text-gray-800 font-extrabold mx-auto sm:text-6xl'>
-          Transform your Business with Seamless Software Solutions
-        </h1>
-        <p className='max-w-xl mx-auto'>
-          We empower businesses by crafting bespoke software solutions that
-          transcend expectations. Namoota crafts innovative applications that
-          integrate perfectly, driving exceptional customer experiences.
+  <>
+    <section class='flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row'>
+      <div class='flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-12'>
+        <p class='mb-4 font-semibold text-sky-600 md:mb-3 md:text-lg xl:text-xl'>
+          Unlocking digital dreams!
         </p>
-        <div className='flex items-center justify-center gap-x-3 font-medium text-sm'>
-          <NavLink
-            href='/get-started'
-            className='text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 '
+
+        <h1 class='mb-4 text-4xl font-bold text-sky-800 sm:text-5xl md:mb-6 md:text-6xl'>
+          Empowering SMEs with Digital Solutions
+        </h1>
+
+        <p class='mb-4 leading-relaxed text-gray-500 md:mb-6 lg:w-4/5 xl:text-lg'>
+          At Namoota, we're passionate about bridging the digital divide for
+          small and medium enterprises (SMEs) in South Africa, our mission is to
+          help businesses succeed by introducing them to the limitless
+          possibilities of the digital world. With our bespoke software
+          solutions, digital marketing expertise, and business-focused tools, we
+          empower SMEs to grow, thrive, and reach new markets with confidence.
+        </p>
+
+        <div class='flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start'>
+          <a
+            href='#'
+            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
           >
-            Start building
-          </NavLink>
-          <NavLink
-            href='#cta'
-            className='text-gray-700 border hover:bg-gray-50'
-            scroll={false}
+            Start now
+          </a>
+
+          <a
+            href='#'
+            class='inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base'
           >
-            Learn more
-          </NavLink>
+            Take tour
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+
+      <div class='h-48 overflow-hidden rounded-lg bg-sky-500 shadow-lg lg:h-auto  xl:w-6/12'>
+        <img
+          src='/lonbg.png'
+          loading='lazy'
+          alt='Photo by Fakurian Design'
+          class='h-full w-full object-cover '
+        />
+      </div>
+    </section>
+  </>
 );
 
 export default Hero;
