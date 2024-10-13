@@ -57,10 +57,22 @@ const Navbar = () => {
           Pricing
         </Link>
         <Link
+          href='/#team'
+          class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
+        >
+          Our Team
+        </Link>
+        <Link
+          href='/contact'
+          class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
+        >
+          Contact
+        </Link>
+        <Link
           href='/'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
-          About
+          Resources
         </Link>
       </nav>
 

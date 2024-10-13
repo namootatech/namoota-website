@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import NavLink from '../NavLink';
 
 const Hero = () => (
@@ -22,19 +23,19 @@ const Hero = () => (
         </p>
 
         <div class='flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start'>
-          <a
-            href='#'
+          <Link
+            href='/pricing'
             class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
           >
             Get a quote
-          </a>
+          </Link>
 
-          <a
-            href='#'
+          <Link
+            href='/contact'
             class='inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base'
           >
             Book a call
-          </a>
+          </Link>
         </div>
       </div>
 

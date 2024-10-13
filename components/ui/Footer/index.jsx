@@ -143,6 +143,15 @@ const Footer = () => (
                   href='#'
                   class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
                 >
+                  Data Sim Cards
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='#'
+                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                >
                   Chat with us
                 </a>
               </div>
