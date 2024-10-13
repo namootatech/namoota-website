@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const CTA = () => {
   return (
-    <section class='relative pt-32 lg:pt-36 -mx-24 '>
+    <section class='relative pt-32 lg:pt-36 md:-mx-24 '>
       <div class='mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12'>
         <div class='absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block'>
           <span class='absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-sky-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden'></span>
@@ -90,7 +90,7 @@ const CTA = () => {
           </div>
         </div>
 
-        <div class='flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl'>
+        <div class='flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto md:max-w-3xl w-full'>
           <Image
             src={ctaImage}
             alt='Hero image'

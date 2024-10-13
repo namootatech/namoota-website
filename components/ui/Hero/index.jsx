@@ -26,19 +26,19 @@ const Hero = () => (
             href='#'
             class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
           >
-            Start now
+            Get a quote
           </a>
 
           <a
             href='#'
             class='inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base'
           >
-            Take tour
+            Book a call
           </a>
         </div>
       </div>
 
-      <div class='h-48 overflow-hidden rounded-lg bg-sky-500 shadow-lg lg:h-auto  xl:w-6/12'>
+      <div class='h-48 hidden md:flex overflow-hidden rounded-lg bg-sky-500 shadow-lg lg:h-auto  xl:w-6/12'>
         <img
           src='/lonbg.png'
           loading='lazy'

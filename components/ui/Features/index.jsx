@@ -64,7 +64,7 @@ const Features = () => {
   ];
 
   return (
-    <section class='py-10 -mx-24 '>
+    <section class='py-10 -mx-24 ' id='features'>
       <div class=' mx-auto  flex flex-col gap-14  '>
         {/* <div class='flex flex-col w-full text-elft'>
           <h2 className='text-5xl text-sky-800 font-black py-8'>

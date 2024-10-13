@@ -41,35 +41,35 @@ const Navbar = () => {
       </a>
 
       <nav class='hidden gap-12 lg:flex'>
-        <a href='#' class='text-lg font-semibold text-sky-500'>
+        <Link href='/' class='text-lg font-semibold text-sky-500'>
           Home
-        </a>
-        <a
-          href='#'
+        </Link>
+        <Link
+          href='/#features'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
           Features
-        </a>
-        <a
-          href='#'
+        </Link>
+        <Link
+          href='/pricing'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
           Pricing
-        </a>
-        <a
-          href='#'
+        </Link>
+        <Link
+          href='/'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
           About
-        </a>
+        </Link>
       </nav>
 
-      <a
-        href='#'
+      <Link
+        href='/contact'
         class='hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
       >
         Contact Sales
-      </a>
+      </Link>
 
       <button
         type='button'
