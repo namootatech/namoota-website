@@ -64,23 +64,162 @@ const Features = () => {
   ];
 
   return (
-    <SectionWrapper>
-      <div id='features' className='custom-screen text-gray-600'>
-        <ul className='grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3'>
-          {features.map((item, idx) => (
-            <li key={idx} className='space-y-3'>
-              <div className='w-12 h-12 border text-gray-600 rounded-full flex items-center justify-center'>
-                {item.icon}
+    <section class='py-10 -mx-24 '>
+      <div class=' mx-auto  flex flex-col gap-14  '>
+        {/* <div class='flex flex-col w-full text-elft'>
+          <h2 className='text-5xl text-sky-800 font-black py-8'>
+            Our Core Solutions
+          </h2>
+          <p class='block antialiased font-sans leading-relaxed text-sky-500 mb-4 !text-2xl font-bold lg:!text-3xl'>
+            Innovative Tools for Your Business Growth
+          </p>
+        </div> */}
+        <div class='flex gap-12 lg:items-center bg-sky-500 p-8 px-24 rounded-md'>
+          <div class='flex flex-1 flex-col gap-10'>
+            <h2 className='text-5xl text-sky-100 font-black py-8'>
+              Our Core Solutions
+            </h2>
+            <div class='gap-8 lg:gap-10 grid sm:grid-cols-2'>
+              <div class='space-y-4'>
+                <div class='p-2 w-full rounded-md flex bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-6 h-6'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
+                    />
+                  </svg>
+                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                    Custom Web & Mobile Apps
+                  </h2>
+                </div>
+
+                <p class='text-gray-100 dark:text-gray-300'>
+                  We build dynamic web applications and custom mobile apps for
+                  Android and iOS to meet your business needs and enhance user
+                  experience.
+                </p>
               </div>
-              <h4 className='text-lg text-gray-800 font-semibold'>
-                {item.title}
-              </h4>
-              <p>{item.desc}</p>
-            </li>
-          ))}
-        </ul>
+
+              <div class='space-y-4'>
+                <div class='w-full p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex '>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-6 h-6'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
+                    />
+                  </svg>
+                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                    Digital Marketing
+                  </h2>
+                </div>
+
+                <p class='text-gray-100 dark:text-gray-300'>
+                  Grow your online presence with targeted digital marketing and
+                  expert social media management, designed to engage customers
+                  and boost your brand.
+                </p>
+              </div>
+
+              <div class='space-y-4'>
+                <div class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-6 h-6'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
+                    />
+                  </svg>
+                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                    Stores & Bookings Systems
+                  </h2>
+                </div>
+
+                <p class='text-gray-100 dark:text-gray-300'>
+                  We create secure e-commerce platforms and streamlined bookings
+                  management systems that drive sales and simplify appointment
+                  handling.
+                </p>
+              </div>
+
+              <div class='space-y-4'>
+                <span class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex w-max'>
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    stroke-width='1.5'
+                    stroke='currentColor'
+                    class='w-6 h-6'
+                  >
+                    <path
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
+                    />
+                  </svg>
+                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                    Quotation & Invoicing Solutions
+                  </h2>
+                </span>
+
+                <p class='text-gray-100 dark:text-gray-300'>
+                  Automate your business processes with custom systems for
+                  efficient quotation creation, invoicing, and financial
+                  tracking.
+                </p>
+              </div>
+            </div>
+            <a
+              href='#'
+              class='bg-white text-sky-600 px-5 h-12 rounded-md w-max flex items-center gap-x-3'
+            >
+              Sign up now
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                class='w-5 h-5'
+              >
+                <path
+                  fill-rule='evenodd'
+                  d='M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z'
+                  clip-rule='evenodd'
+                />
+              </svg>
+            </a>
+          </div>
+          <img
+            src='/Book.png'
+            width='500'
+            alt='img cover about'
+            class=' hidden md:flex md:w-1/2 h-full object-coverobject-center rounded-md'
+          />
+        </div>
       </div>
-    </SectionWrapper>
+    </section>
   );
 };
 
