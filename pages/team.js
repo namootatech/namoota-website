@@ -4,11 +4,7 @@ import LogoGrid from '../components/ui/LogoGrid';
 import FooterCTA from '../components/ui/FooterCTA';
 import Head from 'next/head';
 import GradientWrapper from '../components/GradientWrapper';
-// import aya from '../public/team/aya.jpeg'
-// import zweli from '../public/team/zweliMthethwa.jpeg'
-// import kaatnanret from '../public/team/dyelpoKaatNanretSenshak.jpeg'
-// import siya from '../public/team/siyamthandaNomgqokwana.jpeg'
-// import matthew from '../public/team/matthewFourie.jpeg'
+import { pricing } from '../config';
 
 export default function team() {
   return (
@@ -36,7 +32,7 @@ export default function team() {
 
       <GradientWrapper>
         <div className='flex flex-wrap justify-center gap-6 p-10'>
-          {data.map((member) => {
+          {pricing.map((member) => {
             return (
               <div
                 key={member.id}

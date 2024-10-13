@@ -1,50 +1,4 @@
-const data = [
-  {
-    id: 1,
-    name: 'Zweli Mthethwa',
-    title: 'Co-founder/ Software Engineer',
-    imageUrl: '/team/zweli-removebg.png',
-    description:
-      'Zweli designs high-performance solutions and mentors the team, driving the technical vision of our projects.',
-    color: '#219ebc',
-  },
-  {
-    id: 2,
-    name: 'Ayabonga Qwabi',
-    title: 'Co-founder/ Software Engineer',
-    imageUrl: '/team/aya-removebg.png',
-    description:
-      'Aya develops efficient and scalable software solutions, contributing to the innovation and functionality of our products.',
-    color: '#219ebc',
-  },
-  {
-    id: 3,
-    name: 'Siyamthanda Nomgqokwana',
-    title: 'IT Infrastructure / Cloud Architect',
-    imageUrl: 'team/siya-removebg.png',
-    description:
-      'Siya architects and implements robust cloud solutions, shaping the technological foundations of our projects.',
-    color: '#219ebc',
-  },
-  {
-    id: 4,
-    name: 'Matthew Fourie',
-    title: 'Software Engineer',
-    imageUrl: 'team/matt-removebg.png',
-    description:
-      'Matthew supports the development team by writing clean and maintainable code, assisting in the creation of innovative software solutions that drive project success.',
-    color: '#219ebc',
-  },
-  {
-    id: 5,
-    name: 'Dyelpo KaatNanret Senshak',
-    title: 'Social Media Specialist',
-    imageUrl: 'team/kaatnanret-removebg.png',
-    description:
-      'KaatNanret manages social media pages and creates content to reach target audiences and drive conversions.',
-    color: 'black',
-  },
-];
+import { team } from '../../../config';
 
 const Team = () => (
   <section class='bg-white dark:bg-gray-900' id='team'>
@@ -60,7 +14,7 @@ const Team = () => (
       </p>
 
       <div class='grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-2'>
-        {data.map((p) => (
+        {team.map((p) => (
           <div class='px-12 py-8 transition-colors duration-300 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-sky-600 dark:border-gray-700 dark:hover:border-transparent'>
             <div class='flex flex-col sm:-mx-4 sm:flex-row'>
               <img
