@@ -18,15 +18,15 @@ const CTA = () => {
         >
           <h1
             class='text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
-        font-bold text-gray-900 dark:text-white'
+                    font-bold text-gray-900 dark:text-black'
           >
             Create Successful{' '}
             <span class='text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-sky-600'>
-              Business Models
+              Business Models{' '}
             </span>
-            with Our IT Solutions
+             with Our IT Solutions
           </h1>
-          <p class='mt-8 text-gray-700 dark:text-gray-300'>
+          <p class='mt-8 text-gray-700 dark:text-gray-700'>
             Namoota, a software development company, helps to digitize
             businesses by focusing on client’s business challenges and needs. We
             value close transparent cooperation and encourage our clients to

@@ -3,7 +3,7 @@ import { team } from '../../../config';
 const Team = () => (
   <section class='bg-white dark:bg-gray-900' id='team'>
     <div class='container px-6 py-10 mx-auto'>
-      <h1 class='mb-8 text-3xl font-bold text-black sm:text-4xl md:mb-12 md:text-5xl'>
+      <h1 class='mb-8 text-3xl font-bold text-white sm:text-4xl md:mb-12 md:text-5xl'>
         Meet <span class='text-sky-500'>Our Team</span>
       </h1>
 
