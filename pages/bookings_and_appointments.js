@@ -10,14 +10,22 @@ const BookingsAppointmets = () => {
     <title>Bookings and Appointments Systems | Namoota</title>
     </Head>
 
-    <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <section class="flex flex-col items-center py-56">
-                <div class="flex max-w-xl flex-col items-center text-center">
-                    <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">Maximize efficiency and improve customer satisfaction with a system tailored to your needs</p>
+    <div className="relative dark:bg-center bg-cover pb-6 sm:pb-8 lg:pb-12 rounded-3xl overflow-hidden mt-32 mb-32" style={{backgroundImage: "url('/image1.jpg')"}}>
+        {/* Blurred Overlay */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-sm" style={{backgroundImage: "url('/image1.jpg')"}}></div>
+        
+        {/* Content Layer */}
+        <div className="relative z-10 mx-auto max-w-screen-2xl px-4 md:px-8">
+            <section className="flex flex-col items-center md:py-56 py-32">
+                <div className="flex max-w-xl flex-col items-center text-center">
+                    <p className="mb-4 font-semibold text-sky-500 md:mb-6 md:text-lg xl:text-xl">
+                        Maximize efficiency and improve customer satisfaction with a system tailored to your needs
+                    </p>
                 </div>
                 <div className="flex flex-col items-center">
-                    <h1 className="mb-8 text-3xl font-bold text-sky-800 sm:text-5xl md:mb-12 md:text-5xl">Streamlined Bookings & Appointments Systems</h1>
+                    <h1 className="mb-8 text-xl font-bold text-white sm:text-2xl md:mb-12 md:text-3xl">
+                        Streamlined Bookings & Appointments Systems
+                    </h1>
                     <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
                         <Link href="/contact" className="inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base">
                             Get Started
@@ -28,12 +36,13 @@ const BookingsAppointmets = () => {
         </div>
     </div>
 
+
     <GradientWrapper>
-        <section className="bg-white dark:bg-gray-900 rounded-3xl">
+        <section className="bg-white dark:bg-gray-50 rounded-3xl">
             <div className="container px-6 py-10 mx-auto">
-                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">What is a Bookings & Appointments System?</h1>
-                <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">How It Benefits Your Business</p>
-                <p className="mb-8 leading-relaxed text-white md:mb-5 lg:w-4/5 xl:text-lg">
+                <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-sky-800">What is a Bookings & Appointments System?</h1>
+                <p class="mb-4 font-semibold text-sky-600 md:mb-6 md:text-lg xl:text-xl">How It Benefits Your Business</p>
+                <p className="mb-8 leading-relaxed md:mb-5 lg:w-4/5 xl:text-lg text-gray-500">
                     A Bookings & Appointments system is an online platform that enables businesses to manage appointments, bookings, and scheduling. This system can be 
                     customized to meet the unique needs of your business, allowing for seamless interactions between you and your customers.
                 </p>
@@ -51,8 +60,8 @@ const BookingsAppointmets = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                 </svg>
                             </span>
-                            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">Increased Efficiency:</h1>
-                            <p className="text-gray-500 dark:text-gray-300">
+                            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-sky-800">Increased Efficiency:</h1>
+                            <p className="text-gray-500 dark:text-gray-500">
                                 Automate scheduling and reduce time spent on manual bookings.
                             </p>
                         </div>
@@ -64,8 +73,8 @@ const BookingsAppointmets = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
                                 </svg>
                             </span>
-                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Better Communication:</h1>
-                            <p class="text-gray-500 dark:text-gray-300">
+                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-sky-800">Better Communication:</h1>
+                            <p class="text-gray-500 dark:text-gray-500">
                                 Send automated reminders to customers, minimizing no-shows.
                             </p>
                         </div>
@@ -77,9 +86,9 @@ const BookingsAppointmets = () => {
                                 </svg>
                             </span>
 
-                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">24/7 Access:</h1>
+                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-sky-800">24/7 Access:</h1>
 
-                            <p class="text-gray-500 dark:text-gray-300">
+                            <p class="text-gray-500 dark:text-gray-500">
                                 Allow customers to book anytime, providing flexibility and convenience.
                             </p>
                         </div>
@@ -91,9 +100,9 @@ const BookingsAppointmets = () => {
                                 </svg>
                             </span>
 
-                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Streamlined Processes:</h1>
+                            <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-sky-800">Streamlined Processes:</h1>
 
-                            <p class="text-gray-500 dark:text-gray-300">
+                            <p class="text-gray-500 dark:text-gray-500">
                                 Easily manage appointments, allocate resources, and avoid overbooking.
                             </p>
                         </div>
