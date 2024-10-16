@@ -36,7 +36,7 @@ const Footer = () => (
 
               <div>
                 <a
-                  href='/quoting-invoicing'
+                  href='/quoting_invoicing'
                   class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
                 >
                   Quoting & Invoicing
@@ -45,7 +45,7 @@ const Footer = () => (
 
               <div>
                 <a
-                  href='#'
+                  href='/bookings_and_appointments'
                   class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
                 >
                   Bookings & Appointments
