@@ -9,7 +9,7 @@ const BookingsAppointmets = () => {
     <meta name='robots' content='index' />
     <title>Bookings and Appointments Systems | Namoota</title>
     </Head>
-
+s
     <div className="relative dark:bg-center bg-cover pb-6 sm:pb-8 lg:pb-12 rounded-3xl overflow-hidden mt-32 mb-32" style={{backgroundImage: "url('/image1.jpg')"}}>
         {/* Blurred Overlay */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-sm" style={{backgroundImage: "url('/image1.jpg')"}}></div>
@@ -35,7 +35,6 @@ const BookingsAppointmets = () => {
             </section>
         </div>
     </div>
-
 
     <GradientWrapper>
         <section className="bg-white dark:bg-gray-50 rounded-3xl">

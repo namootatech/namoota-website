@@ -27,7 +27,7 @@ const Footer = () => (
             <nav class='flex flex-col gap-4'>
               <div>
                 <a
-                  href='#'
+                  href='/systems_overview'
                   class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
                 >
                   Overview
