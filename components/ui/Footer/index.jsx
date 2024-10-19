@@ -14,7 +14,7 @@ const Footer = () => (
               </a>
             </div>
             <p class='text-gray-500 sm:pr-8'>
-              We are a small but feisty team, situated in KZN & Eastern Cape.
+              We are a small but feisty team, situated in Gauteng & Eastern Cape.
               Our passion lies in bridging the digital divide in these areas
               with custom digital solutions for SMME's
             </p>
