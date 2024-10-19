@@ -63,7 +63,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <div class='font-bold text-4xl text-gray-900 dark:text-white'>
-                    <span>{i.startingPrice}</span>
+                    <span>{`From ${i.startingPrice}`}</span>
                   </div>
                 </div>
                 <div class='flex md:justify-end md:items-center'>
