@@ -287,41 +287,76 @@ export const networkPackages = [
     title: 'Vodacom Fixed LTE - Uncapped',
     description:
       'Vodacom Fixed LTE Uncapped offers unlimited data, providing consistent high-speed internet without data restrictions. This package is ideal for households and businesses requiring extensive online usage without worrying about data limits.',
+    sellingPoints: [
+      'Unlimited data for uninterrupted browsing and streaming.',
+      'No throttling or reduced speeds, even during peak times.',
+      'Ideal for multiple users and high-demand applications.',
+    ],
   },
   {
     id: 'capped_vodacom_fixed_lte',
     title: 'Vodacom Fixed LTE - Capped',
     description:
       'Vodacom Fixed LTE Capped provides a fixed amount of data per month, ensuring reliable internet access with various data plan sizes to suit different usage needs. Ideal for users with predictable data consumption patterns.',
+    sellingPoints: [
+      'Affordable plans with clear data limits.',
+      'Great for users who monitor and manage their data usage.',
+      'Reliable performance for everyday tasks like browsing and email.',
+    ],
   },
   {
     id: 'uncapped_vodacom_fixed_5g',
     title: 'Vodacom Fixed 5G - Uncapped',
     description:
       'Vodacom Fixed 5G Uncapped delivers high-speed 5G connectivity with unlimited data for seamless browsing, streaming, and gaming. This package is perfect for data-intensive users who require the fastest available internet.',
+    sellingPoints: [
+      'Experience the speed of 5G with unlimited data.',
+      'Perfect for gaming, streaming, and video conferencing.',
+      'Future-proof your internet with the latest technology.',
+    ],
   },
   {
     id: 'capped_telkom_fixed_lte',
     title: 'Telkom Fixed LTE - Capped',
     description:
       "Telkom Fixed LTE Capped provides reliable LTE connectivity with a defined data cap. It's suitable for users who require consistent internet access for basic browsing and streaming without the need for unlimited data.",
+    sellingPoints: [
+      'Flexible data options to fit various budgets.',
+      'Ideal for casual users and small households.',
+      'Reliable internet access with fixed monthly costs.',
+    ],
   },
   {
     id: 'uncapped_mtn_fixed_5g',
     title: 'MTN Fixed 5G - Uncapped',
     description:
       'MTN Fixed 5G Uncapped provides high-speed, next-gen 5G internet with unlimited data. Designed for homes and businesses, it offers powerful connectivity for heavy online activities such as gaming, streaming, and remote work.',
+    sellingPoints: [
+      'Unlimited high-speed data for all your online activities.',
+      'Experience ultra-fast speeds with low latency.',
+      'Perfect for smart homes and remote working setups.',
+    ],
   },
   {
     id: 'mtn_3g_lte',
     title: 'MTN 3G/LTE - Capped',
     description:
       'MTN 3G/LTE Capped offers flexible and reliable mobile data plans for light to moderate usage. Ideal for users who need dependable internet on the go or in areas where fixed-line connections are unavailable.',
+    sellingPoints: [
+      'Affordable mobile data options for everyday use.',
+      'Access the internet wherever you are with reliable coverage.',
+      'Great for social media, browsing, and light streaming.',
+    ],
   },
   {
     id: 'capped_mtn_fixed_lte',
     title: 'MTN Fixed LTE - Capped',
     description:
       'MTN Fixed LTE Capped provides a balance of speed and data control, offering a set amount of data each month. This package is perfect for homes and small offices that need steady internet access with predictable data consumption.',
+    sellingPoints: [
+      'Controlled data usage with fixed monthly pricing.',
+      'Perfect for light users and small families.',
+      'Reliable performance for browsing and streaming.',
+    ],
   },
 ];
