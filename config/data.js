@@ -104,7 +104,7 @@ export const dataPackages = {
   capped_telkom_fixed_lte: [
     {
       data_size_night_gb: 22.5,
-      data_size_day_gb: 22.5,
+      data_size_gb: 22.5,
       stock_price: 179,
       selling_price: 199,
       terms: 'Unknown',
@@ -113,7 +113,7 @@ export const dataPackages = {
     },
     {
       data_size_night_gb: 40,
-      data_size_day_gb: 40,
+      data_size_gb: 40,
       stock_price: 225,
       selling_price: 245,
       terms: 'Unknown',
@@ -122,7 +122,7 @@ export const dataPackages = {
     },
     {
       data_size_night_gb: 80,
-      data_size_day_gb: 80,
+      data_size_gb: 80,
       stock_price: 255,
       selling_price: 275,
       terms: 'Unknown',
@@ -131,7 +131,7 @@ export const dataPackages = {
     },
     {
       data_size_night_gb: 120,
-      data_size_day_gb: 120,
+      data_size_gb: 120,
       stock_price: 310,
       selling_price: 330,
       terms: 'Unknown',
@@ -140,7 +140,7 @@ export const dataPackages = {
     },
     {
       data_size_night_gb: 180,
-      data_size_day_gb: 180,
+      data_size_gb: 180,
       stock_price: 410,
       selling_price: 430,
       terms: 'Unknown',
@@ -149,7 +149,7 @@ export const dataPackages = {
     },
     {
       data_size_night_gb: 2000,
-      data_size_day_gb: 2000,
+      data_size_gb: 2000,
       stock_price: 775,
       selling_price: 795,
       terms: 'Unknown',
