@@ -344,7 +344,7 @@ export default function Home() {
                   ></path>
                 </svg>
                 <a href='javascript:void(0)' class='text-sky-700 text-sm ml-4'>
-                  +27 +27 68 713 9987
+                  +27 68 713 9987
                 </a>
               </li>
               <li class='flex items-center'>
