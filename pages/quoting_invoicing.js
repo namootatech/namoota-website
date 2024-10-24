@@ -39,7 +39,7 @@ const QuotingInvoicing = () => {
         <div className="py-16 sm:py-24">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <p className="text-center mb-4 font-semibold text-sky-800 md:mb-6 text-2xl sm:text-3xl md:text-3xl xl:text-4xl">
-                    How Our Invoicing System Helps <span class="underline decoration-sky-600">Your</span> Business
+                    How Our Invoicing System Can Help <span class="underline decoration-sky-600">Your</span> Business
                 </p>
                 <div class="container px-6 py-10 mx-auto">
                     <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
