@@ -35,7 +35,7 @@ export default function inventory_management() {
         <div className="w-full lg:w-[75%] bg-gray-900 flex flex-col lg:flex-row justify-end rounded-b-lg lg:rounded-r-lg lg:rounded-l-none">
             {/* Image - will be full width on mobile, positioned left on desktop */}
             <div className='relative lg:absolute lg:top-36 lg:left-0 w-full lg:w-[40%]'>
-                <img src="/inventory.jpg"  alt="bookings_and_appointments" className='w-full h-64 lg:h-auto object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-t-none'/>
+                <img src="/inventory.jpg"  alt="bookings_and_appointments" className='w-full h-64 lg:h-auto object-cover rounded-t-lg lg:rounded-l-lg lg:rounded-b-none'/>
             </div>
             
             {/* Content */}
