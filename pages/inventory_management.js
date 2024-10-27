@@ -11,26 +11,6 @@ export default function inventory_management() {
         <title>Inventory management Systems | Namoota</title>
     </Head>
     {/* Hero */}
-
-    {/* <section className='relative flex flex-col md:flex-row justify-end'>
-        <div className="w-full md:w-[75%] bg-gray-900 flex flex-col md:flex-row rounded-b-lg md:rounded-none justify-end">
-            Image - will be full width on mobile, positioned left on desktop
-            <div className='relative md:absolute md:top-24 md:left-0 lg:top-4 lg:left-0 w-full md:w-[40%] rounded-t-lg md:rounded-none'>
-                <img src="/inventory.jpg" alt="bookings_and_appointments" className='w-full'/>
-            </div>
-            Content
-            <div className='flex flex-col items-center md:items-end w-full'>
-                <div className="w-full md:w-[75%] px-6 py-8 md:pl-2 md:pr-10 lg:pr-20 md:pt-16 md:pb-10 lg:pb-20">
-                    <h1 className="sm:text-2xl lg:text-3xl font-bold mb-4 text-white">Empower Your Business with Advanced Inventory Management</h1>
-                    <p className="sm:text-base lg:text-lg mt-5 mb-8 text-white">Stay on top of your stock, reduce costs, and enhance customer satisfaction with a customized Inventory Management System. Our solutions streamline inventory processes, making it easy to manage your inventory and stay up to date.</p>
-                    <Link href="/contact" className="w-full md:w-auto inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base">
-                        Get Started
-                    </Link>
-                </div>
-            </div>
-        </div>
-    </section> */}
-
     <section className='relative flex flex-col lg:flex-row justify-end py-10 lg:py-28'>
         <div className="w-full lg:w-[75%] bg-gray-900 flex flex-col lg:flex-row justify-end rounded-b-lg lg:rounded-r-lg lg:rounded-l-none">
             {/* Image - will be full width on mobile, positioned left on desktop */}
@@ -50,9 +30,6 @@ export default function inventory_management() {
             </div>
         </div>
     </section>
-
-
-    
     <GradientWrapper>    
     <section class="bg-white">
         <div class="container px-6 py-10 mx-auto">
@@ -100,7 +77,6 @@ export default function inventory_management() {
         </div>
         </div>
     </section>
-
     </GradientWrapper>
     </>
   )
