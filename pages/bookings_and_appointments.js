@@ -10,26 +10,26 @@ const BookingsAppointmets = () => {
     <title>Bookings and Appointments Systems | Namoota</title>
     </Head>
 
-    <div className="relative dark:bg-center bg-cover pb-6 sm:pb-8 lg:pb-12 rounded-3xl overflow-hidden mt-32 mb-32" style={{backgroundImage: "url('/image1.jpg')"}}>
+    <div className="relative dark:bg-center bg-cover pb-6 sm:pb-8 lg:pb-10 rounded-3xl overflow-hidden mt-24 mb-40" style={{backgroundImage: "url('/image1.jpg')"}}>
         {/* Blurred Overlay */}
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat filter blur-sm" style={{backgroundImage: "url('/booking1.jpeg')", backgroundColor: 'rgba(0, 0, 0, 0.6)', backgroundBlendMode: 'overlay'}}></div>
         {/* Content Layer */}
         <div className="relative z-10 mx-auto max-w-screen-2xl px-4 md:px-8">
-            <section className="flex flex-col items-center md:py-56 py-32">
+            <section className="flex flex-col items-center py-24 md:py-36">
                 <div className="flex max-w-xl flex-col items-center text-center">
                     <p className="mb-4 font-semibold text-sky-500 md:mb-6 md:text-lg xl:text-xl">
                         Maximize efficiency and improve customer satisfaction with a system tailored to your needs
                     </p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex justify-center pl-10 sm:pl-0">
                     <h1 className="mb-8 text-xl font-bold text-white sm:text-2xl md:mb-12 md:text-3xl">
                         Streamlined Bookings & Appointments Systems
                     </h1>
-                    <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-                        <Link href="/contact" className="inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base">
-                            Get Started
-                        </Link>
-                    </div>
+                </div>
+                <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
+                    <Link href="/contact" className="inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base">
+                        Get Started
+                    </Link>
                 </div>
             </section>
         </div>
