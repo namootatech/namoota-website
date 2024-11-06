@@ -62,7 +62,7 @@ const Footer = () => (
               </div>
               <div>
                 <a
-                  href='#'
+                  href='/social_features'
                   class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
                 >
                   Social features System

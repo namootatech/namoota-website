@@ -75,7 +75,7 @@ const OverviewSystems = () => {
                     <h1 class="mt-1 text-xl font-semibold">Social Features System</h1>
                     <p class="mt-2">Enhance communication and engagement with a robust social features system, making it easier to connect with your users and build a loyal community.</p>
                     <div className="xs:mt-2 sm:mt-3">
-                        <Link href="/social_media" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <Link href="/social_features" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                             Learn more
                         </Link>
                     </div>
