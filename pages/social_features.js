@@ -58,24 +58,23 @@ export default function inventory_management() {
             <div className="grid xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 gap-1 mt-8 md:mt-0">
                 {/* Add images and color blocks in a grid */}
                 <div className="bg-blue-500 aspect-square"></div>
+                <img src="typing.jpg" alt="Event 1" className="object-cover aspect-square" />
+                <img src="look2.jpg" alt="Event 1" className="object-cover aspect-square" />
                 <div className="bg-gray-900 aspect-square"></div>
-                <img src="image1.jpg" alt="Event 1" className="object-cover aspect-square" />
-                
-                <img src="screen1.jpg" alt="Event 2" className="object-cover aspect-square" />
-                <div className="bg-gray-300 aspect-square"></div>
-                <div className="bg-blue-500 aspect-square"></div>
-                
-                <div className="bg-gray-900 aspect-square"></div>
-                <img src="image1.jpg" alt="Event 3" className="object-cover aspect-square" />
-                <img src="screen1.jpg" alt="Event 4" className="object-cover aspect-square" />
-                
-                <img src="image1.jpg" alt="Event 5" className="object-cover aspect-square" />
-                <div className="bg-gray-300 aspect-square"></div>
-                <img src="screen1.jpg" alt="Event 6" className="object-cover aspect-square" />
+                <img src="colourful_phone.jpg" alt="Event 2" className="object-cover aspect-square" />
 
-                <div className="bg-blue-500 aspect-square hidden lg:block"></div>
-                <div className="bg-gray-900 aspect-square hidden lg:block"></div>
-                <img src="image1.jpg" alt="Event 1" className="object-cover aspect-square hidden lg:block" />
+                <img src="Book.png" alt="Event 1" className="object-cover aspect-square" />
+                <img src="phone.jpg" alt="Event 1" className="object-cover aspect-square" />
+                <div className="bg-blue-500 aspect-square"></div>
+                <img src="party.jpg" alt="Event 2" className="object-cover aspect-square" />
+                <div className="bg-gray-300 aspect-square"></div>
+
+                <div className="bg-gray-900 aspect-square"></div>
+                <div className="bg-blue-500 aspect-square"></div>
+                <img src="developer-image.jpeg" alt="Event 1" className="object-cover aspect-square sm:hidden lg:block" />
+                <div className="bg-gray-300 aspect-square sm:hidden lg:block"></div>
+                <img src="hashtag.jpg" alt="Event 1" className="object-cover aspect-square sm:hidden lg:block" />
+                
             </div>
         </div>
     </section>
