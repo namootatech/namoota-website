@@ -1,4 +1,9 @@
-import { FaBullhorn, FaRegHandshake, FaChartLine } from 'react-icons/fa';
+import {
+  FaBullhorn,
+  FaRegHandshake,
+  FaCheckCircle,
+  FaChartLine,
+} from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function Advertise() {

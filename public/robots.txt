@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://namoota.co.za
+
+# Sitemaps
+Sitemap: https://namoota.co.za/sitemap.xml
