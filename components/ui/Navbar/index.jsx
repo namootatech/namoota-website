@@ -35,7 +35,7 @@ const Navbar = () => {
           href='/#features'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
-          Features
+          Services
         </Link>
         <Link
           href='/pricing'
@@ -85,7 +85,7 @@ const Navbar = () => {
             class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/#features'
           >
-            Features
+            Services
           </Link>
           <Link
             class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'

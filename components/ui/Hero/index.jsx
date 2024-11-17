@@ -25,25 +25,25 @@ const Hero = () => (
 
         <div class='flex justify-between  w-full mb-4 rounded-lg border-2 border-sky-500 overflow-hidden md:mb-3'>
           <Link
-            href='/get-a-quote'
+            href='/get-a-website'
             class='px-2 text-center py-2 w-1/4 font-semibold text-sky-500 hover:bg-sky-100 text-lg'
           >
             Get a website
           </Link>
           <Link
-            href='/get-a-quote'
+            href='/build-an-app'
             class='px-2 text-center py-2  w-1/4 font-semibold text-sky-500 border-l border-sky-500 hover:bg-sky-100 text-lg'
           >
             Build an app
           </Link>
           <Link
-            href='/get-a-quote'
+            href='/sell-online'
             class='px-2 text-center py-2  w-1/4 font-semibold text-sky-500 border-l border-sky-500 hover:bg-sky-100 text-lg'
           >
             Sell Online
           </Link>
           <Link
-            href='/get-a-quote'
+            href='/advertise'
             class='px-2 text-center py-2  w-1/4 font-semibold text-sky-500 border-l border-sky-500 hover:bg-sky-100 text-lg'
           >
             Advertise
