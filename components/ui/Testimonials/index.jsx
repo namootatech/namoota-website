@@ -52,7 +52,7 @@ const Testimonials = () => {
                 </div>
 
                 <div>
-                  <div class='text-center text-xl font-bold text-indigo-500 sm:text-left'>
+                  <div class='text-center text-xl font-bold text-sky-500 sm:text-left'>
                     {t.name}
                   </div>
                   <p class='text-center text-lg text-gray-500 '>{t.title}</p>

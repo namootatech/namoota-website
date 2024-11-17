@@ -14,9 +14,9 @@ const Footer = () => (
               </a>
             </div>
             <p class='text-gray-500 sm:pr-8'>
-              We are a small but feisty team, situated in Gauteng & Eastern Cape.
-              Our passion lies in bridging the digital divide in these areas
-              with custom digital solutions for SMME's
+              We are a small but feisty team, situated in Gauteng & Eastern
+              Cape. Our passion lies in bridging the digital divide in these
+              areas with custom digital solutions for SMME's
             </p>
           </div>
 
@@ -28,7 +28,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Overview
                 </a>
@@ -37,7 +37,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Quoting & Invoicing
                 </a>
@@ -46,7 +46,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Bookings & Appointments
                 </a>
@@ -55,7 +55,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Inventory Management
                 </a>
@@ -63,7 +63,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Social features System
                 </a>
@@ -80,7 +80,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Android App
                 </a>
@@ -89,7 +89,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Progressive Web App
                 </a>
@@ -98,7 +98,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   iOs App
                 </a>
@@ -106,7 +106,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Desktop Apps
                 </a>
@@ -123,7 +123,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Social media management
                 </a>
@@ -132,7 +132,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Digital Marketing
                 </a>
@@ -141,7 +141,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Data Sim Cards
                 </a>
@@ -150,7 +150,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Chat with us
                 </a>
@@ -159,7 +159,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   FAQs
                 </a>
@@ -176,7 +176,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Terms of Service
                 </a>
@@ -185,7 +185,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Privacy Policy
                 </a>
@@ -194,7 +194,7 @@ const Footer = () => (
               <div>
                 <a
                   href='#'
-                  class='text-gray-500 transition duration-100 hover:text-indigo-500 active:text-indigo-600'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Cookie settings
                 </a>

@@ -429,7 +429,7 @@ const PreOrderForm = () => {
             </div>
           </div>
         </div>
-        <button class='mx-auto sm:w-fit w-full px-7 py-3 bg-indigo-600 hover:bg-indigo-700 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex'>
+        <button class='mx-auto sm:w-fit w-full px-7 py-3 bg-sky-600 hover:bg-sky-700 transition-all duration-700 ease-in-out rounded-xl shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex'>
           <span class='px-2 text-center text-white text-lg font-semibold leading-8'>
             Order Now
           </span>

@@ -81,7 +81,7 @@ const Features = () => {
             </h2>
             <div class='gap-8 lg:gap-10 grid sm:grid-cols-2'>
               <div class='space-y-4'>
-                <div class='p-2 w-full rounded-md flex bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400'>
+                <div class='p-2 w-full rounded-md flex bg-sky-50 dark:bg-sky-900 text-sky-500 dark:text-sky-400'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -96,7 +96,7 @@ const Features = () => {
                       d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
                     />
                   </svg>
-                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                  <h2 class='font-bold text-sky-500 dark:text-white text-sm'>
                     Custom Web & Mobile Apps
                   </h2>
                 </div>
@@ -109,7 +109,7 @@ const Features = () => {
               </div>
 
               <div class='space-y-4'>
-                <div class='w-full p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex '>
+                <div class='w-full p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-500 dark:text-sky-400 flex '>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -124,7 +124,7 @@ const Features = () => {
                       d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
                     />
                   </svg>
-                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                  <h2 class='font-bold text-sky-500 dark:text-white text-sm'>
                     Digital Marketing
                   </h2>
                 </div>
@@ -137,7 +137,7 @@ const Features = () => {
               </div>
 
               <div class='space-y-4'>
-                <div class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex'>
+                <div class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-500 dark:text-sky-400 flex'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -152,7 +152,7 @@ const Features = () => {
                       d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
                     />
                   </svg>
-                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                  <h2 class='font-bold text-sky-500 dark:text-white text-sm'>
                     Stores & Bookings Systems
                   </h2>
                 </div>
@@ -165,7 +165,7 @@ const Features = () => {
               </div>
 
               <div class='space-y-4'>
-                <span class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-600 dark:text-sky-400 flex w-max'>
+                <span class='p-2 rounded-md bg-sky-50 dark:bg-sky-900 text-sky-500 dark:text-sky-400 flex w-max'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     fill='none'
@@ -180,7 +180,7 @@ const Features = () => {
                       d='M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z'
                     />
                   </svg>
-                  <h2 class='font-bold text-sky-600 dark:text-white text-sm'>
+                  <h2 class='font-bold text-sky-500 dark:text-white text-sm'>
                     Quotation & Invoicing Solutions
                   </h2>
                 </span>
@@ -194,7 +194,7 @@ const Features = () => {
             </div>
             <a
               href='#'
-              class='bg-white text-sky-600 px-5 h-12 rounded-md w-max flex items-center gap-x-3'
+              class='bg-white text-sky-500 px-5 h-12 rounded-md w-max flex items-center gap-x-3'
             >
               Sign up now
               <svg

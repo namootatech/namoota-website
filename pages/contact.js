@@ -27,7 +27,7 @@ const CTAContent = ({ hint, title, link1, link2 }) => (
         <div class='flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center'>
           <a
             href={link1.link}
-            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-sky-700 outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
+            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-sky-700 outline-none ring-sky-300 transition duration-100 hover:bg-sky-500 focus-visible:ring active:bg-sky-700 md:text-base'
           >
             {link1.text}
           </a>
@@ -392,7 +392,7 @@ export default function Home() {
             </ul>
 
             <ul class='flex mt-12 space-x-4'>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -408,7 +408,7 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -424,7 +424,7 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -475,9 +475,9 @@ export default function Home() {
                 onClick={() => setSelected('website-or-landing-page')}
                 class={`${
                   selected === 'website-or-landing-page'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 Website / Landing Page
               </button>
@@ -486,9 +486,9 @@ export default function Home() {
                 onClick={() => setSelected('app-or-system-dev')}
                 class={`${
                   selected === 'app-or-system-dev'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 App / Custom System
               </button>
@@ -497,9 +497,9 @@ export default function Home() {
                 onClick={() => setSelected('social-media-digital-marketing')}
                 class={`${
                   selected === 'social-media-digital-marketing'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 Social / Digital Marketing
               </button>
@@ -511,40 +511,40 @@ export default function Home() {
                 placeholder='Name'
                 name='name'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='email'
                 placeholder='Email'
                 name='email'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='tel'
                 placeholder='Cellphone number'
                 name='cellphone'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='text'
                 name='subject'
                 onChange={handleChange}
                 placeholder='Subject'
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <textarea
                 placeholder='Message'
                 rows='6'
                 name='message'
                 onChange={handleChange}
-                class='w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-blue-500'
+                class='w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-sky-500'
               ></textarea>
               <button
                 type='button'
                 onClick={sendMessage}
-                class='text-white bg-blue-500 hover:bg-sky-400 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6'
+                class='text-white bg-sky-500 hover:bg-sky-400 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
