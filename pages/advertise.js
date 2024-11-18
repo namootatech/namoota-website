@@ -10,12 +10,12 @@ export default function Advertise() {
   return (
     <div className='bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
       {/* Hero Section */}
-      <section className='relative bg-green-50 dark:bg-gray-900/30 pt-32 lg:pt-24 pb-32  px-20 lg:pb-4 rounded-md m-4'>
+      <section className='relative bg-sky-50 dark:bg-gray-900/30 pt-32 lg:pt-24 pb-32  px-20 lg:pb-4 rounded-md m-4'>
         <div className='mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative'>
-          <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:-translate-x-0 lg:-translate-y-0 lg:left-0 lg:top-16 w-40 h-40 skew-x-6 opacity-50 dark:opacity-80 rounded-full bg-gradient-to-bl from-green-600 to-green-400 blur-3xl flex'></div>
+          <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:-translate-x-0 lg:-translate-y-0 lg:left-0 lg:top-16 w-40 h-40 skew-x-6 opacity-50 dark:opacity-80 rounded-full bg-gradient-to-bl from-sky-600 to-sky-400 blur-3xl flex'></div>
           <div className='flex text-center lg:text-left flex-col lg:items-center lg:flex-row gap-8 lg:gap-10 xl:gap-12 relative max-w-4xl lg:max-w-none'>
             <div className='space-y-8 xl:space-y-10 lg:py-12 flex-1 lg:w-1/2'>
-              <h1 className='text-green-950 dark:text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold'>
+              <h1 className='text-sky-950 dark:text-white text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold'>
                 Empowering Your Brand with Effective Digital Marketing
               </h1>
               <p className='text-gray-700 dark:text-gray-300 max-w-md mx-auto lg:max-w-none'>
@@ -26,13 +26,13 @@ export default function Advertise() {
               <div className='flex flex-wrap items-center gap-4 z-30 sm:w-max sm:flex-nowrap mx-auto lg:mx-0'>
                 <Link
                   href='/get-a-quote'
-                  className='px-5 h-12 flex items-center sm:w-max w-full justify-center bg-gradient-to-br from-green-700 to-green-600 text-white rounded-lg ease-linear transition'
+                  className='px-5 h-12 flex items-center sm:w-max w-full justify-center bg-gradient-to-br from-sky-700 to-sky-600 text-white rounded-lg ease-linear transition'
                 >
                   Get Quote
                 </Link>
                 <Link
                   href='/contact'
-                  className='px-5 h-12 flex items-center sm:w-max w-full justify-center gap-x-3 border border-gray-200 dark:border-gray-900/60 rounded-lg text-green-800 dark:text-gray-100 bg-green-50 dark:bg-gray-900'
+                  className='px-5 h-12 flex items-center sm:w-max w-full justify-center gap-x-3 border border-gray-200 dark:border-gray-900/60 rounded-lg text-sky-800 dark:text-gray-100 bg-sky-50 dark:bg-gray-900'
                 >
                   <FaRegHandshake className='h-5 w-5' />
                   Contact Us
@@ -56,7 +56,7 @@ export default function Advertise() {
           </p>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
             <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaBullhorn className='h-16 w-16 text-green-600 mb-4' />
+              <FaBullhorn className='h-16 w-16 text-sky-600 mb-4' />
               <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
                 Targeted Advertising
               </h3>
@@ -66,7 +66,7 @@ export default function Advertise() {
               </p>
             </div>
             <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaChartLine className='h-16 w-16 text-green-600 mb-4' />
+              <FaChartLine className='h-16 w-16 text-sky-600 mb-4' />
               <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
                 Data-Driven Success
               </h3>
@@ -97,7 +97,7 @@ export default function Advertise() {
           </h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
             <div className='flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg'>
-              <FaCheckCircle className='h-12 w-12 text-green-600 mb-4' />
+              <FaCheckCircle className='h-12 w-12 text-sky-600 mb-4' />
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
                 SEO Optimization
               </h3>
@@ -107,7 +107,7 @@ export default function Advertise() {
               </p>
             </div>
             <div className='flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg'>
-              <FaCheckCircle className='h-12 w-12 text-green-600 mb-4' />
+              <FaCheckCircle className='h-12 w-12 text-sky-600 mb-4' />
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
                 Social Media Marketing
               </h3>
@@ -117,7 +117,7 @@ export default function Advertise() {
               </p>
             </div>
             <div className='flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg'>
-              <FaCheckCircle className='h-12 w-12 text-green-600 mb-4' />
+              <FaCheckCircle className='h-12 w-12 text-sky-600 mb-4' />
               <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
                 Content Creation
               </h3>
@@ -131,7 +131,7 @@ export default function Advertise() {
       </section>
 
       {/* Call to Action (CTA) */}
-      <section className='py-24 bg-gradient-to-r from-green-900 to-teal-500 text-white rounded-md shadow-md'>
+      <section className='py-24 bg-gradient-to-r from-sky-900 to-teal-500 text-white rounded-md shadow-md'>
         <div className='text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold mb-6'>
             Ready to Take Your Digital Marketing to the Next Level?
@@ -142,7 +142,7 @@ export default function Advertise() {
           </p>
           <Link
             href='/get-a-quote'
-            className='inline-block px-8 py-3 text-xl bg-green-700 rounded-lg shadow-lg hover:bg-green-800 transition ease-in-out'
+            className='inline-block px-8 py-3 text-xl bg-sky-700 rounded-lg shadow-lg hover:bg-sky-800 transition ease-in-out'
           >
             Get Started Today
           </Link>
