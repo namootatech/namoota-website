@@ -19,7 +19,7 @@ const Stats = () => {
       </div> */}
       <div class='grid gap-10 lg:grid-cols-1 lg:gap-24 xl:grid-cols-2 items-center'>
         <img
-          src='/woman-afric.jpg'
+          src='/woman-afric-1.jpg'
           alt='happy team work'
           class='relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 bg-gray-100/50 text-right'
         />

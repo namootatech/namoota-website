@@ -53,7 +53,7 @@ const Hero = () => (
 
       <div class='h-48 hidden md:flex overflow-hidden rounded-lg bg-sky-500 shadow-lg lg:h-auto  xl:w-6/12'>
         <img
-          src='/lonbg.png'
+          src='/look2.jpg'
           loading='lazy'
           alt='Photo by Fakurian Design'
           class='h-full w-full object-cover '

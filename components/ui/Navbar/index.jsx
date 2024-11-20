@@ -64,10 +64,10 @@ const Navbar = () => {
       </nav>
 
       <Link
-        href='/contact'
-        class='hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
+        href='/login'
+        class='hidden rounded-lg bg-sky-800 px-8 py-3 text-center text-sm font-semibold text-gray-100 outline-none ring-sky-300 transition duration-100 hover:bg-sky-300 hover:text-sky-800 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
       >
-        Contact Sales
+        Sign Up
       </Link>
       <div
         className={`${
