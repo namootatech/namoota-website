@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
         />
         <script
           async
-          src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB1HBcPkYo58RBdFL-y3qYC1VPsqOg-RSo&libraries=places'
+          src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_MAPS_API_KEY}&libraries=places`}
         ></script>
         <script
           async
