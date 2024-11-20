@@ -1,5 +1,19 @@
-import React from 'react';
-import { Bell, ChevronDown, Menu, Search, User } from 'lucide-react';
+import React, { useState } from 'react';
+import {
+  Bell,
+  ChevronDown,
+  Menu,
+  Search,
+  User,
+  Home,
+  Briefcase,
+  ShoppingBag,
+  Database,
+  MessageSquare,
+  CreditCard,
+  BarChart2,
+  Settings,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -20,90 +34,79 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { useFormState } from 'react-dom';
 
-export default function AppLayout({ children }) {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+const menuItems = [
+  { href: '/app', label: 'Dashboard', icon: Home },
+  { href: '/app/projects', label: 'Projects', icon: Briefcase },
+  { href: '/app/marketplace', label: 'Marketplace', icon: ShoppingBag },
+  { href: '/app/data-sims', label: 'Data Sims', icon: Database },
+  { href: '/app/messages', label: 'Messages', icon: MessageSquare },
+  { href: '/app/billing', label: 'Billing', icon: CreditCard },
+  { href: '/app/reports', label: 'Reports', icon: BarChart2 },
+  { href: '/app/settings', label: 'Settings', icon: Settings },
+];
+
+export default function Dash({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <div className='flex h-screen bg-gray-100'>
       {/* Sidebar */}
-      <aside
-        className={`bg-white border-r-8  shadow-md border-sky-500 border-solid text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform ${
-          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+      <motion.aside
+        initial={false}
+        animate={{ width: isSidebarOpen ? 240 : 80 }}
+        className={`bg-white border-r-8 shadow-md border-sky-500 border-solid text-white py-7 px-2 flex flex-col`}
       >
-        <nav>
-          <Link
-            href='/app'
-            class='inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl'
-            aria-label='logo'
+        <div className='flex justify-between items-center mb-6'>
+          {isSidebarOpen && (
+            <Link
+              href='/app'
+              className='inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl'
+            >
+              <img className='w-54 h-10' src='/logz.png' alt='Logo' />
+            </Link>
+          )}
+          <Button
+            variant='ghost'
+            size='icon'
+            onClick={toggleSidebar}
+            className='text-sky-800'
           >
-            <img className='w-54 h-10' src='/logz.png' />
-          </Link>
-          <a
-            href='/app'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Dashboard
-          </a>
-          <Link
-            href='/app/projects'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Projects
-          </Link>
-          <Link
-            href='/app/marketplace'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Marketplace
-          </Link>
-          <Link
-            href='/app/data-sims'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Data Sims
-          </Link>
-          <Link
-            href='/app/messages'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Messages
-          </Link>
-          <Link
-            href='/app/billing'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Billing
-          </Link>
-          <Link
-            href='/app/reports'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Reports
-          </Link>
-          <Link
-            href='/app/settings'
-            className='text-sky-800 block py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white'
-          >
-            Settings
-          </Link>
+            <Menu className='h-6 w-6' />
+          </Button>
+        </div>
+        <nav className='flex-1'>
+          {menuItems.map((item) => (
+            <Link key={item.href} href={item.href}>
+              <div className='relative group'>
+                <div
+                  className={`text-sky-800 flex items-center py-2.5 px-4 rounded transition duration-200 hover:bg-sky-700 hover:text-white ${
+                    !isSidebarOpen ? 'justify-center' : ''
+                  }`}
+                >
+                  <item.icon className='h-5 w-5 mr-2' />
+                  {isSidebarOpen && <span>{item.label}</span>}
+                </div>
+                {!isSidebarOpen && (
+                  <div className='absolute left-full top-0 ml-2 px-2 py-1 bg-sky-700 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200'>
+                    {item.label}
+                  </div>
+                )}
+              </div>
+            </Link>
+          ))}
         </nav>
-      </aside>
+      </motion.aside>
 
       {/* Main Content */}
       <div className='flex-1 flex flex-col overflow-hidden'>
         {/* Header */}
-        <header className='flex border-b-8  shadow-md border-sky-500 justify-between items-center py-4 px-6 bg-white border-b-1 border-gray-200'>
+        <header className='flex border-b-8 shadow-md border-sky-500 justify-between items-center py-4 px-6 bg-white border-b-1 border-gray-200'>
           <div className='flex items-center'>
-            <button
-              onClick={toggleSidebar}
-              className='text-gray-500 focus:outline-none md:hidden'
-            >
-              <Menu className='h-6 w-6' />
-            </button>
             <div className='relative mx-4 lg:mx-0'>
               <span className='absolute inset-y-0 left-0 pl-3 flex items-center'>
                 <Search className='h-5 w-5 text-gray-500' />

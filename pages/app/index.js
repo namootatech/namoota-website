@@ -15,7 +15,20 @@ import { Badge } from '@/components/ui/badge';
 export default function Advertise() {
   return (
     <div className='container mx-auto px-6 py-8'>
-      <h3 className='text-gray-700 text-3xl font-medium'>Dashboard</h3>
+      <div className='flex gap-4 items-center justify-between w-full'>
+        <h3 className='text-gray-700 text-3xl font-medium'>Dashboard</h3>
+        <div className='flex gap-4 items-center'>
+          <Input
+            type='text'
+            placeholder='Search for projects'
+            icon={<Search />}
+            className='w-72 border-gray-300 border-solid'
+          />
+          <Button className='bg-sky-500 text-white p-4 flex items-center justify-center'>
+            New Project +
+          </Button>
+        </div>
+      </div>
 
       <div className='mt-4'>
         <div className='flex flex-wrap -mx-6'>

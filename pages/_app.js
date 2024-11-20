@@ -5,7 +5,8 @@ import { AuthProvider } from '../util/auth/context';
 
 export default function App({ Component, pageProps }) {
   const isAppRoute =
-    typeof window !== 'undefined' && window.location.pathname === '/app';
+    typeof window !== 'undefined' &&
+    window.location.pathname.split('/').includes('app');
   const LayoutComponent = isAppRoute ? AppLayout : Layout;
   return (
     <LayoutComponent>
