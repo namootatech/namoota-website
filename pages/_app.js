@@ -1,10 +1,17 @@
-import Layout from "../components/Layout";
-import "../styles/globals.css";
+import Layout from '../components/Layout';
+import AppLayout from '@/components/AppLayout';
+import '../styles/globals.css';
+import { AuthProvider } from '../util/auth/context';
 
 export default function App({ Component, pageProps }) {
+  const isAppRoute =
+    typeof window !== 'undefined' && window.location.pathname === '/app';
+  const LayoutComponent = isAppRoute ? AppLayout : Layout;
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <LayoutComponent>
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
+    </LayoutComponent>
   );
 }
