@@ -65,10 +65,11 @@ export default function AuthPage() {
     try {
       if (action === 'login') {
         await login(formData.email, formData.password);
-        console.log('Login successful');
+        console.log('Registration successful', action);
+        router.push('/app');
       } else if (action === 'register') {
         await signUpWithEmail(formData);
-        console.log('Registration successful');
+        console.log('Registration successful', action);
         router.push('/app');
       }
     } catch (error) {
@@ -81,9 +82,11 @@ export default function AuthPage() {
       if (action === 'login') {
         await loginWithGoogle();
         console.log('Google login successful');
+        console.log('goog Registration successful');
       } else if (action === 'register') {
         await signupWithGoogle();
         console.log('Google registration successful');
+        console.log('goog Registration successful');
       }
     } catch (error) {
       console.error(`Error during Google ${action}:`, error);
