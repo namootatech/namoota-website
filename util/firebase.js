@@ -42,7 +42,9 @@ if (typeof window !== 'undefined') {
   firebaseaAuth = getAuth(app);
 }
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+  firebaseAnalytics = getAnalytics(app);
+  firebaseaAuth = getAuth(app);
   connectFirestoreEmulator(db, 'localhost', 3005);
   connectAuthEmulator(firebaseaAuth, 'http://localhost:9099');
   connectStorageEmulator(storage, 'localhost', 9199);
