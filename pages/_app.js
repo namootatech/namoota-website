@@ -9,10 +9,10 @@ export default function App({ Component, pageProps }) {
     window.location.pathname.split('/').includes('app');
   const LayoutComponent = isAppRoute ? AppLayout : Layout;
   return (
-    <LayoutComponent>
-      <AuthProvider>
+    <AuthProvider>
+      <LayoutComponent>
         <Component {...pageProps} />
-      </AuthProvider>
-    </LayoutComponent>
+      </LayoutComponent>
+    </AuthProvider>
   );
 }

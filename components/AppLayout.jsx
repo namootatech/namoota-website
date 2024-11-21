@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Bell,
   ChevronDown,
@@ -36,6 +36,9 @@ import {
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useFormState } from 'react-dom';
+import { useRouter } from 'next/router';
+import { useAuth } from '@/util/auth/context';
+import { append, assoc } from 'ramda';
 
 const menuItems = [
   { href: '/app', label: 'Dashboard', icon: Home },
@@ -49,10 +52,39 @@ const menuItems = [
 ];
 
 export default function AppLayout({ children }) {
+  const router = useRouter();
+  const auth = useAuth();
+  const [isUserWithAdvacedMenu, setIsUserWithAdvacedMenu] = useState(false);
+
+  useEffect(() => {
+    console.log('Auth changed effect', auth);
+    if (auth && !auth.currentUser) {
+      router.push('/login');
+    }
+    if (
+      auth &&
+      auth.currentUser &&
+      auth.currentUser.email === process.env.NEXT_PUBLIC_AYAS_EMAIL
+    ) {
+      setIsUserWithAdvacedMenu(true);
+    }
+  }, [auth]);
+
+  console.log('App Layout Auth is ', auth);
+
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
+  const adjustedMenuItems = isUserWithAdvacedMenu
+    ? append(
+        {
+          href: '/app/ayas-dashboard',
+          label: 'Ayas Dashboard',
+          icon: Briefcase,
+        },
+        menuItems
+      )
+    : menuItems;
   return (
     <div className='flex h-screen bg-gray-100'>
       {/* Sidebar */}
@@ -80,7 +112,7 @@ export default function AppLayout({ children }) {
           </Button>
         </div>
         <nav className='flex-1'>
-          {menuItems.map((item) => (
+          {adjustedMenuItems.map((item) => (
             <Link key={item.href} href={item.href}>
               <div className='relative group'>
                 <div
