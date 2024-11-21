@@ -13,11 +13,15 @@ const Layout = ({ children }) => {
     setSeoConfig(seoConfigByPathname[pathname] || homepageSeoConfig);
   }, []);
 
+  console.log('\nRendering Main Layout\n');
+  console.log(seoConfig);
+
   return (
     <>
       <Head>
         <title>
-          {seoConfig.title} | Namoota - Web Design - Build an App - Get a quote
+          {seoConfig.title |
+            'Namoota - Web Design - Build an App - Get a quote'}
         </title>
         <meta name='description' content={seoConfig.description} />
         <meta name='keywords' content={seoConfig.keywords} />

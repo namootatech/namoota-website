@@ -48,7 +48,7 @@ const menuItems = [
   { href: '/app/settings', label: 'Settings', icon: Settings },
 ];
 
-export default function Dash({ children }) {
+export default function AppLayout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
