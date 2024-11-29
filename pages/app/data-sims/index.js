@@ -114,7 +114,7 @@ export default function AppDashboard() {
     setshowBilling(true);
   };
 
-  const handleSaveFeatures = async (features) => {
+  const saveOrder = async (features) => {
     console.log('Handle save features', features);
     const updatedSimcard = {
       ...simcardDetails,
