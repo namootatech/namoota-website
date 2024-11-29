@@ -41,8 +41,7 @@ import { useAuth } from '@/util/auth/context';
 import { append, assoc } from 'ramda';
 
 const menuItems = [
-  { href: '/app', label: 'Dashboard', icon: Home },
-  { href: '/app/projects', label: 'Projects', icon: Briefcase },
+  { href: '/app', label: 'Projects', icon: Home },
   { href: '/app/marketplace', label: 'Marketplace', icon: ShoppingBag },
   { href: '/app/data-sims', label: 'Data Sims', icon: Database },
   { href: '/app/messages', label: 'Messages', icon: MessageSquare },
