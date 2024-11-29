@@ -6,11 +6,11 @@ import { db } from '@/util/firebase';
 export default function ExchangePage() {
   const [formData, setFormData] = useState({
     name: '',
-    cellphone: '',
-    email: '',
+    cellphone: '0987654321',
+    email: 'unknown@gmail.com',
     suburb: 'Ezibeleni',
     postalCode: '5326',
-    zone: '',
+    zone: 'Zone-3',
     exchangeAmount: '',
     type: 'Actual',
     status: 'Paid',
