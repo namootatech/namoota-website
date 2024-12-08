@@ -13,29 +13,19 @@ import {
 import validate from 'validate.js';
 
 const simcardConstraints = {
-  selectedSims: {
+  uniqueId: {
     presence: { allowEmpty: false },
-    type: 'array',
+    type: 'string',
   },
-  deliveryDetails: {
+  type: {
     presence: { allowEmpty: false },
-    type: 'object',
-    length: {
-      minimum: 1,
-      maximum: 200,
-    },
+    type: 'string',
   },
   status: {
     presence: { allowEmpty: false },
     type: 'string',
     inclusion: {
-      within: [
-        'paid',
-        'unpaid',
-        'pending-processing',
-        'being-processed',
-        'out-for-delivery',
-      ],
+      within: ['in-development', 'active', 'in-active'],
     },
   },
   paymentId: {

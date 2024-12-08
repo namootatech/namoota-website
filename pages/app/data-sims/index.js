@@ -12,15 +12,16 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
-import { addSimcard, getUserSimcards, getSimcard } from '@/util/simcards';
+import { getUserSimcards, getSimcard } from '@/util/simcards';
 import { useAuth } from '@/util/auth/context';
-import FeatureSurvey from '@/components/featureSurvey';
 import { useState, useEffect } from 'react';
 import { flatten, isNil, values, without } from 'ramda';
 import { networkPackages, dataPackages } from '@/config/data';
 import { Checkbox } from '@/components/ui/checkbox';
 import { isEmpty, validate } from 'validate.js';
 import { FaTrash } from 'react-icons/fa';
+import moment from 'moment';
+import { addOrder, saveUserDeliveryDetails } from '@/util/orders';
 
 const deliveryConstraints = {
   idNumber: {
@@ -67,10 +68,20 @@ const deliveryConstraints = {
 
 const exists = (i) => !isEmpty(i) && !isNil(i);
 
+const randomstr = (length) => {
+  const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
+  let randomstring = '';
+  for (let i = 0; i < length; i++) {
+    const rnum = Math.floor(Math.random() * chars.length);
+    randomstring += chars.substring(rnum, rnum + 1);
+  }
+  return randomstring;
+};
+
 export default function AppDashboard() {
   const { currentUser } = useAuth();
   const [showSimSelection, setshowSimSelection] = useState(false);
-  const [error, setError] = useState(null);
+  const [errors, setErrors] = useState(null);
   const [simcards, setSimcards] = useState([]);
   const [selectedSims, setSelectedSims] = useState([]);
   const [showBilling, setshowBilling] = useState(false);
@@ -114,37 +125,6 @@ export default function AppDashboard() {
     setshowBilling(true);
   };
 
-  const saveOrder = async (features) => {
-    console.log('Handle save features', features);
-    const updatedSimcard = {
-      ...simcardDetails,
-      survey: features,
-      userId: currentUser.uid,
-      lastUpdated: new Date(),
-      lastUpdatedBy: currentUser.uid,
-    };
-    try {
-      console.log('...addiing');
-      await addSimcard(updatedSimcard); // Assuming `addSimcard` handles saving to the backend
-      setshowBilling(false);
-      setshowSimSelection(false);
-      setSimcardDetails({
-        title: '',
-        description: '',
-        deadline: '',
-        mission: '',
-        survey: {},
-        type: '',
-        tags: '',
-      });
-      setError(null);
-      getSimcards();
-    } catch (error) {
-      console.log(error);
-      setError(error);
-    }
-  };
-
   const totalSimcards = simcards.length;
   const totalActiveSimcards = simcards.filter(
     (p) => p.status === 'in-development'
@@ -163,20 +143,64 @@ export default function AppDashboard() {
     select(simId);
   };
 
-  const payWith = (id) => {
+  const paymentMethods = {
+    payfast: (orderId) => {
+      console.log('Paid with Payfast');
+    },
+    ikhokha: (orderId) => {
+      console.log('Paid with Ikhokha');
+    },
+  };
+
+  const processPayment = (method, orderId) => {
+    paymentMethods[method](orderId);
+  };
+
+  const payWith = async (id) => {
     const delivery = {
       fullName,
       idNumber,
       email,
       cellphone,
       unit,
-      address,
+      streetAddress: address,
       suburb,
       city,
       province,
       postalCode,
     };
     const errors = validate(delivery, deliveryConstraints);
+    if (errors) {
+      console.log(errors);
+      setErrors(errors);
+      return;
+    }
+    try {
+      const deliveryEntity = await saveUserDeliveryDetails(delivery);
+      const deliveryId = deliveryEntity.id;
+      console.log(currentUser);
+      const order = {
+        readableId: currentUser?.displayName
+          ? currentUser.displayName.subString(0, 3) +
+            moment().format('DDMMYY') +
+            randomstr(3)
+          : randomstr(3) + moment().format('DDMMYY') + randomstr(3),
+        userId: currentUser.uid,
+        deliveryId,
+        simcards: selectedSims,
+        paymentMethod: id,
+        status: 'pending',
+        paymentId: '',
+        lastUpdated: new Date(),
+      };
+      const orderEntity = await addOrder(order);
+      const orderId = orderEntity.id;
+      console.log('Order saved with id', orderId);
+      processPayment(id, orderId);
+    } catch (error) {
+      console.log(error);
+      setErrors(error);
+    }
   };
 
   return (
@@ -438,6 +462,8 @@ export default function AppDashboard() {
                 <div className='flex flex-col gap-4 my-4'>
                   <Label className='text-gray-600 '>Postal Code</Label>
                   <Input
+                    onChange={(e) => setPostalCode(e.target.value)}
+                    value={postalCode}
                     className='bg-white focus:border-sky-500 focus:outline-sky-500 focus:border-2  focus-visible:ring-sky-200 transition-all ease-in-out focus-visible:ring-2'
                     placeholder='Enter full name'
                   />

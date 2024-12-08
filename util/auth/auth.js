@@ -10,7 +10,7 @@ import { db, auth } from '../firebase';
 
 const googleProvider = new GoogleAuthProvider();
 
-export const signUpWithEmail = async (data) => {
+export const registerishaWithEmail = async (data) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
       auth,
@@ -19,30 +19,19 @@ export const signUpWithEmail = async (data) => {
     );
 
     const userId = userCredential.user.uid;
+
     const user = userCredential.user;
-    const userDetails = omit(['company', 'password'], data);
+    const userDetails = omit(['password'], data);
 
     await setDoc(doc(db, 'users', userId), {
       ...userDetails,
-      email: user.email,
-      name: user.displayName || 'Anonymous Beaver',
-      photoUrl: user.photoURL || null,
-      phoneNumber: user.phoneNumber || null,
-      role: user.role || 'customer',
+      nomyayi: user.email,
+      gama: user.displayName || userDetails.displayName || 'Anonymous Beaver',
+      isbuko: user.photoURL || userDetails.photoURL || null,
+      bhelas: user.phoneNumber || userDetails.phoneNumber || null,
+      role: user.role || 'mgutyuli',
       createdAt: new Date().toISOString(),
     });
-
-    if (data.company) {
-      const companyId =
-        data.company.name.toLowerCase().replace(/\s/g, '-') + '-' + userId;
-      await setDoc(doc(db, 'companies', companyId), {
-        ...data.company,
-        name: data.company.name || 'Unnamed Company',
-        industry: data.company.industry || 'General',
-        ownerId: userId,
-        createdAt: new Date().toISOString(),
-      });
-    }
 
     return userCredential;
   } catch (error) {
@@ -51,17 +40,7 @@ export const signUpWithEmail = async (data) => {
   }
 };
 
-export const login = async (email, password) => {
-  try {
-    return await signInWithEmailAndPassword(auth, email, password);
-  } catch (error) {
-    console.error('Error logging in:', error);
-    throw error;
-  }
-};
-
-// Sign up/Login with Google
-export const signUpWithGoogle = async () => {
+export const registerishaWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
@@ -69,11 +48,11 @@ export const signUpWithGoogle = async () => {
     const userDoc = await getDoc(doc(db, 'users', userId));
     if (!userDoc.exists()) {
       await setDoc(doc(db, 'users', userId), {
-        email: user.email,
-        name: user.displayName || 'Anonymous Beaver',
-        photoUrl: user.photoURL || null,
-        phoneNumber: user.phoneNumber || null,
-        role: 'customer',
+        nomyayi: user.email,
+        gama: user.displayName || 'Anonymous Beaver',
+        isbuko: user.photoURL || null,
+        bhelas: user.phoneNumber || null,
+        indima: 'mgutyuli',
         createdAt: new Date().toISOString(),
       });
     }
@@ -85,7 +64,51 @@ export const signUpWithGoogle = async () => {
   }
 };
 
-export const loginWithGoogle = async () => {
+export const registerishaWithFacebook = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+    const userId = user.uid;
+    const userDoc = await getDoc(doc(db, 'users', userId));
+    if (!userDoc.exists()) {
+      await setDoc(doc(db, 'users', userId), {
+        nomyayi: user.email,
+        gama: user.displayName || 'Anonymous Beaver',
+        isbuko: user.photoURL || null,
+        bhelas: user.phoneNumber || null,
+        role: 'mgutyuli',
+        createdAt: new Date().toISOString(),
+      });
+    }
+
+    return result;
+  } catch (error) {
+    console.error('Error signing up with Google:', error);
+    throw error;
+  }
+};
+
+export const loga_in = async (email, password) => {
+  try {
+    return await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    console.error('Error logging in:', error);
+    throw error;
+  }
+};
+
+export const loga_inWithGoogle = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+    return result;
+  } catch (error) {
+    console.error('Error logging in with Google:', error);
+    throw error;
+  }
+};
+
+export const loga_inWithFacebook = async () => {
   try {
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
