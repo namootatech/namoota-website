@@ -62,8 +62,11 @@ export default function AuthPage() {
   };
 
   const handleSubmit = async (action) => {
+    e.preventDefault();
+
     try {
       if (action === 'login') {
+        console.log('Login', login);
         await login(formData.email, formData.password);
         console.log('Registration successful', action);
         router.push('/app');
