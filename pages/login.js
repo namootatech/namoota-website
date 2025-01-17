@@ -61,7 +61,7 @@ export default function AuthPage() {
     });
   };
 
-  const handleSubmit = async (action) => {
+  const handleSubmit = async (e, action) => {
     e.preventDefault();
 
     try {
@@ -175,7 +175,7 @@ export default function AuthPage() {
                 <Button
                   type='button'
                   className='w-full bg-sky-600 hover:bg-sky-700 text-white'
-                  onClick={() => handleSubmit('login')}
+                  onClick={(e) => handleSubmit(e, 'login')}
                 >
                   Login
                 </Button>
