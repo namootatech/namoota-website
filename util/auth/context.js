@@ -20,6 +20,7 @@ export const AuthProvider = ({ children }) => {
 
     return unsubscribe; // Cleanup subscription on unmount
   }, []);
+  
 
   const logout = async () => {
     await signOut(auth);

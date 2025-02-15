@@ -21,13 +21,8 @@ const CTA = () => {
                     font-bold text-gray-900 dark:text-black'
           >
             Create Successful{' '}
-<<<<<<< HEAD
-            <span class='text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-sky-600'>
-              Business Models{' '}
-=======
             <span class='text-transparent bg-clip-text bg-gradient-to-br from-sky-600 from-20% via-sky-500 via-30% to-sky-600'>
               Business Models
->>>>>>> 8d44243ca721bdab6199c6538bf2caef1959e81e
             </span>
              with Our IT Solutions
           </h1>
