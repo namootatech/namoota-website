@@ -56,12 +56,6 @@ const Navbar = () => {
         >
           Contact
         </Link>
-        {/* <Link
-          href='/'
-          class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
-        >
-          Resources
-        </Link> */}
         <Link
           href='/blog'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
@@ -112,17 +106,6 @@ const Navbar = () => {
           >
             Contact
           </Link>
-<<<<<<< HEAD
-          {/* <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
-=======
-          <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
->>>>>>> 8d44243ca721bdab6199c6538bf2caef1959e81e
-            href='/resources'
-          >
-            Resources
-          </Link> */}
           <Link
             class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
             href='/blog'
