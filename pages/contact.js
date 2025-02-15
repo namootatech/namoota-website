@@ -27,7 +27,7 @@ const CTAContent = ({ hint, title, link1, link2 }) => (
         <div class='flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center'>
           <a
             href={link1.link}
-            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-sky-700 outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
+            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-sky-700 outline-none ring-sky-300 transition duration-100 hover:bg-sky-500 focus-visible:ring active:bg-sky-700 md:text-base'
           >
             {link1.text}
           </a>
@@ -344,7 +344,7 @@ export default function Home() {
                   ></path>
                 </svg>
                 <a href='javascript:void(0)' class='text-sky-700 text-sm ml-4'>
-                  +27 +27 68 713 9987
+                  +27 68 713 9987
                 </a>
               </li>
               <li class='flex items-center'>
@@ -368,10 +368,31 @@ export default function Home() {
                   1041 Pika Drive, Queenstown
                 </a>
               </li>
+              <li class='flex items-center'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='16px'
+                  height='16px'
+                  fill='#0569a0'
+                  viewBox='0 0 368.16 368.16'
+                >
+                  <path
+                    d='M184.08 0c-74.992 0-136 61.008-136 136 0 24.688 11.072 51.24 11.536 52.36 3.576 8.488 10.632 21.672 15.72 29.4l93.248 141.288c3.816 5.792 9.464 9.112 15.496 9.112s11.68-3.32 15.496-9.104l93.256-141.296c5.096-7.728 12.144-20.912 15.72-29.4.464-1.112 11.528-27.664 11.528-52.36 0-74.992-61.008-136-136-136zM293.8 182.152c-3.192 7.608-9.76 19.872-14.328 26.8l-93.256 141.296c-1.84 2.792-2.424 2.792-4.264 0L88.696 208.952c-4.568-6.928-11.136-19.2-14.328-26.808-.136-.328-10.288-24.768-10.288-46.144 0-66.168 53.832-120 120-120s120 53.832 120 120c0 21.408-10.176 45.912-10.28 46.152z'
+                    data-original='#000000'
+                  ></path>
+                  <path
+                    d='M184.08 64.008c-39.704 0-72 32.304-72 72s32.296 72 72 72 72-32.304 72-72-32.296-72-72-72zm0 128c-30.872 0-56-25.12-56-56s25.128-56 56-56 56 25.12 56 56-25.128 56-56 56z'
+                    data-original='#000000'
+                  ></path>
+                </svg>
+                <a href='javascript:void(0)' class='text-sky-700 text-sm ml-4'>
+                  152 Company Street, Muckleneuk Pretoria
+                </a>
+              </li>
             </ul>
 
             <ul class='flex mt-12 space-x-4'>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -387,7 +408,7 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -403,7 +424,7 @@ export default function Home() {
                   </svg>
                 </a>
               </li>
-              <li class='bg-blue-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
+              <li class='bg-sky-500 hover:bg-[#a91079e2] h-10 w-10 rounded-full flex items-center justify-center shrink-0'>
                 <a href='javascript:void(0)'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -454,9 +475,9 @@ export default function Home() {
                 onClick={() => setSelected('website-or-landing-page')}
                 class={`${
                   selected === 'website-or-landing-page'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 Website / Landing Page
               </button>
@@ -465,9 +486,9 @@ export default function Home() {
                 onClick={() => setSelected('app-or-system-dev')}
                 class={`${
                   selected === 'app-or-system-dev'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 App / Custom System
               </button>
@@ -476,9 +497,9 @@ export default function Home() {
                 onClick={() => setSelected('social-media-digital-marketing')}
                 class={`${
                   selected === 'social-media-digital-marketing'
-                    ? 'bg-blue-500 text-sky-100'
-                    : 'text-blue-500 bg-white'
-                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-blue-500 mr-4`}
+                    ? 'bg-sky-500 text-sky-100'
+                    : 'text-sky-500 bg-white'
+                } px-4 py-2 rounded-lg  text-sm tracking-wider font-medium outline-none border-2 border-sky-500 mr-4`}
               >
                 Social / Digital Marketing
               </button>
@@ -490,40 +511,40 @@ export default function Home() {
                 placeholder='Name'
                 name='name'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='email'
                 placeholder='Email'
                 name='email'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='tel'
                 placeholder='Cellphone number'
                 name='cellphone'
                 onChange={handleChange}
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <input
                 type='text'
                 name='subject'
                 onChange={handleChange}
                 placeholder='Subject'
-                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-blue-500'
+                class='w-full rounded-lg py-3 px-4 text-gray-800 text-sm outline-sky-500'
               />
               <textarea
                 placeholder='Message'
                 rows='6'
                 name='message'
                 onChange={handleChange}
-                class='w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-blue-500'
+                class='w-full rounded-lg px-4 text-gray-800 text-sm pt-3 outline-sky-500'
               ></textarea>
               <button
                 type='button'
                 onClick={sendMessage}
-                class='text-white bg-blue-500 hover:bg-sky-400 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6'
+                class='text-white bg-sky-500 hover:bg-sky-400 tracking-wide rounded-lg text-sm px-4 py-3 flex items-center justify-center w-full !mt-6'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

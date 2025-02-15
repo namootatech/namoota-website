@@ -41,7 +41,7 @@ const LogoGrid = () => (
           Trusted by Forward-Thinking Businesses
         </h2>
 
-        <p className='max-w-md text-center text-sm text-sky-600 lg:text-right'>
+        <p className='max-w-md text-center text-sm text-sky-500 lg:text-right'>
           From digital transformation to bespoke software solutions, these
           businesses trust us to drive their success in the digital world.
         </p>
@@ -61,7 +61,7 @@ const LogoGrid = () => (
             />
 
             {/* sky overlay with hover effect */}
-            <div className='absolute inset-0 bg-sky-600 opacity-50 hover:opacity-0 transition-opacity duration-300 rounded-xl'></div>
+            <div className='absolute inset-0 bg-sky-500 opacity-50 hover:opacity-0 transition-opacity duration-300 rounded-xl'></div>
           </div>
         ))}
       </div>

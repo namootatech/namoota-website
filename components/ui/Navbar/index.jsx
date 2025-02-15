@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Brand from '../Brand';
 import NavLink from '../NavLink';
+import { useAuth } from '@/util/auth/context';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,10 +33,10 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          href='/#features'
+          href='/services'
           class='text-lg font-semibold text-gray-600 transition duration-100 hover:text-sky-500 active:text-sky-700'
         >
-          Features
+          Services
         </Link>
         <Link
           href='/pricing'
@@ -70,10 +71,10 @@ const Navbar = () => {
       </nav>
 
       <Link
-        href='/contact'
-        class='hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-sky-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
+        href='/login'
+        class='hidden rounded-lg bg-sky-800 px-8 py-3 text-center text-sm font-semibold text-gray-100 outline-none ring-sky-300 transition duration-100 hover:bg-sky-300 hover:text-sky-800 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block'
       >
-        Contact Sales
+        Sign Up
       </Link>
       <div
         className={`${
@@ -82,37 +83,42 @@ const Navbar = () => {
       >
         <div class='flex flex-col md:flex-row md:mx-6'>
           <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/'
           >
             Home
           </Link>
           <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/#features'
           >
-            Features
+            Services
           </Link>
           <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/pricing'
           >
             Pricing
           </Link>
           <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/#team'
           >
             Our Team
           </Link>
           <Link
-            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
             href='/#contact'
           >
             Contact
           </Link>
+<<<<<<< HEAD
           {/* <Link
             class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 md:mx-4 md:my-0'
+=======
+          <Link
+            class='my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-sky-500 dark:hover:text-sky-400 md:mx-4 md:my-0'
+>>>>>>> 8d44243ca721bdab6199c6538bf2caef1959e81e
             href='/resources'
           >
             Resources

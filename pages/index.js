@@ -25,7 +25,7 @@ const CTAContent = ({ hint, title, link1, link2 }) => (
         <div class='flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center'>
           <a
             href={link1.link}
-            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-600 focus-visible:ring active:bg-sky-700 md:text-base'
+            class='inline-block rounded-lg bg-sky-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-sky-300 transition duration-100 hover:bg-sky-500 focus-visible:ring active:bg-sky-700 md:text-base'
           >
             {link1.text}
           </a>

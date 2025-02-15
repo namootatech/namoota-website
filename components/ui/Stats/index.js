@@ -5,7 +5,7 @@ const Stats = () => {
         <h1 className='text-5xl text-sky-800 font-black py-8'>
           Our Impact in Numbers
         </h1>
-        <p class='block antialiased font-sans leading-relaxed text-sky-900 mb-4 !text-2xl font-bold lg:!text-3xl'>
+        <p class='block antialiased font-sans leading-relaxed text-sky-800 mb-4 !text-2xl font-bold lg:!text-3xl'>
           Driving Success Through Digital Innovation
         </p>
         <p class='block antialiased font-sans text-xl font-normal leading-relaxed text-inherit w-full !text-gray-500 text-right'>
@@ -19,14 +19,14 @@ const Stats = () => {
       </div> */}
       <div class='grid gap-10 lg:grid-cols-1 lg:gap-24 xl:grid-cols-2 items-center'>
         <img
-          src='/woman-afric.jpg'
+          src='/woman-afric-1.jpg'
           alt='happy team work'
           class='relative flex flex-col bg-clip-border rounded-xl bg-white text-gray-700 bg-gray-100/50 text-right'
         />
         <div>
           <div class='grid lg:grid-cols-2 gap-10 gap-x-20'>
             <div class='relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none'>
-              <p class='block antialiased font-sans leading-relaxed text-sky-900 text-4xl font-bold'>
+              <p class='block antialiased font-sans leading-relaxed text-sky-800 text-4xl font-bold'>
                 10+ Projects
               </p>
               <hr class='mt-2 mb-4 max-w-sm' />
@@ -37,7 +37,7 @@ const Stats = () => {
               </p>
             </div>
             <div class='relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none'>
-              <p class='block antialiased font-sans leading-relaxed text-sky-900 text-4xl font-bold'>
+              <p class='block antialiased font-sans leading-relaxed text-sky-800 text-4xl font-bold'>
                 +100K Users
               </p>
               <hr class='mt-2 mb-4 max-w-sm' />
@@ -47,7 +47,7 @@ const Stats = () => {
               </p>
             </div>
             <div class='relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none'>
-              <p class='block antialiased font-sans leading-relaxed text-sky-900 text-4xl font-bold'>
+              <p class='block antialiased font-sans leading-relaxed text-sky-800 text-4xl font-bold'>
                 95% Client Satisfaction
               </p>
               <hr class='mt-2 mb-4 max-w-sm' />
@@ -57,7 +57,7 @@ const Stats = () => {
               </p>
             </div>
             <div class='relative flex flex-col bg-clip-border rounded-xl bg-transparent text-gray-700 shadow-none'>
-              <p class='block antialiased font-sans leading-relaxed text-sky-900 text-4xl font-bold'>
+              <p class='block antialiased font-sans leading-relaxed text-sky-800 text-4xl font-bold'>
                 6+ Years of Experience
               </p>
               <hr class='mt-2 mb-4 max-w-sm' />

@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "namoota"
+  },
+  "targets": {},
+  "etags": {
+    "namoota": {
+      "extensionInstances": {}
+    }
+  },
+  "dataconnectEmulatorConfig": {}
+}

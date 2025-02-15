@@ -25,7 +25,7 @@ export default function Home() {
             <div class='max-w-xl'>
               <h1 class='text-3xl/tight sm:text-4xl/tight font-bold text-gray-900 dark:text-white'>
                 The Right Plan for <br />
-                <span class='text-sky-700 dark:text-sky-600'>
+                <span class='text-sky-700 dark:text-sky-500'>
                   Your Business
                 </span>
               </h1>
@@ -55,7 +55,7 @@ export default function Home() {
                   <ul class='space-y-3 md:col-span-2'>
                     {i.features.map((f) => (
                       <li class='flex items-center gap-x-4'>
-                        <span class='w-5 h-5 text-xs flex items-center justify-center rounded-full bg-sky-700 dark:bg-sky-600 text-white'>
+                        <span class='w-5 h-5 text-xs flex items-center justify-center rounded-full bg-sky-700 dark:bg-sky-500 text-white'>
                           <FaCircleCheck />
                         </span>
                         {f}
@@ -63,7 +63,7 @@ export default function Home() {
                     ))}
                   </ul>
                   <div class='font-bold text-4xl text-gray-900 dark:text-white'>
-                    <span>{i.startingPrice}</span>
+                    <span>{`From ${i.startingPrice}`}</span>
                   </div>
                 </div>
                 <div class='flex md:justify-end md:items-center'>
