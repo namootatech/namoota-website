@@ -7,11 +7,15 @@ export default function BlogPost({ post }) {
   return (
     <article className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-4xl font-bold text-sky-800 mb-4">{post.title}</h1>
-      <div className="text-gray-600 mb-8">
+      <div className="text-gray-600 mb-2">
         Published on {new Date(post.date).toLocaleDateString()}
       </div>
+      <div className="font-semibold text-gray-600 mb-8">
+       By: {post.author}
+      </div>
       <div 
-        className="prose lg:prose-xl"
+        // className="prose lg:prose-xl"
+        className="prose lg:prose-xl prose-p:mb-6 prose-headings:mt-8 prose-headings:mb-4"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>
@@ -42,6 +46,7 @@ export async function getStaticProps({ params }) {
       post: {
         slug: params.slug,
         title: data.title,
+        author: data.author,
         date: data.date,
         content: marked(content)
       }
