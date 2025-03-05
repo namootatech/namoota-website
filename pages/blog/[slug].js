@@ -14,7 +14,6 @@ export default function BlogPost({ post }) {
        By: {post.author}
       </div>
       <div 
-        // className="prose lg:prose-xl"
         className="prose lg:prose-xl prose-p:mb-6 prose-headings:mt-8 prose-headings:mb-4"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />

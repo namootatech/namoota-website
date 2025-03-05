@@ -14,6 +14,7 @@ export default function BlogIndex({ posts }) {
               <h2 className="text-2xl font-semibold mb-2">{post.title}</h2>
               <p className="text-gray-600 mb-4">{post.excerpt}</p>
               <span className="text-sky-500">Read more →</span>
+              <p className="text-gray-600 mb-4">{post.date}</p>
             </div>
           </Link>
         ))}
