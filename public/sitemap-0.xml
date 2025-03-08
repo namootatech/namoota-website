@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://namoota.co.za</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/advertise</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/build-an-app</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/contact</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/data</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/get-a-website</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/pricing</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/sell-online</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/success</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/team</loc><lastmod>2024-11-17T18:27:27.494Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za</loc><lastmod>2025-03-07T20:35:27.585Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/advertise</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/ayas-dashboard</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/ayas-dashboard/majonini/complete-deferred-exchange</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/ayas-dashboard/majonini/deferred-exchange</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/ayas-dashboard/majonini/exchange</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/ayas-dashboard/majonini/insights</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/billing</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/data-sims</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/data-sims/success</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/marketplace</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/messages</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/projects</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/reports</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/app/settings</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/blog</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/bookings_and_appointments</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/build-an-app</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namoota.co.za/contact</loc><lastmod>2025-03-07T20:35:27.586Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

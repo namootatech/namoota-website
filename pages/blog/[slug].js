@@ -7,8 +7,8 @@ export default function BlogPost({ post }) {
   return (
     <article className="container mx-auto px-4 py-12 max-w-3xl">
       <h1 className="text-4xl font-bold text-sky-800 mb-4">{post.title}</h1>
-      <div className="text-gray-600 mb-2">
-        Published on {new Date(post.date).toLocaleDateString()}
+      <div className="font-semibold text-gray-600 mb-2">
+        Published: {new Date(post.date).toLocaleDateString()}
       </div>
       <div className="font-semibold text-gray-600 mb-8">
        By: {post.author}
