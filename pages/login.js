@@ -23,10 +23,59 @@ import {
 import { industryList } from '@/config/companies';
 import { useRouter } from 'next/router';
 
+// Helper function to translate Firebase error codes to user-friendly messages
+const getErrorMessage = (error) => {
+  if (!error) return 'An unknown error occurred';
+  
+  const errorCode = error.code || '';
+  const errorMessage = error.message || '';
+  
+  // Firebase Auth error codes
+  switch (errorCode) {
+    case 'auth/email-already-in-use':
+      return 'This email is already registered. Please use a different email or try logging in.';
+    case 'auth/invalid-email':
+      return 'The email address is invalid. Please enter a valid email address.';
+    case 'auth/operation-not-allowed':
+      return 'This operation is not allowed. Please contact support.';
+    case 'auth/weak-password':
+      return 'The password is too weak. Please use a stronger password (at least 6 characters).';
+    case 'auth/user-disabled':
+      return 'This account has been disabled. Please contact support.';
+    case 'auth/user-not-found':
+      return 'No account found with this email address. Please check your email or register.';
+    case 'auth/wrong-password':
+      return 'Incorrect password. Please try again or reset your password.';
+    case 'auth/invalid-credential':
+      return 'Invalid email or password. Please check your credentials and try again.';
+    case 'auth/too-many-requests':
+      return 'Too many failed attempts. Please try again later or reset your password.';
+    case 'auth/network-request-failed':
+      return 'Network error. Please check your internet connection and try again.';
+    case 'auth/popup-closed-by-user':
+      return 'Sign-in popup was closed. Please try again.';
+    case 'auth/cancelled-popup-request':
+      return 'Sign-in was cancelled. Please try again.';
+    case 'auth/popup-blocked':
+      return 'Popup was blocked by your browser. Please allow popups and try again.';
+    default:
+      // Try to extract a user-friendly message from the error
+      if (errorMessage.includes('email')) {
+        return 'There was an issue with your email address. Please check and try again.';
+      }
+      if (errorMessage.includes('password')) {
+        return 'There was an issue with your password. Please check and try again.';
+      }
+      return errorMessage || 'An error occurred. Please try again.';
+  }
+};
+
 export default function AuthPage() {
   const router = useRouter();
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -47,6 +96,10 @@ export default function AuthPage() {
   };
 
   const handleFormChange = (field, value) => {
+    // Clear error when user starts typing
+    if (error) {
+      setError(null);
+    }
     console.log('field', field);
     console.log('value', value);
     setFormData((prevData) => {
@@ -62,21 +115,9 @@ export default function AuthPage() {
   };
 
   const handleSubmit = async (e, action) => {
-    console.log("e", e);
-    console.log("action", action);
-    console.log("formData", formData);
-    console.log("email", formData.email);
-    console.log("password", formData.password);
-    console.log("name", formData.name);
-    console.log("cellphoneNumber", formData.cellphoneNumber);
-    console.log("company", formData.company);
-    console.log("company name", formData.company.name);
-    console.log("company website", formData.company.website);
-    console.log("company industry", formData.company.industry);
-    console.log("company subCategory", formData.company.subCategory);
-    console.log("company customIndustry", formData.company.customIndustry);
-    console.log("company customSubCategory", formData.company.customSubCategory);
     e.preventDefault();
+    setError(null);
+    setLoading(true);
 
     const data = {
       email: formData.email,
@@ -90,46 +131,45 @@ export default function AuthPage() {
       customIndustry: formData.company.customIndustry,
       customSubCategory: formData.company.customSubCategory,
     }
-    console.log("\n\n\n\n\n DATA", data);
 
     try {
       if (action === 'login') {
-        console.log('Login', loga_in);
         await loga_in(formData.email, formData.password);
-        console.log('Login successful', action);
         router.push('/app');
       } else if (action === 'register') {
         await registerishaWithEmail(data);
-        console.log('Registration successful', action);
         router.push('/app');
       }
     } catch (error) {
       console.error(`Error during ${action}:`, error);
+      setError(getErrorMessage(error));
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleGoogleAuth = async (action) => {
+    setError(null);
+    setLoading(true);
     try {
       if (action === 'login') {
         await loga_inWithGoogle();
-        console.log('Google login successful');
         router.push('/app');
       } else if (action === 'register') {
         await registerishaWithGoogle();
-        console.log('Google registration successful');
         router.push('/app');
       }
     } catch (error) {
       console.error(`Error during Google ${action}:`, error);
+      setError(getErrorMessage(error));
+    } finally {
+      setLoading(false);
     }
   };
 
   const selectedIndustry = industryList.find(
     (industry) => industry.id === formData.company.industry
   );
-  console.log(formData);
-  console.log('id', formData.company.industry);
-  console.log('selectedIndustry', selectedIndustry);
   const subCategories = selectedIndustry?.subCategories || [];
 
   return (
@@ -150,9 +190,17 @@ export default function AuthPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className='pt-6'>
+          {error && (
+            <div className='mb-4 p-3 bg-red-50 border border-red-200 rounded-md'>
+              <p className='text-sm text-red-600 font-medium'>{error}</p>
+            </div>
+          )}
           <Tabs
             defaultValue='login'
-            onValueChange={(value) => setIsLogin(value === 'login')}
+            onValueChange={(value) => {
+              setIsLogin(value === 'login');
+              setError(null); // Clear error when switching tabs
+            }}
           >
             <TabsList className='grid w-full grid-cols-2 bg-sky-100 transition-all ease-in-out'>
               <TabsTrigger
@@ -202,10 +250,11 @@ export default function AuthPage() {
                 </div>
                 <Button
                   type='button'
-                  className='w-full bg-sky-600 hover:bg-sky-700 text-white'
+                  className='w-full bg-sky-600 hover:bg-sky-700 text-white disabled:opacity-50 disabled:cursor-not-allowed'
                   onClick={(e) => handleSubmit(e, 'login')}
+                  disabled={loading}
                 >
-                  Login
+                  {loading ? 'Logging in...' : 'Login'}
                 </Button>
               </form>
             </TabsContent>
@@ -374,10 +423,11 @@ export default function AuthPage() {
 
                 <Button
                   type='button'
-                  className='w-full bg-sky-600 hover:bg-sky-700 text-white'
+                  className='w-full bg-sky-600 hover:bg-sky-700 text-white disabled:opacity-50 disabled:cursor-not-allowed'
                   onClick={(e) => handleSubmit(e,'register')}
+                  disabled={loading}
                 >
-                  Register
+                  {loading ? 'Registering...' : 'Register'}
                 </Button>
               </form>
             </TabsContent>
@@ -387,9 +437,10 @@ export default function AuthPage() {
           <Button
             variant='outline'
             onClick={() => handleGoogleAuth(isLogin ? 'login' : 'register')}
-            className='w-full border-sky-600 text-sky-600 hover:bg-sky-50'
+            className='w-full border-sky-600 text-sky-600 hover:bg-sky-50 disabled:opacity-50 disabled:cursor-not-allowed'
+            disabled={loading}
           >
-            {isLogin ? 'Login' : 'Register'} with Google
+            {loading ? 'Processing...' : `${isLogin ? 'Login' : 'Register'} with Google`}
           </Button>
         </CardFooter>
       </Card>
