@@ -11,7 +11,13 @@ import { db, auth } from '../firebase';
 const googleProvider = new GoogleAuthProvider();
 
 export const registerishaWithEmail = async (data) => {
+  console.log("data", data);
   try {
+    // Ensure auth is available
+    if (!auth) {
+      throw new Error('Firebase Auth is not initialized. Please ensure you are running this on the client side.');
+    }
+    
     const userCredential = await createUserWithEmailAndPassword(
       auth,
       data.email,
@@ -25,10 +31,10 @@ export const registerishaWithEmail = async (data) => {
 
     await setDoc(doc(db, 'users', userId), {
       ...userDetails,
-      nomyayi: user.email,
-      gama: user.displayName || userDetails.displayName || 'Anonymous Beaver',
-      isbuko: user.photoURL || userDetails.photoURL || null,
-      bhelas: user.phoneNumber || userDetails.phoneNumber || null,
+      email: user.email,
+      name: user.displayName || userDetails.displayName || 'Anonymous Beaver',
+      profilePicUrl: user.photoURL || userDetails.photoURL || null,
+      phone: user.phoneNumber || userDetails.phoneNumber || null,
       role: user.role || 'mgutyuli',
       createdAt: new Date().toISOString(),
     });
@@ -42,16 +48,21 @@ export const registerishaWithEmail = async (data) => {
 
 export const registerishaWithGoogle = async () => {
   try {
+    // Ensure auth is available
+    if (!auth) {
+      throw new Error('Firebase Auth is not initialized. Please ensure you are running this on the client side.');
+    }
+    
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
     const userId = user.uid;
     const userDoc = await getDoc(doc(db, 'users', userId));
     if (!userDoc.exists()) {
       await setDoc(doc(db, 'users', userId), {
-        nomyayi: user.email,
-        gama: user.displayName || 'Anonymous Beaver',
-        isbuko: user.photoURL || null,
-        bhelas: user.phoneNumber || null,
+        email: user.email,
+        name: user.displayName || 'Anonymous Beaver',
+        profilePicUrl: user.photoURL || null,
+        phone: user.phoneNumber || null,
         indima: 'mgutyuli',
         createdAt: new Date().toISOString(),
       });
@@ -72,10 +83,10 @@ export const registerishaWithFacebook = async () => {
     const userDoc = await getDoc(doc(db, 'users', userId));
     if (!userDoc.exists()) {
       await setDoc(doc(db, 'users', userId), {
-        nomyayi: user.email,
-        gama: user.displayName || 'Anonymous Beaver',
-        isbuko: user.photoURL || null,
-        bhelas: user.phoneNumber || null,
+        email: user.email,
+        name: user.displayName || 'Anonymous Beaver',
+        profilePicUrl: user.photoURL || null,
+        phone: user.phoneNumber || null,
         role: 'mgutyuli',
         createdAt: new Date().toISOString(),
       });
@@ -90,6 +101,11 @@ export const registerishaWithFacebook = async () => {
 
 export const loga_in = async (email, password) => {
   try {
+    // Ensure auth is available
+    if (!auth) {
+      throw new Error('Firebase Auth is not initialized. Please ensure you are running this on the client side.');
+    }
+    console.log("logging in with email and password", auth,email, password);
     return await signInWithEmailAndPassword(auth, email, password);
   } catch (error) {
     console.error('Error logging in:', error);
@@ -99,6 +115,11 @@ export const loga_in = async (email, password) => {
 
 export const loga_inWithGoogle = async () => {
   try {
+    // Ensure auth is available
+    if (!auth) {
+      throw new Error('Firebase Auth is not initialized. Please ensure you are running this on the client side.');
+    }
+    
     const result = await signInWithPopup(auth, googleProvider);
     const user = result.user;
     return result;

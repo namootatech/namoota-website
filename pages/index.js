@@ -9,6 +9,7 @@ import Testimonials from '../components/ui/Testimonials';
 import ToolKit from '../components/ui/ToolKit';
 import Stats from '../components/ui/Stats';
 import Team from '../components/ui/Team';
+import GetAQuote from '../components/GetAQuote';
 
 const CTAContent = ({ hint, title, link1, link2 }) => (
   <div class='bg-white py-6 sm:py-8 lg:py-12'>
@@ -47,6 +48,11 @@ export default function Home() {
         <meta name='robots' content='index' />
       </Head>
       <Hero />
+       <div className='py-12 bg-gray-50'>
+        <div className='container mx-auto px-4'>
+          <GetAQuote />
+        </div>
+      </div>
       <Stats />
       <Features />
 
@@ -57,6 +63,7 @@ export default function Home() {
         link1={{ text: 'Get Started Today' }}
         link2={{ text: 'Learn More' }}
       />
+     
       <CTA />
       <LogoGrid />
       <GradientWrapper>

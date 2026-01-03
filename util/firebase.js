@@ -39,17 +39,30 @@ console.log('Window Type is ', typeof window);
 let firebaseAnalytics;
 let firebaseaAuth;
 
-if (typeof window !== 'undefined') {
-  firebaseAnalytics = getAnalytics(app);
-  firebaseaAuth = getAuth(app);
-}
+// Initialize auth - it's safe to call getAuth on server side, it just won't work until client side
+firebaseaAuth = getAuth(app);
 
-if (process.env.NODE_ENV === 'development' && typeof window !== 'undefined') {
+if (typeof window !== 'undefined') {
+  // Only initialize analytics on client side
   firebaseAnalytics = getAnalytics(app);
-  firebaseaAuth = getAuth(app);
-  connectFirestoreEmulator(db, 'localhost', 3005);
-  connectAuthEmulator(firebaseaAuth, 'http://localhost:9099');
-  connectStorageEmulator(storage, 'localhost', 9199);
+  
+  // Connect to emulators only in development and only once
+  if (process.env.NODE_ENV === 'development') {
+    try {
+      // Use a flag to prevent multiple connections
+      if (!window.__firebaseEmulatorsConnected) {
+        connectFirestoreEmulator(db, 'localhost', 3005);
+        connectAuthEmulator(firebaseaAuth, 'http://localhost:9099');
+        connectStorageEmulator(storage, 'localhost', 9199);
+        window.__firebaseEmulatorsConnected = true;
+        console.log('Firebase emulators connected');
+      }
+    } catch (error) {
+      // Emulators might already be connected, ignore the error
+      console.warn('Emulator connection warning:', error.message);
+      window.__firebaseEmulatorsConnected = true; // Mark as connected even if error
+    }
+  }
 }
 
 console.log('Firebase Auth is ', firebaseaAuth);

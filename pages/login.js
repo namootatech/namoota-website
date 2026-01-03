@@ -15,10 +15,10 @@ import {
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
-  login,
-  signUpWithEmail,
-  loginWithGoogle,
-  signupWithGoogle,
+  loga_in,
+  registerishaWithEmail,
+  loga_inWithGoogle,
+  registerishaWithGoogle,
 } from '@/util/auth/auth';
 import { industryList } from '@/config/companies';
 import { useRouter } from 'next/router';
@@ -62,16 +62,44 @@ export default function AuthPage() {
   };
 
   const handleSubmit = async (e, action) => {
+    console.log("e", e);
+    console.log("action", action);
+    console.log("formData", formData);
+    console.log("email", formData.email);
+    console.log("password", formData.password);
+    console.log("name", formData.name);
+    console.log("cellphoneNumber", formData.cellphoneNumber);
+    console.log("company", formData.company);
+    console.log("company name", formData.company.name);
+    console.log("company website", formData.company.website);
+    console.log("company industry", formData.company.industry);
+    console.log("company subCategory", formData.company.subCategory);
+    console.log("company customIndustry", formData.company.customIndustry);
+    console.log("company customSubCategory", formData.company.customSubCategory);
     e.preventDefault();
+
+    const data = {
+      email: formData.email,
+      password: formData.password,
+      name: formData.name,
+      cellphoneNumber: formData.cellphoneNumber,
+      company: formData.company,
+      website: formData.company.website,
+      industry: formData.company.industry,
+      subCategory: formData.company.subCategory,
+      customIndustry: formData.company.customIndustry,
+      customSubCategory: formData.company.customSubCategory,
+    }
+    console.log("\n\n\n\n\n DATA", data);
 
     try {
       if (action === 'login') {
-        console.log('Login', login);
-        await login(formData.email, formData.password);
-        console.log('Registration successful', action);
+        console.log('Login', loga_in);
+        await loga_in(formData.email, formData.password);
+        console.log('Login successful', action);
         router.push('/app');
       } else if (action === 'register') {
-        await signUpWithEmail(formData);
+        await registerishaWithEmail(data);
         console.log('Registration successful', action);
         router.push('/app');
       }
@@ -83,13 +111,13 @@ export default function AuthPage() {
   const handleGoogleAuth = async (action) => {
     try {
       if (action === 'login') {
-        await loginWithGoogle();
+        await loga_inWithGoogle();
         console.log('Google login successful');
-        console.log('goog Registration successful');
+        router.push('/app');
       } else if (action === 'register') {
-        await signupWithGoogle();
+        await registerishaWithGoogle();
         console.log('Google registration successful');
-        console.log('goog Registration successful');
+        router.push('/app');
       }
     } catch (error) {
       console.error(`Error during Google ${action}:`, error);
@@ -184,14 +212,14 @@ export default function AuthPage() {
             <TabsContent value='register'>
               <form className='space-y-4 transition-all ease-in-out duration-5'>
                 <div className='space-y-2'>
-                  <Label htmlFor='displayName'>Name</Label>
+                  <Label htmlFor='name'>Name</Label>
                   <Input
-                    id='displayName'
+                    id='name'
                     placeholder='John Doe'
                     required
                     className=' focus:border-sky-500'
                     onChange={(e) =>
-                      handleFormChange('displayName', e.target.value)
+                      handleFormChange('name', e.target.value)
                     }
                   />
                 </div>
@@ -233,7 +261,7 @@ export default function AuthPage() {
                     required
                     className=' focus:border-sky-500'
                     onChange={(e) =>
-                      handleFormChange('phoneNUmber', e.target.value)
+                      handleFormChange('cellphoneNumber', e.target.value)
                     }
                   />
                 </div>
@@ -347,7 +375,7 @@ export default function AuthPage() {
                 <Button
                   type='button'
                   className='w-full bg-sky-600 hover:bg-sky-700 text-white'
-                  onClick={() => handleSubmit('register')}
+                  onClick={(e) => handleSubmit(e,'register')}
                 >
                   Register
                 </Button>

@@ -42,12 +42,6 @@ import { append, assoc } from 'ramda';
 
 const menuItems = [
   { href: '/app', label: 'Projects', icon: Home },
-  { href: '/app/marketplace', label: 'Marketplace', icon: ShoppingBag },
-  { href: '/app/data-sims', label: 'Data Sims', icon: Database },
-  { href: '/app/messages', label: 'Messages', icon: MessageSquare },
-  { href: '/app/billing', label: 'Billing', icon: CreditCard },
-  { href: '/app/reports', label: 'Reports', icon: BarChart2 },
-  { href: '/app/settings', label: 'Settings', icon: Settings },
 ];
 
 export default function AppLayout({ children }) {

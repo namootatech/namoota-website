@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -27,7 +27,7 @@ const allFeatures = [
   })),
 ];
 
-export default function FeatureSurvey({ onSave }) {
+export default function GetAQuote() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedFeatures, setSelectedFeatures] = useState([]);
   const [buildTime, setBuildTime] = useState('');
@@ -106,31 +106,6 @@ export default function FeatureSurvey({ onSave }) {
     const timeMultiplier = time / desiredTime;
     const adjustedPrice = Math.round(price * timeMultiplier);
     const complexityPerc = Math.round((complexity / totalComplexity) * 100);
-    const developmentPackage =
-      complexityPerc <= 20
-        ? 'EASY-PEASY'
-        : complexityPerc <= 40
-        ? 'YOUNG-DISRUPTOR'
-        : complexityPerc <= 60
-        ? 'BIG-BOSS-MOVES'
-        : complexityPerc <= 80
-        ? 'GAME-CHANGER'
-        : 'ROCKET-SCIENCE';
-
-    const handleSave = () => {
-      console.log('running handle save');
-      const totals = calculateTotals();
-      onSave({
-        features: selectedFeatures,
-        time: buildTime,
-        usersTime: desiredTime,
-        priceAtUsersTime: adjustedPrice,
-        complexityPercent: complexityPerc,
-        package: developmentPackage,
-        ...totals,
-      });
-    };
-
     return (
       <Card className='w-full max-w-6xl mx-auto'>
         <CardHeader>
@@ -142,17 +117,28 @@ export default function FeatureSurvey({ onSave }) {
         <CardContent>
           <div className='space-y-2'>
             <p>
-              <strong>Complexity Rating:</strong> {Math.round(complexity)}/{' '}
-              {Math.round(totalComplexity)} = {complexityPerc}%
+              <strong>How complex your App is:</strong> {Math.round(complexity)}
+              / {Math.round(totalComplexity)} = {complexityPerc}%
             </p>
             {/* These could be package names, trying to use fun relatable humour angle, not sure about the big boss moves one*/}
-            <p className='font-manrope text-emerald-500 text-sm italic'></p>
-            <p>
-              <strong>Namoota's build time:</strong> {Math.round(time)} days
+            <p className='font-manrope text-emerald-500 text-sm italic'>
+              {complexityPerc <= 20
+                ? 'Easy Peasy, App so easy, We gonna build it today and launch it tomorrow 😋😘, When do we start?😅'
+                : complexityPerc <= 40
+                ? 'This app has the mantle of a YOUNG DISRUPTOR 😁💪🏽, our kind of language, MAXIMUM IMPACT!'
+                : complexityPerc <= 60
+                ? "BIG BOSS MOVES 🤔🫡, respek! luckily we've got our heads in the game, how would you like us to move today?"
+                : complexityPerc <= 80
+                ? "GAME CHANGER 🔥🔥🔥, Rock on 🤘🏾 We're always into blazing new trails!"
+                : 'Pure ROCKET SCIENCE 🫨😱😭, infact not even science, science so advanced it has morphed into MAGIC ✨🤯 Time to bring out the BIG Guns 😛💪 To which planet Mr Musk?'}
             </p>
             <p>
-              <strong>Desired build time:</strong> {Math.round(desiredTime)}{' '}
-              days
+              <strong>How long Namoota will take to build:</strong>{' '}
+              {Math.round(time)} days
+            </p>
+            <p>
+              <strong>How long you'd like Namoota to take to build:</strong>{' '}
+              {Math.round(desiredTime)} days
             </p>
             <p>
               <strong>Estimated price at Namoota's time:</strong> R
@@ -162,38 +148,35 @@ export default function FeatureSurvey({ onSave }) {
               <strong>Estimated price at the desired time:</strong> R
               {adjustedPrice.toLocaleString()}
             </p>
-            <p>
-              <strong>Package:</strong>{' '}
-              <strong className='text-cyan-500'>{developmentPackage}</strong>
-            </p>
           </div>
           <h3 className='text-xl text-cyan-800 font-bold mt-6 mb-2'>
             Selected Features
           </h3>
           <p className='text-base text-cyan-600'>
-            Breakdown of your selected features with complexity, time and cost.
+            Here's a breakdown of your selected features with complexity, time
+            and cost.
           </p>
-          <div class='flex flex-col mt-6'>
-            <div class='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
-              <div class='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
-                <div class='overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg'>
-                  <table class='min-w-full divide-y divide-gray-200 dark:divide-gray-700'>
-                    <thead class='bg-gray-50 dark:bg-gray-800'>
+          <div className='flex flex-col mt-6'>
+            <div className='-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8'>
+              <div className='inline-block min-w-full py-2 align-middle md:px-6 lg:px-8'>
+                <div className='overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg'>
+                  <table className='min-w-full divide-y divide-gray-200 dark:divide-gray-700'>
+                    <thead className='bg-gray-50 dark:bg-gray-800'>
                       <tr>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                           Name
                         </th>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
-                          Complexity (1- 5)
+                          Complexity (out of 5)
                         </th>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                           Days to build (8hr/d)
                         </th>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
-                          Our time (Hrs)
+                          Our time (Hr)
                         </th>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
-                          Your time (Hrs)
+                          Your time (Hr)
                         </th>
                         <th className='capitalize font-bold px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500 dark:text-gray-400'>
                           {' '}
@@ -205,7 +188,7 @@ export default function FeatureSurvey({ onSave }) {
                         </th>
                       </tr>
                     </thead>
-                    <tbody class='bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900'>
+                    <tbody className='bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900'>
                       {selectedFeatures.map((item) => {
                         const feature = allFeatures.find((f) => f.id === item);
                         return (
@@ -243,11 +226,8 @@ export default function FeatureSurvey({ onSave }) {
             </div>
           </div>
         </CardContent>
-        <CardFooter className='flex gap-4'>
+        <CardFooter>
           <Button onClick={() => setShowSummary(false)}>Back to Survey</Button>
-          <Button onClick={handleSave} className='bg-green-500 text-white'>
-            Save
-          </Button>
         </CardFooter>
       </Card>
     );
@@ -260,12 +240,13 @@ export default function FeatureSurvey({ onSave }) {
   return (
     <Card className='w-full max-w-3xl mx-auto p-4'>
       <CardHeader>
+        <h2 className='text-xl text-cyan-800 font-bold'>
+          Quote Estimation Survey
+        </h2>
         <p className='text-base text-cyan-600'>
-          Please select any of the following that apply for your app
+          Please answer any of the following that apply for your app
         </p>
-        <CardDescription>
-          My app or its users should be able to:
-        </CardDescription>
+        <CardDescription>My app should be able to:</CardDescription>
       </CardHeader>
       <div className='p-6 pt-0'>
         <p className='text-cyan-800'>
@@ -300,3 +281,4 @@ export default function FeatureSurvey({ onSave }) {
     </Card>
   );
 }
+
