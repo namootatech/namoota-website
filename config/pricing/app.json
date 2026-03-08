@@ -1,6 +1,636 @@
 {
   "app_types": [
     {
+      "type": "Fintech / Personal Finance App",
+      "features": [
+        {
+          "name": "Peer-to-peer transfers",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "p2p-transfers",
+          "survey_question": "Allow users to send money to each other (peer-to-peer transfers)?",
+          "type": "payment-api"
+        },
+        {
+          "name": "Stokvel / group savings",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4000,
+          "id": "stokvel-group-savings",
+          "survey_question": "Support stokvels or group savings (rounds, payouts, member management)?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Instant micro-loans",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4500,
+          "id": "micro-loans",
+          "survey_question": "Offer or request instant micro-loans with repayment tracking?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Credit score simulator",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "credit-score-simulator",
+          "survey_question": "Show a simple credit score or affordability estimate?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Bill splitting",
+          "complexity": 3,
+          "days_to_complete": 2.5,
+          "price_zar": 2200,
+          "id": "bill-splitting",
+          "survey_question": "Split bills or expenses between friends or group members?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Crypto / fiat wallet basics",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 5200,
+          "id": "crypto-fiat-wallet",
+          "survey_question": "Basic wallet to hold or convert crypto and fiat?",
+          "type": "payment-api"
+        },
+        {
+          "name": "Savings goals and tracking",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2200,
+          "id": "savings-goals",
+          "survey_question": "Set savings goals and track progress?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Transaction history and statements",
+          "complexity": 2,
+          "days_to_complete": 2,
+          "price_zar": 1800,
+          "id": "transaction-history",
+          "survey_question": "View transaction history and download statements?",
+          "type": "entity-crud"
+        }
+      ]
+    },
+    {
+      "type": "On-Demand Service / Gig Economy App",
+      "features": [
+        {
+          "name": "Service provider profiles",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "provider-profiles",
+          "survey_question": "Let service providers (drivers, cleaners, etc.) create and manage their profiles?",
+          "type": "user-personal-data-crud"
+        },
+        {
+          "name": "Real-time GPS tracking",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4000,
+          "id": "realtime-gps-tracking",
+          "survey_question": "Track service providers or deliveries on a map in real time?",
+          "type": "physical-sensors"
+        },
+        {
+          "name": "Dynamic pricing and booking",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "dynamic-pricing-booking",
+          "survey_question": "Book a service with dynamic or surge pricing?",
+          "type": "date-entity-range"
+        },
+        {
+          "name": "In-app calling and messaging",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "in-app-calling-messaging",
+          "survey_question": "Call or message the provider/customer from within the app?",
+          "type": "chat"
+        },
+        {
+          "name": "Provider ratings and reviews",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2200,
+          "id": "provider-ratings-reviews",
+          "survey_question": "Rate and review service providers after a job?",
+          "type": "entity-metadata-collection-to-new-entity-build"
+        },
+        {
+          "name": "Scheduling and availability calendar",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "provider-availability-calendar",
+          "survey_question": "Let providers set when they are available (calendar/slots)?",
+          "type": "date-entity-range"
+        },
+        {
+          "name": "Booking request workflow",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "booking-request-workflow",
+          "survey_question": "Request a booking and get accepted or declined by the provider?",
+          "type": "entity-states"
+        },
+        {
+          "name": "Payment on completion",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "payment-on-completion",
+          "survey_question": "Pay only when the service is marked complete?",
+          "type": "payment-api"
+        }
+      ]
+    },
+    {
+      "type": "Healthcare / Telemedicine App",
+      "features": [
+        {
+          "name": "Video consultations",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4800,
+          "id": "video-consultations",
+          "survey_question": "Video calls between patients and doctors or nurses?",
+          "type": "media"
+        },
+        {
+          "name": "Appointment booking",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "appointment-booking-health",
+          "survey_question": "Book, reschedule, or cancel appointments online?",
+          "type": "date-entity-range"
+        },
+        {
+          "name": "Secure patient records",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4500,
+          "id": "patient-records-secure",
+          "survey_question": "Store patient info and medical history securely (access-controlled)?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Symptom checker form",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "symptom-checker",
+          "survey_question": "A form or flow that helps users describe symptoms before a consultation?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Prescription requests",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "prescription-requests",
+          "survey_question": "Request or issue prescriptions (e.g. repeat scripts)?",
+          "type": "entity-states"
+        },
+        {
+          "name": "Pharmacy integration",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "pharmacy-integration",
+          "survey_question": "Link to pharmacies for script collection or delivery?",
+          "type": "api-intergration"
+        },
+        {
+          "name": "Appointment reminders",
+          "complexity": 2,
+          "days_to_complete": 1.5,
+          "price_zar": 1600,
+          "id": "appointment-reminders",
+          "survey_question": "Send SMS or push reminders before an appointment?",
+          "type": "notifications"
+        },
+        {
+          "name": "Doctor or provider profiles",
+          "complexity": 2,
+          "days_to_complete": 2,
+          "price_zar": 2000,
+          "id": "doctor-provider-profiles",
+          "survey_question": "List doctors or providers with specialities and availability?",
+          "type": "user-personal-data-crud"
+        }
+      ]
+    },
+    {
+      "type": "Food Delivery / Restaurant App",
+      "features": [
+        {
+          "name": "Restaurant menu management",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "restaurant-menu-management",
+          "survey_question": "Let restaurants create and update menus (items, prices, options)?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Real-time order tracking",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "order-tracking-delivery",
+          "survey_question": "Track orders and delivery on a map in real time?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Driver assignment",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "driver-assignment",
+          "survey_question": "Assign orders to drivers and track who is delivering?",
+          "type": "entity-crud-and-entity-state"
+        },
+        {
+          "name": "Kitchen order display",
+          "complexity": 3,
+          "days_to_complete": 2.5,
+          "price_zar": 2400,
+          "id": "kitchen-order-display",
+          "survey_question": "Screen or view in the kitchen showing new and in-progress orders?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Promo codes and loyalty points",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "promo-loyalty-food",
+          "survey_question": "Discount codes and loyalty or rewards points for repeat customers?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Payment at checkout",
+          "complexity": 4,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "checkout-payment-food",
+          "survey_question": "Pay for orders in the app (card, EFT, cash on delivery)?",
+          "type": "payment-api"
+        },
+        {
+          "name": "Restaurant and dish reviews",
+          "complexity": 3,
+          "days_to_complete": 2.5,
+          "price_zar": 2200,
+          "id": "restaurant-reviews",
+          "survey_question": "Let customers rate restaurants and dishes?",
+          "type": "ecommerce"
+        }
+      ]
+    },
+    {
+      "type": "Real Estate / Property Management App",
+      "features": [
+        {
+          "name": "Property listings with photos and maps",
+          "complexity": 3,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "property-listings-photos-maps",
+          "survey_question": "List properties with photos and location on a map?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Lease agreements with e-sign",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "lease-agreements-esign",
+          "survey_question": "Create lease agreements and get them signed digitally?",
+          "type": "entity-states"
+        },
+        {
+          "name": "Rent reminders (automated)",
+          "complexity": 3,
+          "days_to_complete": 2,
+          "price_zar": 2200,
+          "id": "rent-reminders-auto",
+          "survey_question": "Send automatic rent reminders to tenants?",
+          "type": "comms"
+        },
+        {
+          "name": "Tenant portal",
+          "complexity": 3,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "tenant-portal",
+          "survey_question": "Let tenants log in to pay rent, submit requests, and view documents?",
+          "type": "auth-claims"
+        },
+        {
+          "name": "Maintenance requests",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "maintenance-requests",
+          "survey_question": "Tenants can log maintenance issues and track when they get fixed?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Rent collection (payments)",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "rent-collection-payments",
+          "survey_question": "Collect rent online (EFT, card, debit order)?",
+          "type": "payment-api"
+        }
+      ]
+    },
+    {
+      "type": "Agriculture / Farm Management App",
+      "features": [
+        {
+          "name": "Field mapping (GPS)",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "field-mapping-gps",
+          "survey_question": "Map fields or plots with GPS and boundaries?",
+          "type": "physical-sensors"
+        },
+        {
+          "name": "Yield prediction (basic analytics)",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4500,
+          "id": "yield-prediction",
+          "survey_question": "Basic yield or harvest estimates from your data?",
+          "type": "entity-aggregates"
+        },
+        {
+          "name": "Supplier and buyer connections",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "supplier-buyer-marketplace",
+          "survey_question": "Connect to suppliers or buyers (marketplace for produce, inputs)?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Weather integration",
+          "complexity": 3,
+          "days_to_complete": 2,
+          "price_zar": 2200,
+          "id": "weather-integration-agri",
+          "survey_question": "Show weather or forecasts for your area?",
+          "type": "api-intergration"
+        },
+        {
+          "name": "Crop tracking",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2600,
+          "id": "crop-tracking",
+          "survey_question": "Track crops by field (planting date, variety, inputs)?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Livestock management",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "livestock-management",
+          "survey_question": "Record and track livestock (counts, health, movements)?",
+          "type": "entity-crud"
+        }
+      ]
+    },
+    {
+      "type": "Event Management / Ticketing App",
+      "features": [
+        {
+          "name": "QR code check-in",
+          "complexity": 3,
+          "days_to_complete": 2.5,
+          "price_zar": 2400,
+          "id": "qr-checkin",
+          "survey_question": "Check in attendees by scanning a QR code on their ticket?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Payment for tickets",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "ticket-payments",
+          "survey_question": "Sell tickets and take payment online?",
+          "type": "payment-api"
+        },
+        {
+          "name": "Attendee management",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2600,
+          "id": "attendee-management",
+          "survey_question": "List attendees, track RSVPs, and manage capacity?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Seating chart",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "seating-chart",
+          "survey_question": "Assign seats and show a seating map?",
+          "type": "entity-configuration"
+        },
+        {
+          "name": "Event listings and RSVPs",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "event-listings-rsvp",
+          "survey_question": "Create events and let people RSVP or register?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Ticket types and pricing",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "ticket-types-pricing",
+          "survey_question": "Different ticket types (e.g. VIP, early bird) with different prices?",
+          "type": "ecommerce"
+        }
+      ]
+    },
+    {
+      "type": "Job Board / Recruitment / HR App",
+      "features": [
+        {
+          "name": "Job postings",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2600,
+          "id": "job-postings",
+          "survey_question": "Post jobs and manage listings (title, description, location)?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Resume upload",
+          "complexity": 2,
+          "days_to_complete": 1.5,
+          "price_zar": 1600,
+          "id": "resume-upload",
+          "survey_question": "Let applicants upload a CV or resume?",
+          "type": "entity-crud"
+        },
+        {
+          "name": "Interview scheduling",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "interview-scheduling",
+          "survey_question": "Schedule interviews (and optionally sync with calendar)?",
+          "type": "date-entity-range"
+        },
+        {
+          "name": "Applicant tracking",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3600,
+          "id": "applicant-tracking",
+          "survey_question": "Track applicants through stages (applied, shortlisted, offered)?",
+          "type": "entity-states"
+        },
+        {
+          "name": "Company or employer profiles",
+          "complexity": 2,
+          "days_to_complete": 2,
+          "price_zar": 2000,
+          "id": "company-employer-profiles",
+          "survey_question": "Let employers create a profile (company, logo, open roles)?",
+          "type": "user-personal-data-crud"
+        },
+        {
+          "name": "Search and filters for jobs",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "job-search-filters",
+          "survey_question": "Search and filter jobs by location, salary, or category?",
+          "type": "entity-query"
+        }
+      ]
+    },
+    {
+      "type": "Marketplace App",
+      "features": [
+        {
+          "name": "Seller / Vendor management",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4500,
+          "id": "seller-vendor-management",
+          "survey_question": "Allow people to become sellers and manage their own products/services?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Product listings for sellers",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "seller-product-listings",
+          "survey_question": "Let sellers create and manage their own product listings?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Buyer-seller messaging",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2400,
+          "id": "buyer-seller-chat",
+          "survey_question": "Private messaging between buyers and sellers?",
+          "type": "chat"
+        },
+        {
+          "name": "Delivery / collection request tracking",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4000,
+          "id": "delivery-tracking",
+          "survey_question": "Track deliveries or collections for orders?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Commission & fee calculation",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2800,
+          "id": "commission-calculation",
+          "survey_question": "Automatically calculate platform commission or fees?",
+          "type": "financial-math"
+        },
+        {
+          "name": "Order fulfillment workflow",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 3200,
+          "id": "order-fulfillment",
+          "survey_question": "Workflow for sellers to mark orders as shipped/collected?",
+          "type": "entity-states"
+        },
+        {
+          "name": "Review system for sellers & products",
+          "complexity": 3,
+          "days_to_complete": 3,
+          "price_zar": 2200,
+          "id": "marketplace-reviews",
+          "survey_question": "Reviews and ratings for sellers and products?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Escrow / secure payments",
+          "complexity": 4.5,
+          "days_to_complete": 6,
+          "price_zar": 5200,
+          "id": "escrow-payments",
+          "survey_question": "Hold money in escrow until buyer receives the item?",
+          "type": "payment-api"
+        },
+        {
+          "name": "Marketplace search & filters",
+          "complexity": 4,
+          "days_to_complete": 4,
+          "price_zar": 2800,
+          "id": "marketplace-search",
+          "survey_question": "Advanced search and filters across all sellers?",
+          "type": "ecommerce"
+        },
+        {
+          "name": "Seller dashboard",
+          "complexity": 4,
+          "days_to_complete": 5,
+          "price_zar": 4000,
+          "id": "seller-dashboard",
+          "survey_question": "Dedicated dashboard for sellers (sales, orders, earnings)?",
+          "type": "entity-crud"
+        }
+      ]
+    },
+    {
       "type": "Invoicing App",
       "features": [
         {

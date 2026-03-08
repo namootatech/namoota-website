@@ -5,25 +5,25 @@
       "name": "Fixed Content",
       "complexity": 1,
       "days_to_complete": 1,
-      "price_zar": 2250
+      "price_zar": 550
     },
     {
       "name": "Fast Loading Speed Optimization",
       "complexity": 2,
       "days_to_complete": 2,
-      "price_zar": 4500
+      "price_zar": 1200
     },
     {
       "name": "Basic Navigation",
       "complexity": 2,
       "days_to_complete": 2,
-      "price_zar": 3750
+      "price_zar": 750
     },
     {
       "name": "Responsive Design",
       "complexity": 3,
       "days_to_complete": 3,
-      "price_zar": 9000
+      "price_zar": 1500
     },
     {
       "name": "Media Elements Integration",
@@ -35,7 +35,7 @@
       "name": "Basic Forms",
       "complexity": 3,
       "days_to_complete": 3,
-      "price_zar": 7500
+      "price_zar": 1500
     },
     {
       "name": "SEO Features",
@@ -59,7 +59,7 @@
       "name": "Cross-Browser Compatibility",
       "complexity": 2,
       "days_to_complete": 2,
-      "price_zar": 4500
+      "price_zar": 800
     },
     {
       "name": "Scalability Setup",
