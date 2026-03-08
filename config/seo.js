@@ -32,18 +32,17 @@ export const seoConfigByPathname = {
   'get-a-quote': {
     title: 'Get a Quote - Namoota',
     description:
-      'Get a quote for your next project. We design and build websites, mobile applications, desktop applications, and web applications.',
+      'Get a quote for your next project. Select features for your app or website and get an estimate, then share your project with us or chat to get started.',
     keywords:
       'get a quote, quote, project quote, project quotation, project estimate, project pricing, project cost, project budget, project proposal, project inquiry, project consultation, app price, build an app price,  ecommerce app price, website price, web design price, web development price, app development price, mobile app price, desktop app price, web app price, app development cost, mobile app development cost, desktop app development cost, web app development cost, app development budget, mobile app development budget, desktop app development budget, web app development budget, app development proposal, mobile app development proposal, desktop app development proposal, web app development proposal, app development inquiry, mobile app development inquiry, desktop app development inquiry, web app development inquiry, app development consultation, mobile app development consultation, desktop app development consultation, web app development consultation',
     ogTitle: 'Get a Quote - Namoota',
     ogDescription:
-      'Get a quote for your next project. We design and build websites, mobile applications, desktop applications, and web applications.',
+      'Use our quote and pricing tool to scope your next project. Select features for apps or websites and get an estimate.',
     ogImage: 'https://www.namoota.co.za/quote.png',
     twitterTitle: 'Get a Quote - Namoota',
     twitterDescription:
-      'Get a quote for your next project. We design and build websites, mobile applications, desktop applications, and web applications.',
+      'Use our quote and pricing tool to scope your next project. Select features for apps or websites and get an estimate.',
     twitterImage: 'https://www.namoota.co.za/quote.png',
-    twitterTitle: 'https://www.namoota.co.za/quote.png',
   },
   'sell-online': {
     title: 'Sell Online - Namoota',

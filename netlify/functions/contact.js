@@ -45,6 +45,21 @@ export default async function handler(req, context) {
       message
     );
 
+    const isBuildRequest = selected === 'build-request';
+    const emailSubject = isBuildRequest
+      ? `Quote / Build request from ${name}`
+      : 'New Namoota Contact Form Submission';
+    const escapeHtml = (s) =>
+      String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    const messageHtml = (message || '')
+      .split('\n')
+      .map((line) => `<p>${escapeHtml(line) || '&nbsp;'}</p>`)
+      .join('');
+
     // Set up Nodemailer transporter with your email service credentials
     let transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -59,14 +74,15 @@ export default async function handler(req, context) {
       from: `"Namoota Website" <namoota.zar@gmail.com>`, // Sender name and email
       to: 'zwescientist@gmail.com', // Receiving email address
       cc: 'Aya <ayabongaqwabi@gmail.com>, Siya <siiiyamthanda@gmail.com>',
-      subject: 'New Namoota Contact Form Submission',
+      subject: emailSubject,
       text: `${name} \n ${cellphone}  \n ${email} \n ${subject} \n ${selected} \n ${message}`, // Plain text message
       html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Cellphone:</strong> ${cellphone}</p>
+             <p><strong>Cellphone:</strong> ${cellphone || '—'}</p>
              <p><strong>Subject:</strong> ${subject}</p>
              <p><strong>Email:</strong> ${email}</p>
              <p><strong>Selected:</strong> ${selected}</p>
-             <p><strong>Message:</strong> ${message}</p>`, // HTML message
+             <p><strong>Message:</strong></p>
+             ${messageHtml}`, // HTML message
     };
 
     console.log(mailOptions);
