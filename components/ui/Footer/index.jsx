@@ -175,7 +175,7 @@ const Footer = () => (
             <nav class='flex flex-col gap-4'>
               <div>
                 <a
-                  href='#'
+                  href='/terms'
                   class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Terms of Service
@@ -184,10 +184,19 @@ const Footer = () => (
 
               <div>
                 <a
-                  href='#'
+                  href='/privacy'
                   class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
                 >
                   Privacy Policy
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href='/data-deletion'
+                  class='text-gray-500 transition duration-100 hover:text-sky-500 active:text-sky-600'
+                >
+                  Data Deletion
                 </a>
               </div>
 

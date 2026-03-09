@@ -104,6 +104,44 @@ export const seoConfigByPathname = {
       'View our service catalogue for website design, web development, app development, and other services.',
     twitterImage: 'https://www.namoota.co.za/services.png',
   },
+  '/privacy': {
+    title: 'Privacy Policy - Namoota',
+    description:
+      'Namoota Privacy Policy. How we collect, use, and protect your personal information.',
+    keywords: 'privacy policy, privacy, personal data, data protection, Namoota',
+    ogTitle: 'Privacy Policy - Namoota',
+    ogDescription:
+      'How we collect, use, and protect your personal information.',
+    ogImage: 'https://www.namoota.co.za/og.png',
+    twitterTitle: 'Privacy Policy - Namoota',
+    twitterDescription:
+      'How we collect, use, and protect your personal information.',
+    twitterImage: 'https://www.namoota.co.za/og.png',
+  },
+  '/terms': {
+    title: 'Terms of Service - Namoota',
+    description:
+      'Namoota Terms of Service. Terms and conditions for using our website and services.',
+    keywords: 'terms of service, terms, conditions, Namoota',
+    ogTitle: 'Terms of Service - Namoota',
+    ogDescription: 'Terms and conditions for using our website and services.',
+    ogImage: 'https://www.namoota.co.za/og.png',
+    twitterTitle: 'Terms of Service - Namoota',
+    twitterDescription: 'Terms and conditions for using our website and services.',
+    twitterImage: 'https://www.namoota.co.za/og.png',
+  },
+  '/data-deletion': {
+    title: 'Data Deletion - Namoota',
+    description:
+      'Request deletion of your personal data from Namoota. How we handle data deletion requests.',
+    keywords: 'data deletion, delete my data, GDPR, privacy request, Namoota',
+    ogTitle: 'Data Deletion - Namoota',
+    ogDescription: 'Request deletion of your personal data.',
+    ogImage: 'https://www.namoota.co.za/og.png',
+    twitterTitle: 'Data Deletion - Namoota',
+    twitterDescription: 'Request deletion of your personal data.',
+    twitterImage: 'https://www.namoota.co.za/og.png',
+  },
 };
 
 export const homepageSeoConfig = {
