@@ -260,10 +260,10 @@ export default function Home() {
   const sendMessage = async (e) => {
     e.preventDefault(); // Prevent default form submission behavior
     formData.selected = selected;
-    // Post data to your Netlify function
+    // Post data to contact API
     console.log('formData', formData);
     try {
-      const response = await fetch('/.netlify/functions/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
