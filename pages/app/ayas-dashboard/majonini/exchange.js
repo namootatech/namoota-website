@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { db } from '@/util/firebase';
+import { db } from '../../../../util/firebase';
 
 export default function ExchangePage() {
   const [formData, setFormData] = useState({

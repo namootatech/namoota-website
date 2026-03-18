@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Label } from '../components/ui/label';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import {
   Card,
@@ -12,15 +12,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+} from '../components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import {
   loga_in,
   registerishaWithEmail,
   loga_inWithGoogle,
   registerishaWithGoogle,
-} from '@/util/auth/auth';
-import { industryList } from '@/config/companies';
+} from '../util/auth/auth';
+import { industryList } from '../config/companies';
 import { useRouter } from 'next/router';
 
 // Helper function to translate Firebase error codes to user-friendly messages

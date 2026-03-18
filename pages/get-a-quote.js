@@ -1,4 +1,4 @@
-import GetAQuote from '@/components/GetAQuote';
+import GetAQuote from '../components/GetAQuote';
 
 export default function GetAQuotePage() {
   return (

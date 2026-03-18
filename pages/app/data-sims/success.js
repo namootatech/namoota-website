@@ -1,5 +1,5 @@
 import { useParams } from 'next/navigation';
-import { getOrder, updateOrder } from '@/util/orders';
+import { getOrder, updateOrder } from '../../../util/orders';
 import { useEffect, useState } from 'react';
 import {
   Card,
@@ -7,11 +7,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+} from '../../../components/ui/card';
+import { Badge } from '../../../components/ui/badge';
 import { CheckCircle, CreditCard, Smartphone, Truck } from 'lucide-react';
 import { set } from 'ramda';
-import { addSimcard } from '@/util/simcards';
+import { addSimcard } from '../../../util/simcards';
 
 const randomstr = (length) => {
   const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz';
