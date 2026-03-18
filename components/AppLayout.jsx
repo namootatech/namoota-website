@@ -14,9 +14,9 @@ import {
   BarChart2,
   Settings,
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+import { Button } from './ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Input } from './ui/input';
 import {
   Table,
   TableBody,
@@ -24,20 +24,20 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+} from './ui/table';
+import { Badge } from './ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from './ui/dropdown-menu';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useFormState } from 'react-dom';
 import { useRouter } from 'next/router';
-import { useAuth } from '@/util/auth/context';
+import { useAuth } from '../util/auth/context';
 import { append, assoc } from 'ramda';
 
 const menuItems = [

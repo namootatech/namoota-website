@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 /**
  * Step progress indicator for wizard (e.g. 5 steps).

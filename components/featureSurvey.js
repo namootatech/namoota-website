@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import {
   Card,
   CardContent,
@@ -9,14 +9,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+} from './ui/card';
+import { Checkbox } from './ui/checkbox';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
 
 // Assuming the JSON data is imported or fetched
-import appData from '@/config/pricing/app.json';
-import websiteData from '@/config/pricing/website.json';
+import appData from '../config/pricing/app.json';
+import websiteData from '../config/pricing/website.json';
 
 const allFeatures = [
   ...appData.app_types.flatMap((appType) => appType.features),

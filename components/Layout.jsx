@@ -130,9 +130,9 @@ const Layout = ({ children }) => {
         <link rel='canonical' href='https://www.namoota.co.za' />
       </Head>
 
-      <main>
-        <div class='bg-white pb-6 sm:pb-8 lg:pb-12'>
-          <div class='mx-auto max-w-screen-2xl px-4 md:px-20'>
+      <main className="dark:bg-slate-950 transition-colors duration-500">
+        <div className='bg-white dark:bg-slate-950 pb-6 sm:pb-8 lg:pb-12 transition-colors duration-500'>
+          <div className='mx-auto max-w-screen-2xl px-4 md:px-20'>
             <Navbar />
             {children}
           </div>

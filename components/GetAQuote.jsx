@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo, useEffect, useCallback } from 'react';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button';
 import {
   Card,
   CardContent,
@@ -9,23 +9,23 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
+} from './ui/card';
+import { Checkbox } from './ui/checkbox';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
+import { Badge } from './ui/badge';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from './ui/accordion';
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from '@/components/ui/popover';
-import { ProgressSteps } from '@/components/ui/progress';
+} from './ui/popover';
+import { ProgressSteps } from './ui/progress';
 import {
   Table,
   TableBody,
@@ -33,12 +33,12 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
+} from './ui/table';
 import { Info, LayoutGrid, Zap, Rocket, Sparkles, FileText, Calendar, Send, CheckCircle, MessageCircle } from 'lucide-react';
 
-import appData from '@/config/pricing/app.json';
-import websiteData from '@/config/pricing/website.json';
-import { cn } from '@/lib/utils';
+import appData from '../config/pricing/app.json';
+import websiteData from '../config/pricing/website.json';
+import { cn } from '../lib/utils';
 
 const CHAT_NOW_URL = 'https://wa.me/27603116777';
 const CHAT_NOW_PREFILL = encodeURIComponent(
