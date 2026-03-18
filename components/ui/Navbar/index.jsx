@@ -6,6 +6,7 @@ import NavLink from '../NavLink';
 import { useAuth } from '../../../util/auth/context';
 
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { events } = useRouter();

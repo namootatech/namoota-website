@@ -454,10 +454,10 @@ export default function GetAQuote({
       href={chatNowHref}
       target='_blank'
       rel='noopener noreferrer'
-      className='inline-flex items-center justify-center gap-2 rounded-md bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-700 transition-colors min-h-[44px] min-w-[44px]'
+      className='inline-flex items-center justify-center gap-2.5 rounded-xl bg-emerald-700 px-6 py-3.5 text-base font-semibold text-white hover:bg-emerald-800 transition-all duration-200 min-h-[52px] shadow-sm hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500/40 focus-visible:ring-offset-2'
       aria-label='Chat on WhatsApp'
     >
-      <MessageCircle className='h-4 w-4' aria-hidden />
+      <MessageCircle className='h-5 w-5' aria-hidden />
       Chat now
     </a>
   );
@@ -481,20 +481,19 @@ export default function GetAQuote({
 
   function renderStage1() {
     return (
-      <Card className='w-full max-w-4xl mx-auto'>
-        <CardHeader>
-          <CardTitle className='text-xl text-cyan-800 flex items-center gap-2'>
-            <LayoutGrid className='h-5 w-5' aria-hidden />
-            What kind of project are you building?
+      <Card className='w-full max-w-5xl mx-auto rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+        <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6 sm:pb-8'>
+          <CardTitle className='text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+            <LayoutGrid className='h-8 w-8 text-teal-700' aria-hidden />
+            What are you building?
           </CardTitle>
-          <CardDescription>
-            Pick one or more that best match your idea — or choose &quot;Custom
-            / Mixed&quot; if your app combines several things (most people do!)
+          <CardDescription className='text-lg leading-relaxed text-slate-500 mt-3 max-w-2xl'>
+            Pick one or more that best match your idea — or choose &quot;Custom / Mixed&quot; if your app combines several things.
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className='px-8 sm:px-10 lg:px-12 pb-4'>
           <div
-            className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3'
+            className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5'
             role='group'
             aria-label='Project type'
           >
@@ -521,16 +520,17 @@ export default function GetAQuote({
                     }
                   }}
                   className={cn(
-                    'rounded-lg border-2 p-4 text-left transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring min-h-[44px]',
+                    'group rounded-2xl border-2 p-6 text-left transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/40 focus-visible:ring-offset-2 min-h-[140px] hover:scale-[1.02] hover:shadow-lg',
                     isSelected
-                      ? 'border-cyan-600 bg-cyan-50 text-cyan-900'
-                      : 'border-gray-200 hover:border-cyan-300 bg-white',
+                      ? 'border-teal-600 bg-teal-50/60 shadow-md scale-[1.02]'
+                      : 'border-slate-200/80 hover:border-teal-400/50 bg-white',
                   )}
                   aria-pressed={isSelected}
                 >
-                  <span className='font-medium'>{emoji} {type}</span>
+                  <span className='text-5xl block mb-3'>{emoji}</span>
+                  <span className='text-xl font-bold tracking-tight text-slate-800 block'>{type}</span>
                   {PROJECT_TYPE_HINTS[type] && (
-                    <p className='text-xs text-muted-foreground mt-1'>
+                    <p className='text-base leading-relaxed text-slate-500 mt-2'>
                       {PROJECT_TYPE_HINTS[type]}
                     </p>
                   )}
@@ -539,13 +539,14 @@ export default function GetAQuote({
             })}
           </div>
         </CardContent>
-        <CardFooter className='flex justify-end'>
+        <CardFooter className='flex justify-end px-8 sm:px-10 lg:px-12 py-8 sm:py-10'>
           <Button
             onClick={() => setWizardStep(2)}
             disabled={selectedProjectTypes.length === 0}
             aria-disabled={selectedProjectTypes.length === 0}
+            className='min-h-[52px] px-8 text-base font-semibold rounded-xl bg-teal-700 hover:bg-teal-800 transition-all duration-200 shadow-sm hover:shadow-md focus-visible:ring-2 focus-visible:ring-teal-500/40'
           >
-            Next: Core features →
+            Next: Core features
           </Button>
         </CardFooter>
       </Card>
@@ -563,25 +564,25 @@ export default function GetAQuote({
     const hasFeatures = groupLabels.length > 0;
 
     return (
-      <Card className='w-full max-w-4xl mx-auto'>
-        <CardHeader>
-          <CardTitle className='text-xl text-cyan-800 flex items-center gap-2'>
-            {IconComponent && <IconComponent className='h-5 w-5' aria-hidden />}
+      <Card className='w-full max-w-5xl mx-auto rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+        <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6 sm:pb-8'>
+          <CardTitle className='text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+            {IconComponent && <IconComponent className='h-8 w-8 text-teal-700' aria-hidden />}
             {title}
           </CardTitle>
-          <CardDescription>
+          <CardDescription className='text-lg leading-relaxed text-slate-500 mt-3 max-w-2xl'>
             {stageNum === 2 && 'The everyday basics your app probably needs'}
             {stageNum === 3 && 'Things that make money or connect people'}
             {stageNum === 4 &&
               'Nice extras that make it feel modern and trustworthy'}
           </CardDescription>
           {visibleBundles.length > 0 && (
-            <div className='flex flex-wrap gap-2 pt-2'>
+            <div className='flex flex-wrap gap-3 pt-4'>
               {visibleBundles.map((bundle) => (
                 <Badge
                   key={bundle.id}
                   variant='secondary'
-                  className='cursor-pointer hover:bg-cyan-100'
+                  className='cursor-pointer hover:bg-teal-100 px-4 py-2 text-sm font-medium rounded-full transition-colors'
                   onClick={() => applyBundle(bundle.featureIds)}
                   role='button'
                   tabIndex={0}
@@ -592,20 +593,20 @@ export default function GetAQuote({
                     }
                   }}
                 >
-                  ✨ Recommended: {bundle.label}
+                  Recommended: {bundle.label}
                 </Badge>
               ))}
             </div>
           )}
         </CardHeader>
-        <CardContent>
+        <CardContent className='px-8 sm:px-10 lg:px-12 pb-4'>
           {!hasFeatures ? (
-            <p className='text-muted-foreground text-sm py-4'>
+            <p className='text-slate-500 text-lg py-8 text-center'>
               No features in this category for your project type. Click Next to
               continue.
             </p>
           ) : (
-            <Accordion type='multiple' defaultValue={[]}>
+            <Accordion type='multiple' defaultValue={[]} className='space-y-3'>
               {groupLabels.map((groupLabel) => {
                 const groupFeatures = byGroup[groupLabel];
                 const ids = groupFeatures.map((f) => f.id);
@@ -615,12 +616,16 @@ export default function GetAQuote({
                 const allSelected = selectedCount === ids.length;
 
                 return (
-                  <AccordionItem key={groupLabel} value={groupLabel}>
+                  <AccordionItem 
+                    key={groupLabel} 
+                    value={groupLabel}
+                    className='border border-slate-200/70 rounded-2xl overflow-hidden bg-white'
+                  >
                     <AccordionTrigger
                       value={groupLabel}
-                      className='hover:no-underline'
+                      className='hover:no-underline py-6 px-7 hover:bg-slate-50/50 transition-colors'
                     >
-                      <div className='flex items-center gap-3'>
+                      <div className='flex items-center gap-4'>
                         <Checkbox
                           checked={allSelected}
                           onCheckedChange={(checked) =>
@@ -628,68 +633,75 @@ export default function GetAQuote({
                           }
                           onClick={(e) => e.stopPropagation()}
                           aria-label={`Select all ${groupLabel}`}
+                          className='h-5 w-5'
                         />
-                        <span className='font-semibold'>{groupLabel}</span>
+                        <span className='font-semibold text-lg text-slate-800'>{groupLabel}</span>
                         {selectedCount > 0 && (
-                          <span className='text-muted-foreground text-xs'>
-                            ({selectedCount} selected)
+                          <span className='text-teal-700 text-sm font-medium bg-teal-50 px-3 py-1 rounded-full'>
+                            {selectedCount} selected
                           </span>
                         )}
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent value={groupLabel}>
-                      <ul className='space-y-1'>
-                        {groupFeatures.map((feature) => (
-                          <li key={feature.id}>
-                            <div
-                              className={cn(
-                                'flex items-center gap-3 rounded-md p-3 min-h-[44px] border border-transparent hover:bg-muted/50 hover:border-muted transition-colors',
-                                selectedFeatures.includes(feature.id) &&
-                                  'bg-cyan-50/50',
-                              )}
-                            >
-                              <Checkbox
-                                id={feature.id}
-                                checked={selectedFeatures.includes(feature.id)}
-                                onCheckedChange={() =>
-                                  handleFeatureToggle(feature.id)
-                                }
-                                aria-describedby={`${feature.id}-desc`}
-                              />
-                              <label
-                                htmlFor={feature.id}
-                                className='flex-1 text-sm text-foreground cursor-pointer'
-                                id={`${feature.id}-desc`}
+                    <AccordionContent value={groupLabel} className='px-7 pb-6'>
+                      <ul className='space-y-2'>
+                        {groupFeatures.map((feature) => {
+                          const isFeatureSelected = selectedFeatures.includes(feature.id);
+                          return (
+                            <li key={feature.id}>
+                              <div
+                                className={cn(
+                                  'flex items-center gap-4 rounded-xl p-4 min-h-[72px] transition-all duration-200',
+                                  isFeatureSelected
+                                    ? 'bg-teal-50/60 border-l-4 border-l-teal-600 border border-teal-200/50'
+                                    : 'border border-transparent hover:bg-slate-50/80 hover:border-slate-200/50',
+                                )}
                               >
-                                {feature.survey_question}
-                              </label>
-                              <Popover>
-                                <PopoverTrigger
-                                  type='button'
-                                  className='shrink-0 p-1 rounded hover:bg-muted text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring'
-                                  aria-label={`Info about ${feature.name}`}
+                                <Checkbox
+                                  id={feature.id}
+                                  checked={isFeatureSelected}
+                                  onCheckedChange={() =>
+                                    handleFeatureToggle(feature.id)
+                                  }
+                                  aria-describedby={`${feature.id}-desc`}
+                                  className='h-5 w-5'
+                                />
+                                <label
+                                  htmlFor={feature.id}
+                                  className='flex-1 text-base text-slate-700 cursor-pointer leading-relaxed'
+                                  id={`${feature.id}-desc`}
                                 >
-                                  <Info className='h-4 w-4' />
-                                </PopoverTrigger>
-                                <PopoverContent
-                                  align='end'
-                                  className='max-w-xs'
-                                >
-                                  <p className='text-sm'>
-                                    {feature.survey_question}
-                                  </p>
-                                  <p className='text-xs text-muted-foreground mt-1'>
-                                    Typical cost: R
-                                    {feature.price_zar?.toLocaleString() ?? '—'}
-                                  </p>
-                                  <p className='text-xs text-muted-foreground'>
-                                    Common in: {feature.groupLabel}
-                                  </p>
-                                </PopoverContent>
-                              </Popover>
-                            </div>
-                          </li>
-                        ))}
+                                  {feature.survey_question}
+                                </label>
+                                <Popover>
+                                  <PopoverTrigger
+                                    type='button'
+                                    className='shrink-0 p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-600 focus-visible:ring-2 focus-visible:ring-teal-500/40 transition-colors'
+                                    aria-label={`Info about ${feature.name}`}
+                                  >
+                                    <Info className='h-5 w-5' />
+                                  </PopoverTrigger>
+                                  <PopoverContent
+                                    align='end'
+                                    className='max-w-sm rounded-xl p-5 shadow-xl border-slate-200/70'
+                                  >
+                                    <p className='text-base text-slate-700 leading-relaxed'>
+                                      {feature.survey_question}
+                                    </p>
+                                    <div className='mt-3 pt-3 border-t border-slate-100 space-y-1'>
+                                      <p className='text-sm text-slate-500'>
+                                        Typical cost: <span className='font-semibold text-slate-700'>R{feature.price_zar?.toLocaleString() ?? '—'}</span>
+                                      </p>
+                                      <p className='text-sm text-slate-500'>
+                                        Common in: <span className='font-medium'>{feature.groupLabel}</span>
+                                      </p>
+                                    </div>
+                                  </PopoverContent>
+                                </Popover>
+                              </div>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </AccordionContent>
                   </AccordionItem>
@@ -698,18 +710,28 @@ export default function GetAQuote({
             </Accordion>
           )}
         </CardContent>
-        <CardFooter className='flex justify-between'>
-          <Button variant='ghost' onClick={() => setWizardStep(stageNum - 1)}>
-            ← Back
+        <CardFooter className='flex flex-col sm:flex-row justify-between gap-4 px-8 sm:px-10 lg:px-12 py-8 sm:py-10'>
+          <Button 
+            variant='ghost' 
+            onClick={() => setWizardStep(stageNum - 1)}
+            className='min-h-[52px] px-6 text-base font-medium text-slate-600 hover:text-slate-800 hover:bg-slate-100 rounded-xl'
+          >
+            Back
           </Button>
-          <div className='flex gap-2'>
+          <div className='flex gap-3'>
             <Button
               variant='outline'
               onClick={() => setWizardStep(stageNum + 1)}
+              className='min-h-[52px] px-6 text-base font-medium rounded-xl border-slate-300 hover:bg-slate-50'
             >
-              None of these → Next
+              Skip this step
             </Button>
-            <Button onClick={() => setWizardStep(stageNum + 1)}>Next →</Button>
+            <Button 
+              onClick={() => setWizardStep(stageNum + 1)}
+              className='min-h-[52px] px-8 text-base font-semibold rounded-xl bg-teal-700 hover:bg-teal-800 transition-all duration-200 shadow-sm hover:shadow-md'
+            >
+              Next
+            </Button>
           </div>
         </CardFooter>
       </Card>
@@ -721,29 +743,29 @@ export default function GetAQuote({
     const complexityPerc = Math.round((complexity / totalComplexity) * 100);
     const complexityCopy =
       complexityPerc <= 20
-        ? 'Easy Peasy, App so easy, We gonna build it today and launch it tomorrow 😋😘, When do we start?😅'
+        ? 'Easy Peasy, App so easy, We gonna build it today and launch it tomorrow, When do we start?'
         : complexityPerc <= 40
-          ? 'This app has the mantle of a YOUNG DISRUPTOR 😁💪🏽, our kind of language, MAXIMUM IMPACT!'
+          ? 'This app has the mantle of a YOUNG DISRUPTOR, our kind of language, MAXIMUM IMPACT!'
           : complexityPerc <= 60
-            ? "BIG BOSS MOVES 🤔🫡, respek! luckily we've got our heads in the game, how would you like us to move today?"
+            ? "BIG BOSS MOVES, respek! luckily we've got our heads in the game, how would you like us to move today?"
             : complexityPerc <= 80
-              ? "GAME CHANGER 🔥🔥🔥, Rock on 🤘🏾 We're always into blazing new trails!"
-              : 'Pure ROCKET SCIENCE 🫨😱😭, in fact not even science, science so advanced it has morphed into MAGIC ✨🤯 Time to bring out the BIG Guns 😛💪 To which planet Mr Musk?';
+              ? "GAME CHANGER, Rock on We're always into blazing new trails!"
+              : 'Pure ROCKET SCIENCE, in fact not even science, science so advanced it has morphed into MAGIC Time to bring out the BIG Guns To which planet Mr Musk?';
 
     return (
-      <div className='w-full max-w-4xl mx-auto space-y-6'>
-        <Card>
-          <CardHeader>
-            <CardTitle className='text-xl text-cyan-800 flex items-center gap-2'>
-              <Calendar className='h-5 w-5' aria-hidden />
+      <div className='w-full max-w-5xl mx-auto space-y-8 sm:space-y-10'>
+        <Card className='rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+          <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6'>
+            <CardTitle className='text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+              <Calendar className='h-7 w-7 text-teal-700' aria-hidden />
               Timeline
             </CardTitle>
-            <CardDescription>
+            <CardDescription className='text-lg leading-relaxed text-slate-500 mt-2'>
               How many days would you like us to aim for?
             </CardDescription>
           </CardHeader>
-          <CardContent>
-            <Label htmlFor='buildTime'>Desired build time (days)</Label>
+          <CardContent className='px-8 sm:px-10 lg:px-12 pb-4'>
+            <Label htmlFor='buildTime' className='text-base font-medium text-slate-700'>Desired build time (days)</Label>
             <Input
               id='buildTime'
               type='number'
@@ -752,65 +774,73 @@ export default function GetAQuote({
               value={buildTime}
               onChange={(e) => setBuildTime(e.target.value)}
               placeholder={String(Math.max(1, Math.round(totals.time)))}
-              className='mt-2 max-w-[120px]'
+              className='mt-3 max-w-[160px] min-h-[52px] text-lg rounded-xl border-slate-300 focus-visible:ring-2 focus-visible:ring-teal-500/40'
               aria-describedby='buildTime-hint'
             />
             <p
               id='buildTime-hint'
-              className='text-xs text-muted-foreground mt-1'
+              className='text-base text-slate-500 mt-3 leading-relaxed'
             >
-              Our estimate: {Math.round(totals.time)} days at R
-              {totals.price.toLocaleString()}. Longer timelines get a discount
+              Our estimate: <span className='font-semibold text-slate-700'>{Math.round(totals.time)} days</span> at <span className='font-semibold text-slate-700'>R{totals.price.toLocaleString()}</span>. Longer timelines get a discount
               (price floor applies after {maxDesiredTimeForDiscount} days).
             </p>
           </CardContent>
-          <CardFooter>
-            <Button variant='outline' onClick={() => setWizardStep(4)}>
-              ← Back
+          <CardFooter className='px-8 sm:px-10 lg:px-12 py-8'>
+            <Button 
+              variant='outline' 
+              onClick={() => setWizardStep(4)}
+              className='min-h-[52px] px-6 text-base font-medium rounded-xl border-slate-300 hover:bg-slate-50'
+            >
+              Back
             </Button>
           </CardFooter>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className='text-xl text-cyan-800 flex items-center gap-2'>
-              <FileText className='h-5 w-5' aria-hidden />
+        <Card className='rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+          <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6'>
+            <CardTitle className='text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+              <FileText className='h-7 w-7 text-teal-700' aria-hidden />
               Summary
             </CardTitle>
-            <CardDescription>
+            <CardDescription className='text-lg leading-relaxed text-slate-500 mt-2'>
               Your selected features and estimated costs
             </CardDescription>
           </CardHeader>
-          <CardContent className='space-y-4'>
-            <p>
-              <strong>Complexity:</strong> {Math.round(complexity)} /{' '}
-              {Math.round(totalComplexity)} = {complexityPerc}%
-            </p>
-            <p className='text-emerald-600 text-sm italic'>{complexityCopy}</p>
-            <p>
-              <strong>Our time:</strong> {Math.round(time)}+ days · R
-              {price.toLocaleString()}
-            </p>
-            <p>
-              <strong>Your desired time:</strong> {Math.round(desiredTimeNum)}{' '}
-              days · R
-              {time === desiredTimeNum
-                ? price.toLocaleString()
-                : adjustedPrice.toLocaleString()}
-            </p>
+          <CardContent className='px-8 sm:px-10 lg:px-12 pb-8 space-y-6'>
+            <div className='bg-slate-50/80 rounded-2xl p-6 space-y-4'>
+              <p className='text-lg text-slate-700'>
+                <span className='font-semibold'>Complexity:</span> {Math.round(complexity)} / {Math.round(totalComplexity)} = <span className='font-bold text-teal-700'>{complexityPerc}%</span>
+              </p>
+              <p className='text-emerald-700 text-base italic leading-relaxed'>{complexityCopy}</p>
+            </div>
+            
+            <div className='grid sm:grid-cols-2 gap-6'>
+              <div className='bg-white border border-slate-200/70 rounded-2xl p-6'>
+                <p className='text-sm font-medium text-slate-500 uppercase tracking-wide mb-2'>Our timeline</p>
+                <p className='text-3xl font-bold text-slate-800'>{Math.round(time)}+ days</p>
+                <p className='text-xl font-semibold text-teal-700 mt-1'>R{price.toLocaleString()}</p>
+              </div>
+              <div className='bg-teal-50/60 border border-teal-200/50 rounded-2xl p-6'>
+                <p className='text-sm font-medium text-teal-700 uppercase tracking-wide mb-2'>Your desired timeline</p>
+                <p className='text-3xl font-bold text-slate-800'>{Math.round(desiredTimeNum)} days</p>
+                <p className='text-xl font-semibold text-teal-700 mt-1'>
+                  R{time === desiredTimeNum ? price.toLocaleString() : adjustedPrice.toLocaleString()}
+                </p>
+              </div>
+            </div>
 
             {isRush && (
               <div
-                className='rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800'
+                className='rounded-2xl border border-amber-200 bg-amber-50 p-5 text-base text-amber-800 leading-relaxed'
                 role='alert'
               >
-                ⚡ Faster delivery increases cost; we've applied a rush multiplier.
+                Faster delivery increases cost; we have applied a rush multiplier.
                 Want to discuss timelines?{' '}
                 <a
                   href={chatNowHref}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='underline font-medium'
+                  className='underline font-semibold hover:text-amber-900'
                 >
                   Chat with us
                 </a>
@@ -818,23 +848,23 @@ export default function GetAQuote({
             )}
 
             {trustStats && (
-              <p className='text-sm text-muted-foreground'>
-                📊 We've built {trustStats.count}+ similar apps. Typical range for
-                projects like this: {trustStats.range}.
+              <p className='text-base text-slate-500 leading-relaxed'>
+                We have built {trustStats.count}+ similar apps. Typical range for
+                projects like this: <span className='font-semibold text-slate-700'>{trustStats.range}</span>.
               </p>
             )}
 
-            <div className='overflow-x-auto'>
+            <div className='overflow-x-auto rounded-2xl border border-slate-200/70'>
               <Table>
                 <TableHeader>
-                  <TableRow>
-                    <TableHead>Feature</TableHead>
-                    <TableHead>Complexity</TableHead>
-                    <TableHead>Days (our)</TableHead>
-                    <TableHead>Hours (our)</TableHead>
-                    <TableHead>Hours (desired)</TableHead>
-                    <TableHead>Price (our)</TableHead>
-                    <TableHead>Price (desired)</TableHead>
+                  <TableRow className='bg-slate-50/80'>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Feature</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Complexity</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Days (our)</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Hours (our)</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Hours (desired)</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Price (our)</TableHead>
+                    <TableHead className='font-semibold text-slate-700 py-4'>Price (desired)</TableHead>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -847,14 +877,14 @@ export default function GetAQuote({
                       (f.price_zar ?? 0) * effectiveTimeMultiplier,
                     );
                     return (
-                      <TableRow key={f.id}>
-                        <TableCell className='font-medium'>{f.name}</TableCell>
-                        <TableCell>{f.complexity}</TableCell>
-                        <TableCell>{f.days_to_complete}</TableCell>
-                        <TableCell>{ourHr}</TableCell>
-                        <TableCell>{desiredHr}</TableCell>
-                        <TableCell>R{f.price_zar}</TableCell>
-                        <TableCell>R{priceDesired}</TableCell>
+                      <TableRow key={f.id} className='hover:bg-slate-50/50'>
+                        <TableCell className='font-medium text-slate-800 py-4'>{f.name}</TableCell>
+                        <TableCell className='py-4'>{f.complexity}</TableCell>
+                        <TableCell className='py-4'>{f.days_to_complete}</TableCell>
+                        <TableCell className='py-4'>{ourHr}</TableCell>
+                        <TableCell className='py-4'>{desiredHr}</TableCell>
+                        <TableCell className='py-4'>R{f.price_zar}</TableCell>
+                        <TableCell className='py-4'>R{priceDesired}</TableCell>
                       </TableRow>
                     );
                   })}
@@ -865,24 +895,24 @@ export default function GetAQuote({
         </Card>
 
         {wantNamootaToBuild === null && (
-          <Card>
-            <CardHeader>
-              <CardTitle className='text-lg text-cyan-800 flex items-center gap-2'>
-                <CheckCircle className='h-5 w-5' aria-hidden />
+          <Card className='rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+            <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6'>
+              <CardTitle className='text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+                <CheckCircle className='h-7 w-7 text-teal-700' aria-hidden />
                 Would you like Namoota to build this project?
               </CardTitle>
             </CardHeader>
-            <CardContent className='flex flex-wrap gap-3'>
+            <CardContent className='flex flex-wrap gap-4 px-8 sm:px-10 lg:px-12 pb-10'>
               <Button
                 onClick={() => setWantNamootaToBuild(true)}
-                className='bg-emerald-600 hover:bg-emerald-700 min-h-[44px]'
+                className='bg-emerald-700 hover:bg-emerald-800 min-h-[52px] px-8 text-base font-semibold rounded-xl shadow-sm hover:shadow-md transition-all duration-200'
               >
-                👍 Yes, I'd like to share details
+                Yes, I would like to share details
               </Button>
               <Button
                 variant='outline'
                 onClick={() => setWantNamootaToBuild(false)}
-                className='min-h-[44px]'
+                className='min-h-[52px] px-8 text-base font-medium rounded-xl border-slate-300 hover:bg-slate-50'
               >
                 No, thanks
               </Button>
@@ -891,11 +921,11 @@ export default function GetAQuote({
         )}
 
         {wantNamootaToBuild === false && (
-          <Card>
-            <CardContent className='pt-6'>
-              <p className='text-cyan-700 mb-4'>
+          <Card className='rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+            <CardContent className='p-8 sm:p-10 lg:p-12'>
+              <p className='text-xl text-slate-700 mb-6 leading-relaxed'>
                 Thanks for using our quote tool. If you change your mind or have
-                questions, we're here. 💬
+                questions, we are here.
               </p>
               <ChatNowButton />
             </CardContent>
@@ -903,21 +933,21 @@ export default function GetAQuote({
         )}
 
         {wantNamootaToBuild === true && !projectDetailsSent && (
-          <Card>
-            <CardHeader>
-              <CardTitle className='text-lg text-cyan-800 flex items-center gap-2'>
-                <Send className='h-5 w-5' aria-hidden />
+          <Card className='rounded-3xl border-slate-200/70 bg-gradient-to-b from-white to-slate-50/30 shadow-sm'>
+            <CardHeader className='p-8 sm:p-10 lg:p-12 pb-6'>
+              <CardTitle className='text-2xl sm:text-3xl font-bold tracking-tight text-slate-800 flex items-center gap-3'>
+                <Send className='h-7 w-7 text-teal-700' aria-hidden />
                 Share your project details
               </CardTitle>
-              <CardDescription>
-                We'll email your details and quote summary to our team. You can
+              <CardDescription className='text-lg leading-relaxed text-slate-500 mt-2'>
+                We will email your details and quote summary to our team. You can
                 also chat with us on WhatsApp.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleBuildRequestSubmit} className='space-y-4'>
+            <CardContent className='px-8 sm:px-10 lg:px-12 pb-10'>
+              <form onSubmit={handleBuildRequestSubmit} className='space-y-6'>
                 <div>
-                  <Label htmlFor='build-name'>Name *</Label>
+                  <Label htmlFor='build-name' className='text-base font-medium text-slate-700'>Name *</Label>
                   <Input
                     id='build-name'
                     value={buildRequestForm.name}
@@ -928,12 +958,12 @@ export default function GetAQuote({
                       }))
                     }
                     placeholder='Your name'
-                    className='mt-1 min-h-[44px]'
+                    className='mt-2 min-h-[52px] text-base rounded-xl border-slate-300 focus-visible:ring-2 focus-visible:ring-teal-500/40'
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor='build-email'>Email *</Label>
+                  <Label htmlFor='build-email' className='text-base font-medium text-slate-700'>Email *</Label>
                   <Input
                     id='build-email'
                     type='email'
@@ -945,12 +975,12 @@ export default function GetAQuote({
                       }))
                     }
                     placeholder='your@email.com'
-                    className='mt-1 min-h-[44px]'
+                    className='mt-2 min-h-[52px] text-base rounded-xl border-slate-300 focus-visible:ring-2 focus-visible:ring-teal-500/40'
                     required
                   />
                 </div>
                 <div>
-                  <Label htmlFor='build-cellphone'>Phone (optional)</Label>
+                  <Label htmlFor='build-cellphone' className='text-base font-medium text-slate-700'>Phone (optional)</Label>
                   <Input
                     id='build-cellphone'
                     type='tel'
@@ -962,11 +992,11 @@ export default function GetAQuote({
                       }))
                     }
                     placeholder='+27 ...'
-                    className='mt-1 min-h-[44px]'
+                    className='mt-2 min-h-[52px] text-base rounded-xl border-slate-300 focus-visible:ring-2 focus-visible:ring-teal-500/40'
                   />
                 </div>
                 <div>
-                  <Label htmlFor='build-details'>Project details</Label>
+                  <Label htmlFor='build-details' className='text-base font-medium text-slate-700'>Project details</Label>
                   <textarea
                     id='build-details'
                     value={buildRequestForm.projectDetails}
@@ -977,22 +1007,22 @@ export default function GetAQuote({
                       }))
                     }
                     placeholder='Tell us about your project, timeline, or any questions...'
-                    rows={4}
-                    className='mt-1 w-full rounded-md border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring'
+                    rows={5}
+                    className='mt-2 w-full rounded-xl border border-slate-300 bg-background px-4 py-3 text-base leading-relaxed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/40 focus-visible:ring-offset-2'
                   />
                 </div>
                 {submitError && (
-                  <p className='text-sm text-red-600' role='alert'>
+                  <p className='text-base text-red-600 font-medium' role='alert'>
                     {submitError}
                   </p>
                 )}
-                <div className='flex flex-wrap gap-3'>
+                <div className='flex flex-wrap gap-4 pt-2'>
                   <Button
                     type='submit'
                     disabled={submitLoading}
-                    className='bg-cyan-600 hover:bg-cyan-700 min-h-[44px] inline-flex items-center gap-2'
+                    className='bg-teal-700 hover:bg-teal-800 min-h-[52px] px-8 text-base font-semibold rounded-xl inline-flex items-center gap-2.5 shadow-sm hover:shadow-md transition-all duration-200'
                   >
-                    <Send className='h-4 w-4' aria-hidden />
+                    <Send className='h-5 w-5' aria-hidden />
                     {submitLoading ? 'Sending...' : 'Send project details'}
                   </Button>
                   <ChatNowButton />
@@ -1003,13 +1033,13 @@ export default function GetAQuote({
         )}
 
         {wantNamootaToBuild === true && projectDetailsSent && (
-          <Card>
-            <CardContent className='pt-6'>
-              <p className='text-emerald-600 font-medium mb-2 flex items-center gap-2'>
-                <CheckCircle className='h-5 w-5 shrink-0' aria-hidden />
-                Your project details have been sent. We'll be in touch soon.
+          <Card className='rounded-3xl border-emerald-200 bg-gradient-to-b from-emerald-50/50 to-white shadow-sm'>
+            <CardContent className='p-8 sm:p-10 lg:p-12'>
+              <p className='text-xl text-emerald-700 font-semibold mb-3 flex items-center gap-3'>
+                <CheckCircle className='h-7 w-7 shrink-0' aria-hidden />
+                Your project details have been sent. We will be in touch soon.
               </p>
-              <p className='text-cyan-700 text-sm mb-4'>
+              <p className='text-lg text-slate-600 mb-6 leading-relaxed'>
                 Want to chat now? Open WhatsApp and we can discuss your project.
               </p>
               <ChatNowButton />
@@ -1021,17 +1051,17 @@ export default function GetAQuote({
   }
 
   return (
-    <div className='relative pb-24'>
-      <div className='sticky top-0 z-10 bg-background/95 backdrop-blur py-3 border-b mb-6'>
+    <div className='relative pb-32 bg-[#fafaf9]'>
+      <div className='sticky top-0 z-10 bg-[#fafaf9]/95 backdrop-blur-sm py-5 border-b border-slate-200/70 mb-10 sm:mb-12'>
         <ProgressSteps
           steps={WIZARD_STEPS}
           currentStep={wizardStep}
           onStepClick={(step) => setWizardStep(step)}
-          className='max-w-4xl mx-auto px-4'
+          className='max-w-5xl mx-auto px-4'
         />
       </div>
 
-      <div className='px-4'>
+      <div className='px-4 sm:px-6'>
         {wizardStep === 1 && renderStage1()}
         {wizardStep === 2 &&
           renderFeatureStage(
@@ -1062,19 +1092,24 @@ export default function GetAQuote({
 
       {showMiniSummary && (
         <div
-          className='fixed bottom-0 left-0 right-0 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-sm z-20 bg-card border shadow-lg rounded-lg p-4 sm:rounded-xl'
+          className='fixed bottom-0 left-0 right-0 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-sm z-20 bg-white/90 backdrop-blur-md border border-slate-200/70 shadow-2xl rounded-t-2xl sm:rounded-2xl p-5 sm:p-6'
           role='complementary'
           aria-label='Quote summary'
         >
-          <p className='text-sm font-medium'>
-            📋 {selectedFeatures.length} features · R
-            {totals.price.toLocaleString()} · ~{Math.round(totals.time)} days
+          <p className='text-lg font-semibold text-slate-800'>
+            {selectedFeatures.length} features selected
+          </p>
+          <p className='text-2xl font-bold text-teal-700 mt-1'>
+            R{totals.price.toLocaleString()}
+          </p>
+          <p className='text-base text-slate-500'>
+            ~{Math.round(totals.time)} days estimated
           </p>
           <Button
-            className='w-full mt-2 min-h-[44px]'
+            className='w-full mt-4 min-h-[52px] text-base font-semibold rounded-xl bg-teal-700 hover:bg-teal-800 transition-all duration-200 shadow-sm hover:shadow-md'
             onClick={() => setWizardStep(5)}
           >
-            View full summary →
+            View full summary
           </Button>
         </div>
       )}
