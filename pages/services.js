@@ -7,12 +7,13 @@ import {
   FaRegHandshake,
   FaChartLine,
 } from 'react-icons/fa';
+import BusinessInABoxSolutionsSection from '../components/BusinessInABoxSolutionsSection';
 
 export default function Services() {
   return (
     <div className='bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100'>
       {/* Hero Section */}
-      <section className='relative bg-sky-50 dark:bg-gray-900/30 pt-32 lg:pt-24 pb-32 px-20 lg:pb-4 rounded-md m-4'>
+      {/* <section className='relative bg-sky-50 dark:bg-gray-900/30 pt-32 lg:pt-24 pb-32 px-20 lg:pb-4 rounded-md m-4'>
         <div className='mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 relative'>
           <div className='absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 lg:-translate-x-0 lg:-translate-y-0 lg:left-0 lg:top-16 w-40 h-40 skew-x-6 opacity-50 dark:opacity-80 rounded-full bg-gradient-to-bl from-sky-600 to-sky-400 blur-3xl flex'></div>
           <div className='flex text-center lg:text-left flex-col lg:items-center lg:flex-row gap-8 lg:gap-10 xl:gap-12 relative max-w-4xl lg:max-w-none'>
@@ -42,113 +43,9 @@ export default function Services() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Systems We Build Section */}
-      <section className='py-24 bg-white dark:bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 text-center'>
-          <h2 className='text-3xl sm:text-4xl font-semibold text-gray-900 dark:text-white mb-6'>
-            Systems We Build
-          </h2>
-          <h2 className='text-2xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-6'>
-            Streamline Your Business Operations
-          </h2>
-          <p className='text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto'>
-            We understand that running a business can be overwhelming, but the
-            right systems can make a world of difference. Our systems are built
-            to make your day-to-day operations more efficient, organized, and
-            automated.
-          </p>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
-            <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaLaptopCode className='h-16 w-16 text-sky-600 mb-4' />
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                Quoting & Invoicing
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2'>
-                Automate and simplify your quoting and invoicing processes,
-                ensuring you never miss a detail.
-              </p>
-            </div>
-            <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaCheckCircle className='h-16 w-16 text-sky-600 mb-4' />
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                Bookings & Appointments
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2'>
-                Manage appointments with ease, integrate with your calendar, and
-                set up automated reminders.
-              </p>
-            </div>
-            <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaDesktop className='h-16 w-16 text-sky-600 mb-4' />
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                Inventory Management
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2'>
-                Track stock, monitor product movement, and optimize your supply
-                chain for maximum efficiency.
-              </p>
-            </div>
-            <div className='flex flex-col items-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg'>
-              <FaRegHandshake className='h-16 w-16 text-sky-600 mb-4' />
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white'>
-                Social Features System
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2'>
-                Create a community around your brand with custom-built social
-                features that foster engagement.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Apps We Build Section */}
-      <section className='py-24 bg-sky-50 dark:bg-gray-800 rounded-md shadow-lg my-6'>
-        <div className='max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-10'>
-          <h2 className='text-3xl sm:text-4xl font-semibold text-center text-gray-900 dark:text-white mb-6'>
-            Apps We Build
-          </h2>
-          <h2 className='text-2xl sm:text-2xl text-center font-semibold text-gray-900 dark:text-white mb-6'>
-            Scale with Your Business
-          </h2>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
-            <div className='flex flex-col items-center bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg'>
-              <FaMobileAlt className='h-12 w-12 text-sky-600 mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
-                Android & iOS Apps
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2 text-center'>
-                Using Ionic, we create mobile apps that work seamlessly across
-                both platforms, leveraging Google Firebase for real-time data.
-              </p>
-            </div>
-            <div className='flex flex-col items-center bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg'>
-              <FaLaptopCode className='h-12 w-12 text-sky-600 mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
-                Progressive Web Apps (PWA)
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2 text-center'>
-                Fast, reliable, and accessible across devices without the need
-                for an app store. Perfect for businesses looking for a web
-                presence.
-              </p>
-            </div>
-            <div className='flex flex-col items-center bg-white dark:bg-gray-700 rounded-lg p-6 shadow-lg'>
-              <FaDesktop className='h-12 w-12 text-sky-600 mb-4' />
-              <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
-                Desktop Apps
-              </h3>
-              <p className='text-gray-600 dark:text-gray-300 mt-2 text-center'>
-                Using Electron, we develop desktop applications that work across
-                Windows, Mac, and Linux, ideal for businesses needing a robust
-                desktop presence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BusinessInABoxSolutionsSection />
 
       {/* Content & Marketing Section */}
       <section className='py-24 bg-white dark:bg-gray-900'>
