@@ -10,7 +10,7 @@ export default function team() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <section>
         <div className='border-t custom-screen py-16 text-gray-600'>

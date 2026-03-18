@@ -298,7 +298,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <div
         class='relative mt-6 max-w-6xl max-lg:max-w-3xl mx-auto bg-white rounded-lg'

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <section class='py-20'>
         <div class='max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 divide-y divide-gray-200 dark:divide-gray-800'>

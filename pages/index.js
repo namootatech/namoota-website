@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
       </Head>
       <div className="-mx-4 md:-mx-20">
         <Hero />

@@ -6,7 +6,7 @@ const OverviewSystems = () => {
   return (
     <>
     <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
         <title>Overview | Namoota</title>
     </Head>
 

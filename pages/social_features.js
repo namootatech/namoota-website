@@ -15,7 +15,7 @@ export default function inventory_management() {
   return (
     <>
     <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
         <title>Social Features Systems | Namoota</title>
     </Head>
 

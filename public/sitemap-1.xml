@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://namoota.co.za/data</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/get-a-quote</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/get-a-website</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/inventory_management</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/login</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/microcreditpro</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/pricing</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/quoting_invoicing</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/sell-online</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/services</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/social_features</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/success</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/systems_overview</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/team</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/1. The Tech Revolution</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/2. Software&apos;s New Sidekick_ AI The Code Whisperer</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/3. The Unseen Architect_ How Open Source Shapes the Software You Use</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/4. Did Your App Just Get Smarter</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/5. Your Laptop, Your Office_ Tech&apos;s Takeover of the 9-to-5</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://namoota.co.za/blog/6. Anyone Can Build an App Now</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/data</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/get-a-quote</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/get-a-website</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/inventory_management</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/login</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/microcreditpro</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/pricing</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/quoting_invoicing</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/sell-online</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/services</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/social_features</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/success</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/systems_overview</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/team</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/1.%20The%20Tech%20Revolution</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/2.%20Software%27s%20New%20Sidekick_%20AI%20The%20Code%20Whisperer</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/3.%20The%20Unseen%20Architect_%20How%20Open%20Source%20Shapes%20the%20Software%20You%20Use</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/4.%20Did%20Your%20App%20Just%20Get%20Smarter</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/5.%20Your%20Laptop%2C%20Your%20Office_%20Tech%27s%20Takeover%20of%20the%209-to-5</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/6.%20Anyone%20Can%20Build%20an%20App%20Now</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/7.%20My%20Google%20ADK%20Multi-Agent%20Lessons</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/8.%20Vibe%20Coding%20Needs%20Documentation</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/9.%20A%205-Year%20Service%20Certificate</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://namootatech.com/blog/10.%20White-Label%20Uber-for-Laundry</loc><lastmod>2026-03-08T21:36:44.655Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

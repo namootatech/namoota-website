@@ -2,10 +2,40 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import Head from 'next/head'
+
+const SITE_URL = 'https://namootatech.com';
 
 export default function BlogIndex({ posts }) {
   return (
-    <section className="py-20">
+    <>
+      <Head>
+        <title key='title'>Namoota Blog - Web & App Insights</title>
+        <meta
+          key='description'
+          name='description'
+          content='Discover expert insights on web development, digital transformation, and tech innovation from Namoota.'
+        />
+        <meta key='keywords' name='keywords' content='Namoota blog, web development, digital transformation, software development' />
+        <meta key='og:title' property='og:title' content='Namoota Blog - Web & App Insights' />
+        <meta
+          key='og:description'
+          property='og:description'
+          content='Discover expert insights on web development, digital transformation, and tech innovation from Namoota.'
+        />
+        <meta key='og:image' property='og:image' content={`${SITE_URL}/og.png`} />
+        <meta key='og:url' property='og:url' content={`${SITE_URL}/blog`} />
+        <meta key='twitter:card' name='twitter:card' content='summary_large_image' />
+        <meta key='twitter:title' name='twitter:title' content='Namoota Blog - Web & App Insights' />
+        <meta
+          key='twitter:description'
+          name='twitter:description'
+          content='Discover expert insights on web development, digital transformation, and tech innovation from Namoota.'
+        />
+        <meta key='twitter:image' name='twitter:image' content={`${SITE_URL}/og.png`} />
+        <link key='canonical' rel='canonical' href={`${SITE_URL}/blog`} />
+      </Head>
+      <section className="py-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-10">
         <div className="text-center space-y-6 max-w-2xl mx-auto">
           <h1 className="text-4xl font-bold text-sky-800">Namoota Blogs</h1>
@@ -40,7 +70,8 @@ export default function BlogIndex({ posts }) {
           ))}
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }
 

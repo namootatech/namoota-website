@@ -6,7 +6,7 @@ const QuotingInvoicing = () => {
   return (
     <>
     <Head>
-    <meta name='robots' content='index' />
+    <meta name='robots' content='index, follow' />
     <title>Quoting & Invoicing Systems | Namoota</title>
     </Head>
 

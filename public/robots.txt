@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://namoota.co.za
+Host: https://namootatech.com
 
 # Sitemaps
-Sitemap: https://namoota.co.za/sitemap.xml
+Sitemap: https://namootatech.com/sitemap.xml

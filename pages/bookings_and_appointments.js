@@ -6,7 +6,7 @@ const BookingsAppointmets = () => {
   return (
     <>
     <Head>
-    <meta name='robots' content='index' />
+    <meta name='robots' content='index, follow' />
     <title>Bookings and Appointments Systems | Namoota</title>
     </Head>
 

@@ -7,7 +7,7 @@ export default function inventory_management() {
   return (
     <>
     <Head>
-        <meta name='robots' content='index' />
+        <meta name='robots' content='index, follow' />
         <title>Inventory management Systems | Namoota</title>
     </Head>
     {/* Hero */}
