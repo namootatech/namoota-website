@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import AppLayout from '@/components/AppLayout';
+import AppLayout from '../components/AppLayout';
 import '../styles/globals.css';
 import { AuthProvider } from '../util/auth/context';
 

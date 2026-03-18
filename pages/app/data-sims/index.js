@@ -1,8 +1,8 @@
 import { Bell, ChevronDown, Menu, Search, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { Button } from '../../../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../../../components/ui/card';
+import { Input } from '../../../components/ui/input';
+import { Label } from '../../../components/ui/label';
 import {
   Table,
   TableBody,
@@ -10,18 +10,18 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-import { getUserSimcards, getSimcard } from '@/util/simcards';
-import { useAuth } from '@/util/auth/context';
+} from '../../../components/ui/table';
+import { Badge } from '../../../components/ui/badge';
+import { getUserSimcards, getSimcard } from '../../../util/simcards';
+import { useAuth } from '../../../util/auth/context';
 import { useState, useEffect } from 'react';
 import { flatten, isNil, values, without } from 'ramda';
-import { networkPackages, dataPackages } from '@/config/data';
-import { Checkbox } from '@/components/ui/checkbox';
+import { networkPackages, dataPackages } from '../../../config/data';
+import { Checkbox } from '../../../components/ui/checkbox';
 import { isEmpty, validate } from 'validate.js';
 import { FaTrash } from 'react-icons/fa';
 import moment from 'moment';
-import { addOrder, saveUserDeliveryDetails } from '@/util/orders';
+import { addOrder, saveUserDeliveryDetails } from '../../../util/orders';
 
 const deliveryConstraints = {
   idNumber: {

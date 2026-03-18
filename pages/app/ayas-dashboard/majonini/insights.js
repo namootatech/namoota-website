@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '@/util/firebase';
+import { db } from '../../../../util/firebase';
 import ReactPaginate from 'react-paginate';
 
 export default function InsightsPage() {

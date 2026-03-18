@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { db } from '@/util/firebase';
+import { db } from '../../../../util/firebase';
 
 export default function DeferredExchangePage() {
   const [formData, setFormData] = useState({

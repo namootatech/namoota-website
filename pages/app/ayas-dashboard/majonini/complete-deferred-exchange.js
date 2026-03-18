@@ -7,7 +7,7 @@ import {
   updateDoc,
   doc,
 } from 'firebase/firestore';
-import { db } from '@/util/firebase';
+import { db } from '../../../../util/firebase';
 
 export default function SearchAndCompleteExchangePage() {
   const [searchName, setSearchName] = useState('');

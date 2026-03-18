@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { ChevronDown } from 'lucide-react';
 
 const AccordionContext = React.createContext({

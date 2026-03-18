@@ -47,7 +47,9 @@ export default function Home() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      <Hero />
+      <div className="-mx-4 md:-mx-20">
+        <Hero />
+      </div>
        <div className='py-12 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <GetAQuote />
