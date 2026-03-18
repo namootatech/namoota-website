@@ -1,16 +1,10 @@
 ---
 title: TypeScript & React Interview Notes (Simple English)
 date: '2026-03-05'
-author: "Ayabonga Qwabi"
+author: 'Ayabonga Qwabi'
 excerpt: Easy-English revision notes for TypeScript and React interviews, with clear examples and a quick checklist.
-image: "https://images.pexels.com/photos/14553713/pexels-photo-14553713.jpeg?cs=srgb&dl=pexels-bibekghosh-14553713.jpg&fm=jpg"
+image: 'https://images.pexels.com/photos/14553713/pexels-photo-14553713.jpeg?cs=srgb&dl=pexels-bibekghosh-14553713.jpg&fm=jpg'
 ---
-
-This doc is written in easy English so you can quickly revise before your interview.
-
----
-
-## 🔹 TypeScript
 
 ### What is TypeScript?
 
@@ -44,10 +38,14 @@ Example:
 
 ```tsx
 // Structural typing example
-interface Person { name: string }
-interface User { name: string }
+interface Person {
+  name: string;
+}
+interface User {
+  name: string;
+}
 
-let p: Person = { name: "Aya" };
+let p: Person = { name: 'Aya' };
 let u: User = p; // ✅ Works in TypeScript because shape is the same
 ```
 
@@ -97,7 +95,7 @@ function identity<T>(value: T): T {
   return value;
 }
 
-identity<string>("hello");
+identity<string>('hello');
 identity<number>(42);
 ```
 
@@ -226,4 +224,3 @@ class Example {
 - Optimizations = memoization, lazy load, virtualization.
 
 ---
-

@@ -1,16 +1,12 @@
 ---
-title: "Facebook Version: How I Build Client Websites in 10-20 Minutes"
+title: 'Facebook Version: How I Build Client Websites in 10-20 Minutes'
 date: '2026-03-04'
-author: "Ayabonga Qwabi"
+author: 'Ayabonga Qwabi'
 excerpt: Copy-paste ready Facebook post text showing the exact Agent.ai v0 prompt workflow and the 10-20 minute delivery process.
-image: "https://images.pexels.com/photos/14553713/pexels-photo-14553713.jpeg?cs=srgb&dl=pexels-bibekghosh-14553713.jpg&fm=jpg"
+image: 'https://images.pexels.com/photos/14553713/pexels-photo-14553713.jpeg?cs=srgb&dl=pexels-bibekghosh-14553713.jpg&fm=jpg'
 ---
 
-Use this in the Facebook post composer. Copy the body below; add one main link (e.g. to your blog or the Agent.ai tool) in the post link field if you want a preview. Keep links in the text for people who read the full post.
-
-## Facebook post body
-
-How I build great-looking client websites in 10-20 minutes (and what I use)
+## How I build great-looking client websites in 10-20 minutes (and what I use)
 
 A lot of you have asked how I ship client sites so fast. Here's the exact workflow - no gatekeeping.
 
@@ -30,7 +26,7 @@ If you try it, drop a comment and tell me what you would add or change. Always k
 
 ---
 
-Links (paste these in a comment under your post so people can click):
+Links:
 
 - Vercel v0 Website Prompt Generator (Agent.ai): https://agent.ai/agent/vercel-v0-prompt-generator
 - Vercel v0: https://v0.dev
@@ -38,10 +34,3 @@ Links (paste these in a comment under your post so people can click):
 - Grok: https://grok.com
 
 ---
-
-## Optional: shorter version (if character limit or you want a "teaser + link" style)
-
-Shorter version (paste as post, put your blog link in the link field):
-
-I build client websites in 10-20 minutes using an AI prompt generator + Vercel v0. I get the business name, industry and a short description (or generate the description with Gemini/Grok), feed it into the Agent.ai v0 prompt generator, then paste the result into v0.dev and hit Generate. In about 5 minutes I have a full site - then I add the custom domain and deploy. Works great for restaurants, salons, NPOs and small businesses. If you want the full step-by-step and links, I've put it in a post (link below). Try it and tell me what you'd do differently.
-
